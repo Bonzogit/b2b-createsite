@@ -1,0 +1,715 @@
+{
+  "catalogVersion": "1.0",
+  "checkedAt": "2026-10-03",
+  "title": "CKCC 企业站候选目录",
+  "sourceUrl": "http://demo.ckcc.cc/b2b",
+  "catalogPages": 4,
+  "candidateCount": 37,
+  "evidenceLimit": "目录、预览外层页面与部分站点 HTML 已核对；浏览器画面未取得。所有视觉维度需实际查看后再填，不能把目录标签或源码当成视觉观察。",
+  "usage": "按基础框架选择候选；先打开 previewUrl 核对首页、详情、手机端，再写入 design-library.json 的正式设计记录。目录中的企业名称、数据和图片不可直接移入客户网站。",
+  "candidates": [
+    {
+      "id": "ckcc-w127",
+      "catalogPage": 1,
+      "catalogLabel": "机械设备",
+      "catalogUrl": "http://demo.ckcc.cc/w127",
+      "previewUrl": "https://w127.demowp.cc/",
+      "priority": "优先复核",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "页面源码包含产品、服务、案例和资讯区；适合工业询盘站的内容组织候选。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo10",
+      "catalogPage": 1,
+      "catalogLabel": "材料",
+      "catalogUrl": "http://demo.ckcc.cc/demo10",
+      "previewUrl": "https://demowp.cc/w10/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "error",
+        "previewError": "The read operation timed out",
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-w43",
+      "catalogPage": 1,
+      "catalogLabel": "食品调料",
+      "catalogUrl": "http://demo.ckcc.cc/w43",
+      "previewUrl": "https://demowp.cc/w43",
+      "priority": "优先复核",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录按餐饮、电商、流通、工业客户分组；适合研究按采购对象组织入口。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-w126",
+      "catalogPage": 1,
+      "catalogLabel": "企业展示网站",
+      "catalogUrl": "http://demo.ckcc.cc/w126",
+      "previewUrl": "https://demowp.cc/w126/",
+      "priority": "谨慎使用",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录写“企业展示网站”，演示页内容却混合家居商品与占位文案；须核对实际适配。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-w125",
+      "catalogPage": 1,
+      "catalogLabel": "企业展示型网站",
+      "catalogUrl": "http://demo.ckcc.cc/w125",
+      "previewUrl": "https://demowp.cc/w125/",
+      "priority": "谨慎使用",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录写“企业展示型网站”，演示页出现时尚主题标题、头盔、背包等混合内容。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo116",
+      "catalogPage": 1,
+      "catalogLabel": "厨具",
+      "catalogUrl": "http://demo.ckcc.cc/demo116",
+      "previewUrl": "https://demowp.cc/w116/",
+      "priority": "可复核",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "页面源码包含热门产品、品牌介绍和联系区；具体视觉效果尚待查看。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo120",
+      "catalogPage": 1,
+      "catalogLabel": "钢材",
+      "catalogUrl": "http://demo.ckcc.cc/demo120",
+      "previewUrl": "https://demowp.cc/w120/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo119",
+      "catalogPage": 1,
+      "catalogLabel": "陶瓷工艺",
+      "catalogUrl": "http://demo.ckcc.cc/demo119",
+      "previewUrl": "https://w119.demowp.cc/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "error",
+        "previewError": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'w119.demowp.cc'. (_ssl.c:1010)>",
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo14",
+      "catalogPage": 1,
+      "catalogLabel": "工业摄像头",
+      "catalogUrl": "http://demo.ckcc.cc/demo14",
+      "previewUrl": "http://demo14.wp.taodakeji.com/",
+      "priority": "优先复核",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "页面源码包含产品、尺寸选择、特性、质量说明和报价入口；适合技术产品详情的内容组织候选。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo118",
+      "catalogPage": 1,
+      "catalogLabel": "企业展示网站",
+      "catalogUrl": "http://demo.ckcc.cc/demo118",
+      "previewUrl": "https://demowp.cc/w118",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo112",
+      "catalogPage": 1,
+      "catalogLabel": "包装盒箱子",
+      "catalogUrl": "http://demo.ckcc.cc/demo112",
+      "previewUrl": "https://w112.demowp.cc/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "error",
+        "previewError": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'w112.demowp.cc'. (_ssl.c:1010)>",
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo114",
+      "catalogPage": 1,
+      "catalogLabel": "博客文章",
+      "catalogUrl": "http://demo.ckcc.cc/demo114",
+      "previewUrl": "https://w114.demowp.cc/",
+      "priority": "可复核",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "文章目录演示站含大量与外贸产品无关的新闻，适合研究版式时再核对。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo110",
+      "catalogPage": 2,
+      "catalogLabel": "发电机",
+      "catalogUrl": "http://demo.ckcc.cc/demo110",
+      "previewUrl": "https://demowp.cc/w110/",
+      "priority": "优先复核",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "页面源码包含新品、产品承诺、安全功能、支持和博客区；适合消费类设备候选。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo111",
+      "catalogPage": 2,
+      "catalogLabel": "电子设备",
+      "catalogUrl": "http://demo.ckcc.cc/demo111",
+      "previewUrl": "https://w111.demowp.cc",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo99",
+      "catalogPage": 2,
+      "catalogLabel": "自行车配件",
+      "catalogUrl": "http://demo.ckcc.cc/demo99",
+      "previewUrl": "https://w99.demowp.cc",
+      "priority": "谨慎使用",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录写“自行车配件”，演示页仍出现男装衬衫占位商品。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo104",
+      "catalogPage": 2,
+      "catalogLabel": "外贸网站",
+      "catalogUrl": "http://demo.ckcc.cc/demo104",
+      "previewUrl": "https://demowp.cc/w104/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo7",
+      "catalogPage": 2,
+      "catalogLabel": "外贸机械设备",
+      "catalogUrl": "http://demo.ckcc.cc/demo7",
+      "previewUrl": "http://demo7.wp.taodakeji.com/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo42",
+      "catalogPage": 2,
+      "catalogLabel": "山地自行车",
+      "catalogUrl": "http://demo.ckcc.cc/demo42",
+      "previewUrl": "https://w42.demowp.cc/",
+      "priority": "优先复核",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "accessible",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "页面源码包含产品、材料与性能、企业和资讯区；适合骑行产品候选。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo17",
+      "catalogPage": 2,
+      "catalogLabel": "不锈钢",
+      "catalogUrl": "http://demo.ckcc.cc/demo17",
+      "previewUrl": "http://demo17.wp.taodakeji.com/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo74",
+      "catalogPage": 2,
+      "catalogLabel": "机械设备",
+      "catalogUrl": "http://demo.ckcc.cc/demo74",
+      "previewUrl": "https://w74.demowp.cc/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo58",
+      "catalogPage": 2,
+      "catalogLabel": "汽车配件",
+      "catalogUrl": "http://demo.ckcc.cc/demo58",
+      "previewUrl": "https://w58.demowp.cc",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo87",
+      "catalogPage": 2,
+      "catalogLabel": "外贸螺丝",
+      "catalogUrl": "http://demo.ckcc.cc/demo87",
+      "previewUrl": "https://demowp.cc/w87/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo103",
+      "catalogPage": 3,
+      "catalogLabel": "汽车用品",
+      "catalogUrl": "http://demo.ckcc.cc/demo103",
+      "previewUrl": "http://w103.demowp.cc",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo108",
+      "catalogPage": 3,
+      "catalogLabel": "游乐设备",
+      "catalogUrl": "http://demo.ckcc.cc/demo108",
+      "previewUrl": "https://w108.demowp.cc",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo5",
+      "catalogPage": 3,
+      "catalogLabel": "灯具",
+      "catalogUrl": "http://demo.ckcc.cc/demo5",
+      "previewUrl": "https://demowp.cc/w5/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo54",
+      "catalogPage": 3,
+      "catalogLabel": "足球资讯",
+      "catalogUrl": "http://demo.ckcc.cc/demo54",
+      "previewUrl": "https://demowp.cc/w54",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo80",
+      "catalogPage": 3,
+      "catalogLabel": "外贸企业官网",
+      "catalogUrl": "http://demo.ckcc.cc/demo80",
+      "previewUrl": "http://w80.demowp.cc",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo94",
+      "catalogPage": 3,
+      "catalogLabel": "无纺布",
+      "catalogUrl": "http://demo.ckcc.cc/demo94",
+      "previewUrl": "https://w94.demowp.cc",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo95",
+      "catalogPage": 3,
+      "catalogLabel": "出国留学",
+      "catalogUrl": "http://demo.ckcc.cc/demo95",
+      "previewUrl": "http://w95.demowp.cc",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo100",
+      "catalogPage": 3,
+      "catalogLabel": "一般产品-中文",
+      "catalogUrl": "http://demo.ckcc.cc/demo100",
+      "previewUrl": "https://w100.demowp.cc",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo21",
+      "catalogPage": 3,
+      "catalogLabel": "LED",
+      "catalogUrl": "http://demo.ckcc.cc/demo21",
+      "previewUrl": "http://demo21.wp.taodakeji.com/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo20",
+      "catalogPage": 4,
+      "catalogLabel": "外贸机械",
+      "catalogUrl": "http://demo.ckcc.cc/demo20",
+      "previewUrl": "https://demowp.cc/w20/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo4",
+      "catalogPage": 4,
+      "catalogLabel": "轴承",
+      "catalogUrl": "http://demo.ckcc.cc/demo4",
+      "previewUrl": "http://demo4.wp.taodakeji.com/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo9",
+      "catalogPage": 4,
+      "catalogLabel": "外贸机械",
+      "catalogUrl": "http://demo.ckcc.cc/demo9",
+      "previewUrl": "http://demo9.wp.taodakeji.com/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo2",
+      "catalogPage": 4,
+      "catalogLabel": "外贸钢材",
+      "catalogUrl": "http://demo.ckcc.cc/demo2",
+      "previewUrl": "http://demo2.wp.taodakeji.com",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo11",
+      "catalogPage": 4,
+      "catalogLabel": "外贸音响",
+      "catalogUrl": "http://demo.ckcc.cc/demo11",
+      "previewUrl": "http://demo11.wp.taodakeji.com/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    },
+    {
+      "id": "ckcc-demo12",
+      "catalogPage": 4,
+      "catalogLabel": "外贸瑜伽垫",
+      "catalogUrl": "http://demo.ckcc.cc/demo12",
+      "previewUrl": "http://demo12.wp.taodakeji.com/",
+      "priority": "待筛选",
+      "sourceReview": {
+        "catalogHtmlRead": true,
+        "wrapperHtmlRead": true,
+        "previewHtmlStatus": "not_checked",
+        "previewError": null,
+        "visualStatus": "not_verified",
+        "desktopScreenshot": null,
+        "mobileScreenshot": null
+      },
+      "observedContent": "目录链接已核对；采用前需实际查看演示首页、详情及手机端。",
+      "designObservations": []
+    }
+  ]
+}

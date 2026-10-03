@@ -4,7 +4,7 @@
 
 A portable specification, reference catalog, and offline package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.3.0**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.3.1**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
@@ -14,7 +14,7 @@ A portable specification, reference catalog, and offline package checker for AI-
 - Resend 邮件通知、WhatsApp、文章发布、按需翻译与缓存规则。
 - Node 工作台及 Cloudflare 的不同部署要求。
 - 整站参考或多个网站模块组合的设计方法。
-- 45 条 Blocksy 官方模板介绍索引，以及离线包结构检查和打包工具。
+- 45 条 Blocksy 官方模板介绍索引、37 条 CKCC 企业站候选目录，以及离线包结构检查和打包工具。候选目录待实际画面复核。
 
 本仓库提供规范、模板和检查工具，**不包含已实现的通用 CMS、现成主题库或云端服务凭据**。生成结果需要功能、视觉和部署验收。
 
@@ -39,6 +39,8 @@ A portable specification, reference catalog, and offline package checker for AI-
 | [业务接口](unified-site-builder/references/business-contract.md) | 后台、接口及数据行为 |
 | [参考库](site-reference-library/design-library.json) | 45 条候选与来源链接 |
 | [中文参考目录](site-reference-library/参考库总览.html) | 下载后可在浏览器打开的目录 |
+| [CKCC 企业站候选](site-reference-library/ckcc-b2b-candidates.json) | 37 个行业案例的目录链接、演示地址与核对状态 |
+| [CKCC 中文目录](site-reference-library/CKCC企业站候选目录.html) | 下载后可搜索和打开演示站 |
 | [验证范围](VALIDATION.md) | 已检查与未验证的边界 |
 | [更新记录](CHANGELOG.md) | 版本变化 |
 
