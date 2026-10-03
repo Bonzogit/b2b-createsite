@@ -48,7 +48,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/growly/",
+      "catalogCategories": [
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-book-store",
@@ -94,7 +99,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/book-store/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce"
+      ]
     },
     {
       "id": "blocksy-codespot",
@@ -140,7 +150,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/codespot/",
+      "catalogCategories": [
+        "Business",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-landscape",
@@ -186,7 +202,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/landscape/",
+      "catalogCategories": [
+        "Business",
+        "Nonprofit",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-web-studio",
@@ -232,7 +254,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/web-studio/",
+      "catalogCategories": [
+        "Business",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-invest-boost",
@@ -277,7 +305,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/investboost/",
+      "catalogCategories": [
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-kiddy",
@@ -323,7 +356,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/kiddy/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce"
+      ]
     },
     {
       "id": "blocksy-consultant",
@@ -369,7 +407,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/consultant/",
+      "catalogCategories": [
+        "Business",
+        "Nonprofit",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-furniture",
@@ -415,7 +459,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/furniture/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce"
+      ]
     },
     {
       "id": "blocksy-e-bike",
@@ -461,7 +510,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/e-bike/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce"
+      ]
     },
     {
       "id": "blocksy-pottery",
@@ -508,7 +562,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/pottery/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-smile-dent",
@@ -554,7 +614,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/smile-dent/",
+      "catalogCategories": [
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-smart-home",
@@ -600,7 +665,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/smart-home/",
+      "catalogCategories": [
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-daily-news",
@@ -646,7 +716,14 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/daily-news/",
+      "catalogCategories": [
+        "Blog",
+        "Business",
+        "News",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-cosmetic",
@@ -693,7 +770,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/cosmetic/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-real-estate",
@@ -739,7 +822,14 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/real-estate/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-photo-studio",
@@ -786,7 +876,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/photo-studio/",
+      "catalogCategories": [
+        "Business",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-restaurant",
@@ -832,7 +928,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/restaurant/",
+      "catalogCategories": [
+        "Blog",
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-wood",
@@ -879,7 +981,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/wood/",
+      "catalogCategories": [
+        "Business",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-renovation",
@@ -925,7 +1033,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/renovation/",
+      "catalogCategories": [
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-beverr",
@@ -971,7 +1084,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/beverr/",
+      "catalogCategories": [
+        "Business",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-catering",
@@ -1017,7 +1136,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/catering/",
+      "catalogCategories": [
+        "Business",
+        "Nonprofit"
+      ]
     },
     {
       "id": "blocksy-barber-shop",
@@ -1063,7 +1187,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/barber-shop/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-bizconsult",
@@ -1109,7 +1239,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/bizconsult/",
+      "catalogCategories": [
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-gadgets",
@@ -1155,7 +1290,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/gadgets/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce"
+      ]
     },
     {
       "id": "blocksy-home-decor",
@@ -1200,7 +1340,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/home-decor/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce"
+      ]
     },
     {
       "id": "blocksy-cleaning-service",
@@ -1246,7 +1391,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/cleaning-service/",
+      "catalogCategories": [
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-car-service",
@@ -1292,7 +1442,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/car-service/",
+      "catalogCategories": [
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-floreo",
@@ -1339,7 +1494,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/floreo/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce"
+      ]
     },
     {
       "id": "blocksy-garderobe",
@@ -1385,7 +1545,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/garderobe/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-petsy",
@@ -1430,7 +1596,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/petsy/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce"
+      ]
     },
     {
       "id": "blocksy-justice",
@@ -1476,7 +1647,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/justice/",
+      "catalogCategories": [
+        "Business",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-wedding",
@@ -1523,7 +1700,14 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/wedding/",
+      "catalogCategories": [
+        "Blog",
+        "Business",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-web-agency",
@@ -1569,7 +1753,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/web-agency/",
+      "catalogCategories": [
+        "Business",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-persona",
@@ -1615,7 +1804,14 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/persona/",
+      "catalogCategories": [
+        "Blog",
+        "Business",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-yogi",
@@ -1661,7 +1857,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/yogi/",
+      "catalogCategories": [
+        "Blog",
+        "Personal",
+        "Portfolio"
+      ]
     },
     {
       "id": "blocksy-homi",
@@ -1707,7 +1909,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/homi/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce"
+      ]
     },
     {
       "id": "blocksy-tasty",
@@ -1754,7 +1961,14 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/tasty/",
+      "catalogCategories": [
+        "Blog",
+        "Business",
+        "News",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-review-hub",
@@ -1800,7 +2014,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/product-reviews/",
+      "catalogCategories": [
+        "Blog",
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-business",
@@ -1846,7 +2066,12 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/business/",
+      "catalogCategories": [
+        "Business",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-charity",
@@ -1892,7 +2117,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/charity/",
+      "catalogCategories": [
+        "Blog",
+        "Nonprofit",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-app",
@@ -1938,7 +2169,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/app/",
+      "catalogCategories": [
+        "Business",
+        "News",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-travel",
@@ -1984,7 +2221,15 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/travel/",
+      "catalogCategories": [
+        "Blog",
+        "Business",
+        "News",
+        "Personal",
+        "Travel"
+      ]
     },
     {
       "id": "blocksy-modern-shop",
@@ -2029,7 +2274,13 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/modern-shop/",
+      "catalogCategories": [
+        "Business",
+        "Ecommerce",
+        "Personal"
+      ]
     },
     {
       "id": "blocksy-news",
@@ -2075,7 +2326,14 @@
         "不复制模板品牌、商业事实或未经授权素材"
       ],
       "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
-      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径",
+      "demoUrl": "https://startersites.io/blocksy/blog/",
+      "catalogCategories": [
+        "Blog",
+        "News",
+        "Personal",
+        "Travel"
+      ]
     }
   ],
   "projects": [],
@@ -2109,5 +2367,5 @@
     "referenceComposition": "支持整站参考同一网站，或按页面/模块组合多个网站；记录模块来源及借鉴点，并统一字体、配色、间距、组件与交互。",
     "foundationBeforeStyle": "先按Skill中的通用基础框架确定网站目标、页面职责、内容、询盘路径和后台可管理项，再按业务参考整站或组合模块；框架不固定视觉布局。"
   },
-  "libraryRevision": "1.2.1-public"
+  "libraryRevision": "1.2.2-public"
 }
