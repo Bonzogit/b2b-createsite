@@ -15,6 +15,18 @@
   "visualVerification": {
     "desktop": "unverified",
     "mobile": "unverified",
-    "evidence": []
+    "evidence": [],
+    "tablet": "unverified"
+  },
+  "referenceLibrary": {
+    "source": null,
+    "revision": null,
+    "readStatus": "unverified",
+    "candidateIds": []
+  },
+  "assetVerification": {
+    "inventory": "docs/DESIGN.md",
+    "status": "unverified",
+    "missing": []
   }
 }

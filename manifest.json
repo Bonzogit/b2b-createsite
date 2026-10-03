@@ -1,5 +1,5 @@
 {
-  "version": "1.2.1",
+  "version": "1.3.0",
   "scope": "public specification and reference catalog",
   "entry": "AGENT_ENTRY.md",
   "license": "MIT",
@@ -10,7 +10,7 @@
     },
     {
       "path": "AGENT_ENTRY.md",
-      "sha256": "b747bc175235feab230e02eeb4d77eb64a0e502562c0df59058c6626e7de1e7a"
+      "sha256": "57c89439cf1ef5b21ac72673c2f5115d8356515ce8fed89469eecd3574742d58"
     },
     {
       "path": "AGENTS.md",
@@ -18,7 +18,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "4a2c393b8d7ae5e9776416b1e10223f15cc22d65363f9a7e7501f4300dc3f603"
+      "sha256": "ad1efd1760b664058f3a1d12cc945c058bed2aa98e82adc9e5ed6be7434dd911"
     },
     {
       "path": "LICENSE",
@@ -26,7 +26,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "55eb3a5c7a2fe5cb223e35e7ba0f1c9877c6d9298311727f0a48d2985b576ac0"
+      "sha256": "c9f70784e5e2b8367a3b53eff1407c2c054be81561ecef990eb3fec83b37782d"
     },
     {
       "path": "site-reference-library/design-library.json",
@@ -58,7 +58,7 @@
     },
     {
       "path": "unified-site-builder/assets/design-record.json",
-      "sha256": "0d2c26dbe6d1c105f02ddce565fff57aa09832e45dcffbfa16fc6d4b27fa92bb"
+      "sha256": "0b3e97bc034e5a03ee777752655624eb9d9ee75c367b55afb1d73d2f48af0155"
     },
     {
       "path": "unified-site-builder/assets/site.contract.json",
@@ -66,7 +66,7 @@
     },
     {
       "path": "unified-site-builder/references/acceptance.md",
-      "sha256": "837e5ba14b987697817c9f589df1d777b6f8c1bd26d777cedda91307b9491ea7"
+      "sha256": "bb97f2d72915d012107fb6ca0db376f349f7e102225faa270e3f5925cc1b9733"
     },
     {
       "path": "unified-site-builder/references/admin-ui.md",
@@ -82,7 +82,7 @@
     },
     {
       "path": "unified-site-builder/references/design.md",
-      "sha256": "94e4f92f9e1fadd48fdd785f25cfad5238efb58224e572a70367a6a54d7745f4"
+      "sha256": "3fa266351db2d566eb8bbcba92c85c3e29f547564481389c1a820fcbabe3f10b"
     },
     {
       "path": "unified-site-builder/references/node-workbench.md",
@@ -90,7 +90,7 @@
     },
     {
       "path": "unified-site-builder/references/portable-handoff.md",
-      "sha256": "b96a02ad1fcde8d62d97df6898f8de134a25cea40de69a1213439f0c7f5ad2e4"
+      "sha256": "2cd7f281244a6a5cb889c2d1d3037d6a5bf9a4014f3842c5d83b87809d99f236"
     },
     {
       "path": "unified-site-builder/references/resend-email.md",
@@ -98,15 +98,19 @@
     },
     {
       "path": "unified-site-builder/references/site-foundation.md",
-      "sha256": "9bcd92caffb39cd7a7ac3c8ad588f9cea183124b7db5c825f63ce6372b604d77"
+      "sha256": "5dd25024c0e76eaaf19d2a21c7585c519ed8e261ed5dd5ba0ea6c1ea50b0d2e9"
     },
     {
       "path": "unified-site-builder/references/style-selection.md",
-      "sha256": "a22bc3c16bbdfe50d8babbe70c0e40eab238ba2618be1be9a82adffa165d8649"
+      "sha256": "4e175a1dda33933093965f90446401f0ef418618642cdc4872cc75a35690bfb7"
     },
     {
       "path": "unified-site-builder/references/translation.md",
       "sha256": "d8cae1dd7e95d06258fc19aed4c5506a826b7cdaf4a859649fc95bb9e4923f30"
+    },
+    {
+      "path": "unified-site-builder/references/visual-production.md",
+      "sha256": "534690344dbb980dce2efd7accd710e24ebbd6a51fa286c00e9e9cec45fe146c"
     },
     {
       "path": "unified-site-builder/scripts/site_package.py",
@@ -118,23 +122,23 @@
     },
     {
       "path": "unified-site-builder/SKILL.md",
-      "sha256": "6555dcbafd4f0867e8c934ccc26d37a3b68fb2301219c7f8cddf0a3fc6069010"
+      "sha256": "bdda3eccfa6691afcf707a770e01bbe1a36f6cba6a3ce3661b0aec46fead5cb3"
     },
     {
       "path": "unified-site-builder/使用说明.txt",
-      "sha256": "4b1f2fb2f9b3ba567229f8116ab7a6bd6385178eca84e9562c931d54bd6a608c"
+      "sha256": "fda67c381ac5f4ee41018b898e5ac2d71e31451c74229d6c5bb3eafa72717b51"
     },
     {
       "path": "unified-site-builder/验证结果.txt",
-      "sha256": "a283e2bb1b80c344f71eed15e7cabd95ff9f2a60cc50f6f1865018e9f9d3b9c2"
+      "sha256": "36249c002d87f951f12bde7c785949bc6c150341913c224eea448e31ac83021d"
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "969984357cbf9ff122c468ae90c26b04bd2388b96cdb48ace9920304c477a63c"
+      "sha256": "8b8935594a941f91f18b9bd504f362d9c48deb571f7cf1f1bf54a0651dab5dbe"
     },
     {
       "path": "VERSION",
-      "sha256": "d7c5f05b8f509e61cbb54803e95dedf5b328af81cd5456f7554fb2990f91acce"
+      "sha256": "3c85c66d06c31df0c6511ad18b7e8576fcf8e76a011c5c28bbd66c57f3ed851e"
     }
   ]
 }
