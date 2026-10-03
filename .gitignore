@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+node_modules/
+data/
+uploads/
+backups/
+*.db
+*.sqlite*
+*.zip
+.DS_Store
+

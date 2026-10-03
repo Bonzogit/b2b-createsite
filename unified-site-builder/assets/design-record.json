@@ -1,0 +1,20 @@
+{
+  "recordVersion": "1.0",
+  "projectId": null,
+  "productType": null,
+  "buyerTask": null,
+  "chosenDirection": null,
+  "selectionReasons": [],
+  "referenceIds": [],
+  "referenceStrategy": null,
+  "sectionReferences": [],
+  "layoutDecisions": {},
+  "comparedProjectIds": [],
+  "meaningfulDifferences": [],
+  "userApprovedConsistency": false,
+  "visualVerification": {
+    "desktop": "unverified",
+    "mobile": "unverified",
+    "evidence": []
+  }
+}

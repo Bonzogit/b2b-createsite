@@ -1,0 +1,12 @@
+{
+  "contractVersion": "1.0",
+  "runtime": "node",
+  "sourceLanguage": "en",
+  "languages": ["en", "zh", "es", "ar", "ru"],
+  "publicDir": "public",
+  "entry": "server.mjs",
+  "adminPath": "/admin/",
+  "healthPath": "/healthz",
+  "features": {"cms": true, "articles": true, "inquiries": true, "translation": "on-demand"},
+  "integrations": {"email": "unconfigured", "whatsapp": "unconfigured", "translation": "unconfigured"}
+}

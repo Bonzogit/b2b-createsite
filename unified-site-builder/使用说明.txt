@@ -1,0 +1,13 @@
+统一网站建站 Skill 1.2.1
+
+从仓库根目录README.md和AGENT_ENTRY.md开始，随后读取本目录SKILL.md。
+完整检出仓库同时保留同级site-reference-library目录；单独安装Skill时另指定参考库位置。
+这是规范、模板和离线检查工具，不是已实现的通用CMS。后台和接口统一，前台可整站或按模块参考不同网站。
+通用基础框架负责页面、内容和询盘方向，参考库负责视觉选择；已有项目仅改本次范围。
+
+检查工具要求Python3.11+，仅标准库。
+python unified-site-builder/scripts/site_package.py check <网站目录>
+python unified-site-builder/scripts/site_package.py pack <网站目录> --output <网站目录外的ZIP路径>
+
+结构检查通过不代表网站功能或部署通过。Cloudflare、Resend、AI与DNS需在实际环境配置并分别验证。
+版本更新不会自动修改其他Agent、已部署网站或私有参考库。实际安装方式以宿主平台能力为准。

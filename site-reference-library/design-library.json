@@ -1,0 +1,2113 @@
+{
+  "libraryVersion": "1.0",
+  "updatedAt": "2026-10-03",
+  "title": "Blocksy 公开设计参考索引",
+  "scope": "45条官方公开模板介绍与独立适配建议；未核验完整演示页面、移动端和交互。",
+  "sourceCatalog": "https://creativethemes.com/blocksy/starter-sites/",
+  "references": [
+    {
+      "id": "blocksy-growly",
+      "url": "https://creativethemes.com/blocksy/starter-site/growly/",
+      "title": "Growly",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "营销服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "服务分类、成果说明与咨询入口"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "借鉴按服务组织导航，案例只用本企业真实资料"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-book-store",
+      "url": "https://creativethemes.com/blocksy/starter-site/book-store/",
+      "title": "Book Store",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "采购目录",
+      "productTypes": [
+        "图书",
+        "文具"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "分类导航、筛选和精选集合"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "借鉴按采购任务筛选产品；不照搬读者评分"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-codespot",
+      "url": "https://creativethemes.com/blocksy/starter-site/codespot/",
+      "title": "Codespot",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "精密技术",
+      "productTypes": [
+        "软件",
+        "技术服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "深色与荧光绿点缀，服务与文章分区"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "可用于技术方案展示，控制高亮面积"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-landscape",
+      "url": "https://creativethemes.com/blocksy/starter-site/landscape/",
+      "title": "Landscape",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "自然生活",
+      "productTypes": [
+        "农业",
+        "环保"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "大地色系，农业内容与行动入口"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "适合展示种植场景、材料来源和应用知识"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-web-studio",
+      "url": "https://creativethemes.com/blocksy/starter-site/web-studio/",
+      "title": "Web Studio",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "精品画册",
+      "productTypes": [
+        "设计",
+        "创意服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "深色配局部色彩，项目作品展示"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "用实际案例组织页面，而非堆叠通用优势"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-invest-boost",
+      "url": "https://creativethemes.com/blocksy/starter-site/invest-boost/",
+      "title": "Invest Boost",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "企业咨询"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "大型导航与侧边信息区域"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "服务很多时才采用复杂导航"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-kiddy",
+      "url": "https://creativethemes.com/blocksy/starter-site/kiddy/",
+      "title": "Kiddy",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "采购目录",
+      "productTypes": [
+        "童装",
+        "儿童用品"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "轻快风格，筛选、对比和尺码说明"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "B2B可将尺码与材质变为选型字段"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-consultant",
+      "url": "https://creativethemes.com/blocksy/starter-site/consultant/",
+      "title": "Consultant",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "顾问",
+        "企业服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "服务介绍与预约模块"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "转为需求咨询和沟通流程，预约功能需另实现"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-furniture",
+      "url": "https://creativethemes.com/blocksy/starter-site/furniture/",
+      "title": "Furniture",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "自然生活",
+      "productTypes": [
+        "家具",
+        "家居"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "柔和浅色、圆角、筛选与产品对比"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "结合空间场景图、尺寸和材料参数"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-e-bike",
+      "url": "https://creativethemes.com/blocksy/starter-site/e-bike/",
+      "title": "E-Bike",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "户外运动",
+      "productTypes": [
+        "自行车",
+        "户外装备"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "金黄色点缀，筛选与规格选项"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "用真实骑行场景和性能参数建立购买理由"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-pottery",
+      "url": "https://creativethemes.com/blocksy/starter-site/pottery/",
+      "title": "Pottery",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "精品画册",
+      "productTypes": [
+        "陶瓷",
+        "工艺品",
+        "珠宝"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "暗色背景与柔和点缀突出手工产品"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "可转为材质、工艺、系列的展示路线"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-smile-dent",
+      "url": "https://creativethemes.com/blocksy/starter-site/smile-dent/",
+      "title": "Smile Dent",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "口腔",
+        "医疗服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "柔和色彩、圆角和清楚的服务说明"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "吸收易读的服务分类；资质与医疗事实需核实"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-smart-home",
+      "url": "https://creativethemes.com/blocksy/starter-site/smart-home/",
+      "title": "Smart Home",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "精密技术",
+      "productTypes": [
+        "智能家居",
+        "电子系统"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "深色风格、明暗切换及展开式导航"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "围绕场景、兼容性和系统组成设计"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-daily-news",
+      "url": "https://creativethemes.com/blocksy/starter-site/daily-news/",
+      "title": "Daily News",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "内容阅读",
+      "productTypes": [
+        "行业媒体",
+        "知识中心"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "杂志结构、大图、明暗与语言功能"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "借鉴内容层级；语言功能仍采用统一翻译协议"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-cosmetic",
+      "url": "https://creativethemes.com/blocksy/starter-site/cosmetic/",
+      "title": "Cosmetic",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "精品画册",
+      "productTypes": [
+        "美妆",
+        "护肤",
+        "珠宝"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "以产品为主，筛选、收藏与对比"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "按成分或材质分类，重点说明规格和定制"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-real-estate",
+      "url": "https://creativethemes.com/blocksy/starter-site/real-estate/",
+      "title": "Real Estate",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": true,
+      "styleDirection": "采购目录",
+      "productTypes": [
+        "房产",
+        "复杂目录"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "动态分类与搜索式目录"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "借鉴多条件检索，适配设备或多规格采购目录"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-photo-studio",
+      "url": "https://creativethemes.com/blocksy/starter-site/photo-studio/",
+      "title": "Photo Studio",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "精品画册",
+      "productTypes": [
+        "摄影",
+        "设计",
+        "作品展示"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "深色首页与瀑布流作品图库"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "只在图片素材充足时采用图库主导结构"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-restaurant",
+      "url": "https://creativethemes.com/blocksy/starter-site/restaurant/",
+      "title": "Restaurant",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "精品画册",
+      "productTypes": [
+        "餐饮",
+        "食品"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "深色与整屏首屏，摄影占较大比重"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "食品企业可借鉴场景图，再补规格与生产信息"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-wood",
+      "url": "https://creativethemes.com/blocksy/starter-site/wood/",
+      "title": "Wood",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "精品画册",
+      "productTypes": [
+        "木作",
+        "家具",
+        "工艺制造"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "大首屏、视频介绍、服务与作品页面"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "以工艺过程和实际案例建立可信度"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-renovation",
+      "url": "https://creativethemes.com/blocksy/starter-site/renovation/",
+      "title": "Renovation",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "装修",
+        "工程服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "首屏交叠区块与橙色点缀"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "按项目需求、施工能力、案例组织询盘路径"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-beverr",
+      "url": "https://creativethemes.com/blocksy/starter-site/beverr/",
+      "title": "Beverr",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "精品画册",
+      "productTypes": [
+        "设计",
+        "创意服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "简约设计、技能说明与项目展示"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "把作品变为可解释的案例，不虚构认证"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-catering",
+      "url": "https://creativethemes.com/blocksy/starter-site/catering/",
+      "title": "Catering",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "餐饮服务",
+        "食品供应"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "菜单、服务、公司与联系页面"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "借鉴清楚的供应范围与咨询入口"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-barber-shop",
+      "url": "https://creativethemes.com/blocksy/starter-site/barber-shop/",
+      "title": "Barber Shop",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "美容护理",
+        "服务加产品"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "服务介绍和商品展示并存"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "可用于既提供服务又销售配套产品的业务"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-bizconsult",
+      "url": "https://creativethemes.com/blocksy/starter-site/bizconsult/",
+      "title": "BizConsult",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "企业服务",
+        "物流"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "服务、动态与页头行动按钮"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "物流可围绕航线、流程、案例与询价组织"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-gadgets",
+      "url": "https://creativethemes.com/blocksy/starter-site/gadgets/",
+      "title": "Gadgets",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "精密技术",
+      "productTypes": [
+        "消费电子",
+        "科技产品"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "科技风格与商品目录"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "将零售购买路径改为规格对比与询价"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-home-decor",
+      "url": "https://creativethemes.com/blocksy/starter-site/home-decor/",
+      "title": "Home Decor",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "自然生活",
+      "productTypes": [
+        "家居装饰"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "简约商品页，信息布局较宽松"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "用空间搭配和材质说明支撑产品目录"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-cleaning-service",
+      "url": "https://creativethemes.com/blocksy/starter-site/cleaning-service/",
+      "title": "Cleaning Service",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "清洁",
+        "上门服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "首屏预约入口与简短服务说明"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "借鉴短路径咨询，适合明确服务范围的企业"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-car-service",
+      "url": "https://creativethemes.com/blocksy/starter-site/car-service/",
+      "title": "Car Service",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "汽车维修",
+        "汽配服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "服务、预约与行业文章"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "汽配企业可按车型适配组织产品和内容"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-floreo",
+      "url": "https://creativethemes.com/blocksy/starter-site/floreo/",
+      "title": "Floreo",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "自然生活",
+      "productTypes": [
+        "植物",
+        "园艺",
+        "家居"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "温暖风格，商品、服务与文章"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "用自然场景和养护知识建立内容体系"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-garderobe",
+      "url": "https://creativethemes.com/blocksy/starter-site/garderobe/",
+      "title": "Garderobe",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "采购目录",
+      "productTypes": [
+        "服装",
+        "配饰"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "首页分类展示与商品筛选"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "批发站可强化款式、面料、尺码和起订量"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-petsy",
+      "url": "https://creativethemes.com/blocksy/starter-site/petsy/",
+      "title": "Petsy",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "采购目录",
+      "productTypes": [
+        "宠物用品"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "友好风格，分类商品与评价区域"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "按宠物种类和用途组织；评价须有真实来源"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-justice",
+      "url": "https://creativethemes.com/blocksy/starter-site/justice/",
+      "title": "Justice",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "法律",
+        "专业服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "清晰的服务、团队、联系与动态页面"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "借鉴专业信息层次，不照搬法律承诺"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-wedding",
+      "url": "https://creativethemes.com/blocksy/starter-site/wedding/",
+      "title": "Wedding",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "精品画册",
+      "productTypes": [
+        "婚礼",
+        "活动",
+        "珠宝场景"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "作品图库与婚礼照片展示"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "珠宝可借鉴佩戴场景与系列叙事"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-web-agency",
+      "url": "https://creativethemes.com/blocksy/starter-site/web-agency/",
+      "title": "Web Agency",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "网站",
+        "数字服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "精简首页、服务和联系结构"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "适合服务少、决策路径清楚的企业"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-persona",
+      "url": "https://creativethemes.com/blocksy/starter-site/persona/",
+      "title": "Persona",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "精品画册",
+      "productTypes": [
+        "设计师",
+        "摄影影视"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "深色风格，首页作品与服务介绍"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "适合案例驱动的展示，产品站仍需规格信息"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-yogi",
+      "url": "https://creativethemes.com/blocksy/starter-site/yogi/",
+      "title": "Yogi",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "课程",
+        "健身服务"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "课程列表、价格表与首屏导览"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "只借鉴服务比较；课程系统不是统一后台现成功能"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-homi",
+      "url": "https://creativethemes.com/blocksy/starter-site/homi/",
+      "title": "Homi",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "自然生活",
+      "productTypes": [
+        "家居",
+        "室内设计"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "大首屏视频入口、简洁商品与品牌故事"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "将场景、设计理念和产品目录衔接"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-tasty",
+      "url": "https://creativethemes.com/blocksy/starter-site/tasty/",
+      "title": "Tasty",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "内容阅读",
+      "productTypes": [
+        "食品",
+        "食谱",
+        "知识内容"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "柔和色彩，食谱材料和步骤"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "借鉴结构化知识内容，改为应用指南也可行"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-review-hub",
+      "url": "https://creativethemes.com/blocksy/starter-site/review-hub/",
+      "title": "Review Hub",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "内容阅读",
+      "productTypes": [
+        "产品评测",
+        "选型指南"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "分项评分、优缺点与推荐内容"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "可转为客观规格比较；不生成虚构评分"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-business",
+      "url": "https://creativethemes.com/blocksy/starter-site/business/",
+      "title": "Business",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "综合企业",
+        "物流"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "顶部突出行动入口，公司与文章页面"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "适合清晰介绍服务能力，避免所有企业套同一顺序"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-charity",
+      "url": "https://creativethemes.com/blocksy/starter-site/charity/",
+      "title": "Charity",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "专业服务",
+      "productTypes": [
+        "公益",
+        "组织"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "首屏介绍、项目成果与志愿参与"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "借鉴项目影响叙事，不添加未授权募款功能"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-app",
+      "url": "https://creativethemes.com/blocksy/starter-site/app/",
+      "title": "App",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "精密技术",
+      "productTypes": [
+        "应用",
+        "数字产品"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "精简首屏、功能比较与更新文章"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "围绕用户任务、功能与使用方式讲解"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-travel",
+      "url": "https://creativethemes.com/blocksy/starter-site/travel/",
+      "title": "Travel",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "户外运动",
+      "productTypes": [
+        "旅行",
+        "户外内容"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "通栏首屏和旅行文章"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "户外品牌可借鉴场景故事，补充产品选型入口"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-modern-shop",
+      "url": "https://creativethemes.com/blocksy/starter-site/modern-shop/",
+      "title": "Modern Shop",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "采购目录",
+      "productTypes": [
+        "多品类商品"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "简约商品展示及三种商店页变体"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "根据SKU数量选择目录布局，改为统一询盘路径"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    },
+    {
+      "id": "blocksy-news",
+      "url": "https://creativethemes.com/blocksy/starter-site/news/",
+      "title": "News",
+      "observedAt": "2026-10-03",
+      "evidence": "official_description_read; full_demo_not_verified",
+      "catalogPro": false,
+      "styleDirection": "内容阅读",
+      "productTypes": [
+        "企业动态",
+        "知识文章"
+      ],
+      "buyerTypes": [
+        "适配目标项目时确认"
+      ],
+      "marketPosition": "待结合用户品牌和目标买家确定",
+      "observations": [
+        {
+          "basis": "官方单套介绍，未进行视觉核验",
+          "summary": "大图与摘要组成文章索引"
+        }
+      ],
+      "hero": "unknown",
+      "navigation": "unknown",
+      "sectionSequence": "unknown",
+      "listing": "unknown",
+      "detail": "unknown",
+      "typography": "unknown",
+      "palette": "unknown",
+      "imagery": "unknown",
+      "spacing": "unknown",
+      "motion": "unknown",
+      "mobile": "unknown",
+      "reusableIdeas": [
+        {
+          "basis": "建站适配建议，属于分析推断",
+          "summary": "适合后台文章列表，重点核对详情与相关文章路径"
+        }
+      ],
+      "avoid": [
+        "不将WordPress插件能力视作统一后台现成功能",
+        "不复制模板品牌、商业事实或未经授权素材"
+      ],
+      "confidence": "官方介绍作为候选线索；实际页面、交互与移动端采用前需要复核",
+      "applicationPriority": "优先参考非商店页面与整体视觉；按询盘站重新组织业务路径"
+    }
+  ],
+  "projects": [],
+  "defaultPreferences": {
+    "source": "本项目默认建站策略；使用者的明确要求优先",
+    "defaultSiteType": "企业展示与询盘独立站",
+    "includeStoreTemplates": true,
+    "priorityPages": [
+      "首页",
+      "关于我们与品牌故事",
+      "服务与应用场景",
+      "文章列表与详情",
+      "联系页"
+    ],
+    "visualFocus": [
+      "首屏构图",
+      "页面内容顺序",
+      "配色",
+      "字体层级",
+      "图片表达",
+      "留白与节奏",
+      "导航与页脚",
+      "整体品牌感"
+    ],
+    "selectionRule": "不得因模板属于商店或含WooCommerce而排除；以非商店页面和整体外观作为主要设计参考。",
+    "commerceRule": "默认不实现购物车、结账、在线支付或顾客订单系统；用户另有明确要求时再增加。",
+    "conversionRule": "根据询盘站的采购路径重新设计CTA，围绕获取报价、咨询定制、索取目录和WhatsApp沟通；同时说明规格、起订量、交期、工艺和可信案例。",
+    "backendRule": "管理后台、Resend邮件、WhatsApp、文章发布和按需翻译继续遵循统一建站规范；视觉参考不决定运行平台。",
+    "reviewRule": "截图仅证明可见缩略图；选定参考后仍需核对实际页面与手机效果。",
+    "architectureRule": "后台操作、内容模型、邮件/询盘/文章/翻译接口统一；展示站根据产品与品牌独立设计，各站配置与数据独立。",
+    "referenceComposition": "支持整站参考同一网站，或按页面/模块组合多个网站；记录模块来源及借鉴点，并统一字体、配色、间距、组件与交互。",
+    "foundationBeforeStyle": "先按Skill中的通用基础框架确定网站目标、页面职责、内容、询盘路径和后台可管理项，再按业务参考整站或组合模块；框架不固定视觉布局。"
+  },
+  "libraryRevision": "1.2.1-public"
+}

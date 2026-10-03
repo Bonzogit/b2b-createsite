@@ -1,0 +1,4 @@
+interface:
+  display_name: "统一网站建站"
+  short_description: "统一生成真实后台、文章发布、询盘和按需翻译网站，供不同 Agent 使用"
+  default_prompt: "使用 $unified-site-builder 按统一网站规范完成建站、验证并交付部署 ZIP。"

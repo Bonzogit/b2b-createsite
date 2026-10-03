@@ -1,0 +1,9 @@
+{
+  "type": "node",
+  "build": false,
+  "start": ["node", "server.mjs"],
+  "containerPort": 3000,
+  "healthPath": "/healthz",
+  "originEnv": ["SITE_ORIGIN", "SITE_URL", "PUBLIC_SITE_URL"],
+  "spa": false
+}
