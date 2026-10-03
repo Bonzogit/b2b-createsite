@@ -1,5 +1,5 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "scope": "public specification and reference catalog",
   "entry": "AGENT_ENTRY.md",
   "license": "MIT",
@@ -18,7 +18,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "a2e10e0a1e003ac85c74b1559ddd3a12c21e5653afee548c25ced49c79094402"
+      "sha256": "bfc849175adf45d8e8aa2c940f726d254a759ac027b3365429f86c76af51bfc6"
     },
     {
       "path": "LICENSE",
@@ -26,7 +26,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "944fb64e692f6b2d91af86b7fa92ae0a3132eaecf5a9214fca78b8c93ba56681"
+      "sha256": "aefa70a18d2fc16c6b8ea73692ffa23035029887013eb52cf77965914ec06b41"
     },
     {
       "path": "site-reference-library/ckcc-b2b-candidates.json",
@@ -38,15 +38,15 @@
     },
     {
       "path": "site-reference-library/design-library.json",
-      "sha256": "ead62253fb6870ec12e1a0d28e435a5f687b074438d909003ee3e96ecf6920f9"
+      "sha256": "4f5d96fb6d176a049ad1f2eb0f9deef21aa96a93e5103c8f68a6bd13f0c76125"
     },
     {
       "path": "site-reference-library/使用说明.txt",
-      "sha256": "faeca7d2cf0e18392ba8d7b8117d364208ff7ab165986d757486e35c3f4a3472"
+      "sha256": "6ac06f52188e75cca437266455eec13f98ff4e03eb2fd16f53dcf99b56fe9b17"
     },
     {
       "path": "site-reference-library/参考库总览.html",
-      "sha256": "2645f0ac48e4657aab3ab998748e9704e0e2d906e13e4ef40e3884c9833130fc"
+      "sha256": "0666f19de470a22c7283d387dd48bc049c718b85a1854cdddd7510eae5742e23"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -110,7 +110,7 @@
     },
     {
       "path": "unified-site-builder/references/style-selection.md",
-      "sha256": "54e4eaedd061d4dbdb5ba2e7e923c457859542798aacc1b9a187570f9be35636"
+      "sha256": "9fbfd40fb5aa41acb14e2dee3d264d0332d64a8a0fa1015135b48fbcc57ffeb2"
     },
     {
       "path": "unified-site-builder/references/translation.md",
@@ -130,23 +130,23 @@
     },
     {
       "path": "unified-site-builder/SKILL.md",
-      "sha256": "e8d35f63ba5eab61eacf055e9304e50301e5be227d4aafb17544ed939f3a66cf"
+      "sha256": "1a5b7c05dbf79e1e1ff5749cce95ff31e75f0924e02c311f6bb8205928891053"
     },
     {
       "path": "unified-site-builder/使用说明.txt",
-      "sha256": "a77d3e51c87c3b8e315573bce0473ed0d0e1f453ef4b62bb4c007cc981e68702"
+      "sha256": "f76423fe023d068040c74e43e396382a46edc0d1d48dac3821931765e83c395e"
     },
     {
       "path": "unified-site-builder/验证结果.txt",
-      "sha256": "bfb5f759708b9bf5c2f6dc2bdfeedeb26844600b41af6a81177df65748d0864c"
+      "sha256": "e7bddb1e583d2fa3ca9d17ca2362c97c6bcb8ee3cac28cb7ffd286cb5d32f815"
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "ae42feeac658cd86dba376a4a140723f0d42b0cd1cb0d592e6dfb97e20d82cd1"
+      "sha256": "fd50f5173ae08f34f6c48302ba2bf40fa1f120e2e18a1d2944bd0b042592de9a"
     },
     {
       "path": "VERSION",
-      "sha256": "10e2e117b01523891ca271a615ae36e9d5e52348fd7d642f66727602c1b8dcbe"
+      "sha256": "58fc9eaec0da89f3f2847202466109d098ebfd09a89bdf18894f9a98786a2994"
     }
   ]
 }
