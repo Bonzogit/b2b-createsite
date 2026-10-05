@@ -2,7 +2,7 @@
 name: unified-site-builder
 description: 创建或改造具有真实中文后台的企业展示与询盘网站，统一联系方式、邮件通知、文章发布、按需翻译和部署交付；根据产品及用户参考库选择不同视觉与页面组织方式。适用于统一建站、参考风格整理或工作台部署包；仅咨询概念时不自行生成网站。
 metadata:
-  version: "1.3.2"
+  version: "1.4.0"
 ---
 
 # 统一网站建站
@@ -24,7 +24,7 @@ metadata:
 1. 中文真实后台，默认维护英文源内容，用户可指定其他语言；后台语言不改变内容语言。
 2. 联系方式集中设置；询盘先持久化再成功；邮件独立记录结果；WhatsApp 入口不冒充已发送。
 3. 后台发布文章后同步列表、独立详情与元信息，无需用户重新上传 ZIP，失败保留旧版。
-4. 默认按需翻译并持久化缓存；部署和发布不自动翻译全部语言。源文变更使受影响译文失效。
+4. 默认按需翻译并持久化缓存；源码内实现 Workers AI 与外部引擎，通过运行时注入选择，部署只配置资源。保护术语并校验还原；部署和发布不自动翻译全部语言，源文变更只使受影响块失效。
 5. 发布后的数据库是内容来源；初始示例仅首次使用。升级代码不覆盖文章、账号、询盘和图片。
 6. 主要内容直接包含在 HTML 响应中；功能验证与视觉验收分别完成。
 
@@ -36,7 +36,7 @@ metadata:
 
 先读 [通用建站基础框架](references/site-foundation.md)，明确目标买家、完整页面职责、内容深度、询盘路径和后台管理项，记录到 docs/SITE-BRIEF.md。用户只给产品或业务，也应完成基础规划，不要求重复整份提示词。页面须帮助客户选型和判断合作，展开适用的场景、材料、规格、采购与服务信息；信息覆盖标准见基础框架。
 
-检查已有资料、项目、路由、API、存储与部署。读取 [业务与接口](references/business-contract.md)、[后台界面](references/admin-ui.md)、[按需翻译](references/translation.md) 和 [Resend 邮件后台](references/resend-email.md)。优先复用用户已提供并验证的公共核心；规范本身不包含已实现的通用后台。
+检查已有资料、项目、路由、API、存储与部署。读取 [业务与接口](references/business-contract.md)、[后台界面](references/admin-ui.md)、[按需翻译](references/translation.md) 和 [Resend 邮件后台](references/resend-email.md)。翻译的适配参考代码与离线测试位于 assets/translation/，复用时接好内容校验、持久缓存、任务和前台，不把参考模块当完整服务。优先复用用户已提供并验证的公共核心；规范本身不包含已实现的通用后台。
 
 - 普通服务器/腾讯云工作台：读 [Node 部署协议](references/node-workbench.md)。
 - Cloudflare：读 [Cloudflare 部署协议](references/cloudflare.md)，实际适配其运行与持久化环境。

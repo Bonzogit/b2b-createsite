@@ -5,7 +5,7 @@
 - 管理后台统一：中文界面、菜单命名、字段含义及发布/跟进/配置流程保持一致，按业务启用模块。已有用户认可且验证过的后台组件应复用，不随前台风格重新设计一套管理习惯。
 - 业务接口统一：新工程遵循下方 /api/v1 的路径、请求字段、返回结构与状态定义；邮件、WhatsApp、文章和翻译沿用同一业务规则。各项目在 docs/API.md 记录实际实现和接口版本，不能只有规范没有实现。
 - 展示站独立：首页构图、导航、内容顺序、列表与详情版式、字体、颜色、图片及交互可以不同。前台呈现层负责把标准内容变为品牌页面，不直接持有 Resend 等服务凭据，也不另实现与后台冲突的业务状态。
-- 运行环境适配：Node 与 Cloudflare 可以用不同存储和发送适配器，对前台保持相同接口语义。用到兼容接口时记录映射；增加字段优先向后兼容，破坏性变化另起版本并说明迁移方式。
+- 运行环境适配：Node 与 Cloudflare 可以用不同存储和发送适配器，对前台保持相同接口语义。翻译在源码中具备两种引擎，通过运行时能力选择，见 [按需翻译](translation.md)；部署配置绑定与变量，不为单个项目改写翻译逻辑。用到兼容接口时记录映射；增加字段优先向后兼容，破坏性变化另起版本并说明迁移方式。
 - 每站配置独立：发件身份、收件邮箱、WhatsApp、语言与品牌资料由对应站点后台配置。统一接口不等于全部网站共用账号、数据库、密钥或客户询盘；未经明确要求不改成多站集中后台。
 
 验收时至少覆盖：修改联系方式后前台入口同步；文章发布后列表与详情更新；询盘先保存再处理邮件；语言切换按统一规则读取或生成译文。换前台主题不得破坏这些行为。优先验证实际结果，不以接口名称一致代替功能验收。
@@ -59,6 +59,8 @@ WhatsApp 使用经校验的国际号码生成 wa.me，预填产品名称、型�
 | POST /translations/resolve | 查询/请求已发布版本的翻译 |
 
 产品/分类按相同资源风格实现；公开页面可以服务端渲染，不强制通过浏览器 API 才阅读。
+
+翻译接口沿用请求 `{contentId,revision,targetLanguage,blockIds?}` 和返回 `{ok:true,data:{status,sourceLanguage,targetLanguage,revision,blocks,retryAfterMs}}`。兼容新增可选 `reasonCode` 和脱敏 `engine:{provider,configured,model,engineVersion,glossaryVersion}`；provider 为 workers-ai/openai-compatible/unconfigured，不返回凭据。状态仍为 ready/partial/pending/unconfigured/failed，准确语义、稳定块 ID 与术语结构见 translation.md。配置完整不等于真实引擎验收；翻译服务端只读取本站已发布内容，来源与权限错误使用相应 HTTP 状态。
 
 ## 账号与数据
 

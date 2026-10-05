@@ -1,4 +1,4 @@
-统一网站建站 Skill 1.3.2
+统一网站建站 Skill 1.4.0
 
 从仓库根目录README.md和AGENT_ENTRY.md开始，随后读取本目录SKILL.md。
 完整检出仓库同时保留同级site-reference-library目录；单独安装Skill时另指定参考库位置。
@@ -11,4 +11,7 @@ python unified-site-builder/scripts/site_package.py check <网站目录>
 python unified-site-builder/scripts/site_package.py pack <网站目录> --output <网站目录外的ZIP路径>
 
 结构检查通过不代表网站功能或部署通过。Cloudflare、Resend、AI与DNS需在实际环境配置并分别验证。
+翻译建站时实现双引擎：Cloudflare注入AI绑定，Node配置外部引擎；部署不临时改写翻译代码。
+翻译参考模块仅包含适配与术语保护，仍需接好内容校验、持久缓存、任务和前台；离线测试：
+node --test unified-site-builder/assets/translation/test_engine.mjs
 版本更新不会自动修改其他Agent、已部署网站或私有参考库。实际安装方式以宿主平台能力为准。

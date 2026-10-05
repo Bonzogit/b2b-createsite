@@ -1,6 +1,6 @@
 {
-  "version": "1.3.2",
-  "scope": "public specification and reference catalog",
+  "version": "1.4.0",
+  "scope": "public specification, reference catalog and translation adapter",
   "entry": "AGENT_ENTRY.md",
   "license": "MIT",
   "files": [
@@ -10,7 +10,7 @@
     },
     {
       "path": "AGENT_ENTRY.md",
-      "sha256": "1b3e3c0786dce9be35cbba8ae394aea4496793237fd8cb07731185a9a43963da"
+      "sha256": "aa7d66da3a25fda7325e86a19052f5d031cd533743d1f08c4a40a45f75f502a6"
     },
     {
       "path": "AGENTS.md",
@@ -18,7 +18,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "bfc849175adf45d8e8aa2c940f726d254a759ac027b3365429f86c76af51bfc6"
+      "sha256": "ccb5f3046761b5014f9e6562ac52c0b45c6ae1470e58f2e00783d89f42f49c14"
     },
     {
       "path": "LICENSE",
@@ -26,7 +26,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "aefa70a18d2fc16c6b8ea73692ffa23035029887013eb52cf77965914ec06b41"
+      "sha256": "6f279767fb4bbd10ac6abd678215349b20713229ad52cab1934f739aca61a6f7"
     },
     {
       "path": "site-reference-library/ckcc-b2b-candidates.json",
@@ -73,8 +73,16 @@
       "sha256": "a0bc02923f10112987e2a4ab2e8291a7a1ea905f45e52d1cc64d652117681471"
     },
     {
+      "path": "unified-site-builder/assets/translation/engine.mjs",
+      "sha256": "10c9db51508db5908fb3902576fb1d2eeea16d604b56c5fd2cc8b72a961ee32f"
+    },
+    {
+      "path": "unified-site-builder/assets/translation/test_engine.mjs",
+      "sha256": "d66356ab8febb9f094208b97b0c43e2cddc4a1c158386e3ac68d10bd4aa6b298"
+    },
+    {
       "path": "unified-site-builder/references/acceptance.md",
-      "sha256": "bb97f2d72915d012107fb6ca0db376f349f7e102225faa270e3f5925cc1b9733"
+      "sha256": "f1ee887a5a91732c195c9fdad5354f1c285729c20bfd8eb830a7a1349b7ce83c"
     },
     {
       "path": "unified-site-builder/references/admin-ui.md",
@@ -82,11 +90,11 @@
     },
     {
       "path": "unified-site-builder/references/business-contract.md",
-      "sha256": "9612f194235236205b819b3d467644e055e187229688180faa8fd93a694b6ad9"
+      "sha256": "25c9129193b753a149e9772240cfb511d8638c7f92ccc4f684f93c6bfe8a7f8c"
     },
     {
       "path": "unified-site-builder/references/cloudflare.md",
-      "sha256": "945c6d2afac48dfe58646c9899cdd52fd04df77ba06fc0ead96e7e23bcd210ba"
+      "sha256": "75a9a9b22ba06ff1dbd8b867f91656664c77520a8fb55042d1b65dd69d396e05"
     },
     {
       "path": "unified-site-builder/references/design.md",
@@ -94,7 +102,7 @@
     },
     {
       "path": "unified-site-builder/references/node-workbench.md",
-      "sha256": "8db1b7e6fe0a051a5e2c65b9d987f62020ecd7f692a0efaf985b6c7717813e33"
+      "sha256": "89d55cb32745fa14c1adcc6ad145c7f202a90c3b6f21def3fef4e1a99f28b075"
     },
     {
       "path": "unified-site-builder/references/portable-handoff.md",
@@ -114,7 +122,7 @@
     },
     {
       "path": "unified-site-builder/references/translation.md",
-      "sha256": "d8cae1dd7e95d06258fc19aed4c5506a826b7cdaf4a859649fc95bb9e4923f30"
+      "sha256": "9d29caff93269f08ceddcee079a558a295515134375e3cc9c86da2270bb2fef5"
     },
     {
       "path": "unified-site-builder/references/visual-production.md",
@@ -130,23 +138,23 @@
     },
     {
       "path": "unified-site-builder/SKILL.md",
-      "sha256": "1a5b7c05dbf79e1e1ff5749cce95ff31e75f0924e02c311f6bb8205928891053"
+      "sha256": "83cfb8082c779190078e4211c34515d53d77189a42abe46d5736f23dcfdaf792"
     },
     {
       "path": "unified-site-builder/使用说明.txt",
-      "sha256": "f76423fe023d068040c74e43e396382a46edc0d1d48dac3821931765e83c395e"
+      "sha256": "668c8c7d9945f3b3dd3202171dc12926bee30072a42e48e97bff87e0ace298e5"
     },
     {
       "path": "unified-site-builder/验证结果.txt",
-      "sha256": "e7bddb1e583d2fa3ca9d17ca2362c97c6bcb8ee3cac28cb7ffd286cb5d32f815"
+      "sha256": "87763792c75e2aaab4f6a73b5a8ba8b92b4aad2ecd8f8f95b6e43737a6c8679b"
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "fd50f5173ae08f34f6c48302ba2bf40fa1f120e2e18a1d2944bd0b042592de9a"
+      "sha256": "4a09268e3ba31f039a59a4c5292b1258689ca9805ee6feb2e938a7ba86fb2924"
     },
     {
       "path": "VERSION",
-      "sha256": "58fc9eaec0da89f3f2847202466109d098ebfd09a89bdf18894f9a98786a2994"
+      "sha256": "382e5778205c344619abd0106bc48587a3a849c7e94c80cb8e329754de68b1f6"
     }
   ]
 }

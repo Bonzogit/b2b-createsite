@@ -4,14 +4,14 @@
 
 A portable specification, reference catalog, and offline package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.3.2**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.4.0**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
 - 通用建站框架：首页、产品或服务、企业能力、合作流程、文章和询盘等内容职责与内容深度。
 - 按基础框架、参考设计、图片准备与生成、页面实现、实际验收的顺序完成网站。
 - 中文真实后台约定、业务数据与接口协议。
-- Resend 邮件通知、WhatsApp、文章发布、按需翻译与缓存规则。
+- Resend 邮件通知、WhatsApp、文章发布、按需翻译与缓存规则；双翻译引擎的运行时注入、术语保护参考模块及测试。
 - Node 工作台及 Cloudflare 的不同部署要求。
 - 整站参考或多个网站模块组合的设计方法。
 - 45 条 Blocksy 官方模板介绍索引、37 条 CKCC 企业站候选目录，以及离线包结构检查和打包工具。候选目录待实际画面复核。
@@ -37,6 +37,7 @@ A portable specification, reference catalog, and offline package checker for AI-
 | [基础框架](unified-site-builder/references/site-foundation.md) | 页面职责、内容、询盘方向 |
 | [图片制作](unified-site-builder/references/visual-production.md) | 素材规划、实际生成与页面验证 |
 | [业务接口](unified-site-builder/references/business-contract.md) | 后台、接口及数据行为 |
+| [翻译规范](unified-site-builder/references/translation.md) | 双引擎、术语保护、内容块、缓存与验收 |
 | [参考库](site-reference-library/design-library.json) | 45 条候选与来源链接 |
 | [中文参考目录](site-reference-library/参考库总览.html) | 下载后可在浏览器打开的目录 |
 | [CKCC 企业站候选](site-reference-library/ckcc-b2b-candidates.json) | 37 个行业案例的目录链接、演示地址与核对状态 |
@@ -58,6 +59,7 @@ Python 3.11+，检查器仅使用标准库，不执行目标网站代码、不�
 python -m unittest discover -s unified-site-builder/scripts -p "test_*.py" -v
 python unified-site-builder/scripts/site_package.py check /path/to/website
 python unified-site-builder/scripts/site_package.py pack /path/to/website --output /path/outside/website.zip
+node --test unified-site-builder/assets/translation/test_engine.mjs
 ```
 
 结构通过不能替代真实后台、询盘保存、邮件收件、翻译和上线测试。

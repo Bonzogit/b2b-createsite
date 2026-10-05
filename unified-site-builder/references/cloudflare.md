@@ -6,7 +6,7 @@
 Workers 工程：
 - 完整代码、素材、wrangler.json、依赖锁、迁移和测试；runtime=cloudflare-workers。main 与 assets.directory 必须实际存在，compatibility_date 明确。
 - 用合适的 D1 或 SQLite Durable Object 保存内容/询盘，媒体/附件使用适当持久存储并隔离访问；列明资源绑定与迁移，不硬编码真实凭据。
-- AI 服务端绑定，邮件 Secret。Node 兼容开关不等于普通服务器运行环境，不能把本地 SQLite、child_process 构建、长期进程或本地文件写入当持久化。
+- AI 服务端绑定，邮件 Secret。源码的翻译模块已具备两种引擎，Worker 引导代码注入 env.AI，Wrangler 声明 ai.binding；按 [翻译规范](translation.md) 实现保护、额度与持久缓存，不依赖部署适配器临时改写。Node 兼容开关不等于普通服务器运行环境，不能把本地 SQLite、child_process 构建、长期进程或本地文件写入当持久化。
 - 文章返回带正文的 HTML 或采用经验证的原子发布任务，不能指向不存在的构建钩子。
 - 后台任务使用平台支持的持久机制，不假设响应结束后定时器继续。
 - /healthz、/admin/ 与统一接口一致；敏感响应不进共享缓存。
