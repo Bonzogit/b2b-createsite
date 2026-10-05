@@ -75,3 +75,12 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 ## 技能更新与同步
 
 更新 Skill 后，运行相关检查，同步 VERSION、更新记录和 manifest.json，然后提交并推送到此 GitHub 仓库。无法推送时明确报告未同步，不能只提供本地 ZIP 就声称 GitHub 已更新。
+
+## 查看历史版本
+
+每次发布后保留 `versions/v<版本号>` 分支作为固定快照；main 持续维护最新版，旧版本不覆盖、不强推。
+
+- [1.5.0](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.5.0)
+- [1.4.1](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.4.1)
+- [1.3.2](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.3.2)
+- [比较 1.4.1 与 1.5.0](https://github.com/Bonzogit/b2b-createsite/compare/versions/v1.4.1...versions/v1.5.0)

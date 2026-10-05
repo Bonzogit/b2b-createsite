@@ -11,3 +11,5 @@ This repository contains a portable website-building specification and reference
 
 
 - The user requires every Skill update to be committed and pushed to this GitHub repository after relevant validation. Keep VERSION, CHANGELOG.md, VALIDATION.md and manifest.json current; report any failed synchronization explicitly.
+
+- After each validated Skill release is pushed to main, create versions/v<version> at its release commit. Preserve existing version branches as fixed snapshots; never overwrite or force-push them. Include current and historical version links in delivery notes.
