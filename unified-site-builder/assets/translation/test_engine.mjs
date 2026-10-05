@@ -44,12 +44,12 @@ test('Workers AI wins over external config and uses one synchronous call per blo
 test('all default language directions are routed with language codes', async () => {
   let calls = 0;
   const engine = initTranslationEngine({ AI: { run: async (_, input) => { calls++; return { translated_text: input.text }; } } });
-  for (const sourceLanguage of ['en', 'zh', 'es', 'ar', 'ru']) {
-    for (const targetLanguage of ['en', 'zh', 'es', 'ar', 'ru']) {
+  for (const sourceLanguage of ['en', 'zh', 'es', 'ar', 'ru', 'fr', 'de', 'pt']) {
+    for (const targetLanguage of ['en', 'zh', 'es', 'ar', 'ru', 'fr', 'de', 'pt']) {
       await engine.callEngine(['Hello'], { sourceLanguage, targetLanguage });
     }
   }
-  assert.equal(calls, 20); // Routing only; mocks do not prove model language quality.
+  assert.equal(calls, 56); // Routing only; mocks do not prove model language quality.
 });
 
 test('brands, repeated model codes, dimensions, units, email and URL survive translation', () => {

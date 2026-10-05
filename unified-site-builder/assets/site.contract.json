@@ -2,11 +2,39 @@
   "contractVersion": "1.0",
   "runtime": "node",
   "sourceLanguage": "en",
-  "languages": ["en", "zh", "es", "ar", "ru"],
+  "languages": [
+    "en",
+    "zh",
+    "es",
+    "ar",
+    "ru",
+    "fr",
+    "de",
+    "pt"
+  ],
   "publicDir": "public",
   "entry": "server.mjs",
   "adminPath": "/admin/",
   "healthPath": "/healthz",
-  "features": {"cms": true, "articles": true, "inquiries": true, "translation": "on-demand"},
-  "integrations": {"email": "unconfigured", "whatsapp": "unconfigured", "translation": "unconfigured"}
+  "features": {
+    "cms": true,
+    "articles": true,
+    "inquiries": true,
+    "translation": "on-demand"
+  },
+  "integrations": {
+    "email": "unconfigured",
+    "whatsapp": "unconfigured",
+    "translation": "unconfigured"
+  },
+  "translationPolicy": {
+    "initialTranslations": [
+      "zh"
+    ],
+    "otherLanguages": "on-demand",
+    "sourceFingerprint": "source-v1:sha256-text-context",
+    "seedImport": "initialization-only",
+    "missingOrStale": "engine-then-persistent-cache",
+    "unconfigured": "current-translations-then-source"
+  }
 }

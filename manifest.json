@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.4.1",
   "scope": "public specification, reference catalog and translation adapter",
   "entry": "AGENT_ENTRY.md",
   "license": "MIT",
@@ -10,7 +10,7 @@
     },
     {
       "path": "AGENT_ENTRY.md",
-      "sha256": "aa7d66da3a25fda7325e86a19052f5d031cd533743d1f08c4a40a45f75f502a6"
+      "sha256": "aa6391a4ea614fe029fd380cb913f2e91e05b44923367e3849c88a1403afcb71"
     },
     {
       "path": "AGENTS.md",
@@ -18,7 +18,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "ccb5f3046761b5014f9e6562ac52c0b45c6ae1470e58f2e00783d89f42f49c14"
+      "sha256": "59a95a0128034c4b804e3b184787f470ffa6239e45ba46be66bcd44afa8adc90"
     },
     {
       "path": "LICENSE",
@@ -26,7 +26,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "6f279767fb4bbd10ac6abd678215349b20713229ad52cab1934f739aca61a6f7"
+      "sha256": "cd23428dc7b932fcef68b892069005cec9955e5029bac37438f410d4871d2e64"
     },
     {
       "path": "site-reference-library/ckcc-b2b-candidates.json",
@@ -70,27 +70,35 @@
     },
     {
       "path": "unified-site-builder/assets/site.contract.json",
-      "sha256": "a0bc02923f10112987e2a4ab2e8291a7a1ea905f45e52d1cc64d652117681471"
+      "sha256": "eb269ea6b0646553ee8f09eff61e5e8f73dcbc2ac0c4491b5212dcd3fbddf192"
     },
     {
       "path": "unified-site-builder/assets/translation/engine.mjs",
-      "sha256": "10c9db51508db5908fb3902576fb1d2eeea16d604b56c5fd2cc8b72a961ee32f"
+      "sha256": "106ef09007ff3d21560a9b300c86f40cb1219dbc3c09471fcbaf65e9aad3a770"
+    },
+    {
+      "path": "unified-site-builder/assets/translation/seed.mjs",
+      "sha256": "df774c5e7b681cec29c0cca00a34157d241deff3336872f626d943011e7ca11e"
     },
     {
       "path": "unified-site-builder/assets/translation/test_engine.mjs",
-      "sha256": "d66356ab8febb9f094208b97b0c43e2cddc4a1c158386e3ac68d10bd4aa6b298"
+      "sha256": "9b8cc259a6855fda268f374998faf9f35bd1b1ce3b0f49981c156414d1fca41a"
+    },
+    {
+      "path": "unified-site-builder/assets/translation/test_seed.mjs",
+      "sha256": "ac00687b11d26637f8cb02cbeb06152b16d0381175e37833d3a757de7705f310"
     },
     {
       "path": "unified-site-builder/references/acceptance.md",
-      "sha256": "f1ee887a5a91732c195c9fdad5354f1c285729c20bfd8eb830a7a1349b7ce83c"
+      "sha256": "0f0ed7f4ad57a76f98b0e3baeaa99c8e414a57aec312c07681dfccb8a65a3802"
     },
     {
       "path": "unified-site-builder/references/admin-ui.md",
-      "sha256": "1a3cac4e9cfdcd00b7ca0d89409dd2c7f850b51539f6abe59768fae54f8a0b98"
+      "sha256": "8466c0a20aa4cc8d78a1ddc4bee7a2d3c886cbafcdd1aa1de923dc118967a4ea"
     },
     {
       "path": "unified-site-builder/references/business-contract.md",
-      "sha256": "25c9129193b753a149e9772240cfb511d8638c7f92ccc4f684f93c6bfe8a7f8c"
+      "sha256": "d083b712a6e3415cf71f3836fad4a99c67f7a9138ff02eccd8b5cd385b179a84"
     },
     {
       "path": "unified-site-builder/references/cloudflare.md",
@@ -122,7 +130,7 @@
     },
     {
       "path": "unified-site-builder/references/translation.md",
-      "sha256": "9d29caff93269f08ceddcee079a558a295515134375e3cc9c86da2270bb2fef5"
+      "sha256": "f3a9934cec6c02332a1d79c9dcfa70d8947abfca47bf96878ae052d541f6cb49"
     },
     {
       "path": "unified-site-builder/references/visual-production.md",
@@ -138,23 +146,23 @@
     },
     {
       "path": "unified-site-builder/SKILL.md",
-      "sha256": "83cfb8082c779190078e4211c34515d53d77189a42abe46d5736f23dcfdaf792"
+      "sha256": "8e685319e57b6709a206858daa315f4620d56de9cad8b237d12b28305eb72647"
     },
     {
       "path": "unified-site-builder/使用说明.txt",
-      "sha256": "668c8c7d9945f3b3dd3202171dc12926bee30072a42e48e97bff87e0ace298e5"
+      "sha256": "40ff090dff02c41044e681b3decd46866c79c882d1087ebf7315fd124ae26adf"
     },
     {
       "path": "unified-site-builder/验证结果.txt",
-      "sha256": "87763792c75e2aaab4f6a73b5a8ba8b92b4aad2ecd8f8f95b6e43737a6c8679b"
+      "sha256": "ff26fa13ea6e8fe5e5c02318a31c73932664bb965a52451eac4c59d95f2cdf1d"
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "4a09268e3ba31f039a59a4c5292b1258689ca9805ee6feb2e938a7ba86fb2924"
+      "sha256": "247028ba53c8e470a1aacfa15b68c9332cb7d31a8b2ba4bad87ea454e21811d9"
     },
     {
       "path": "VERSION",
-      "sha256": "382e5778205c344619abd0106bc48587a3a849c7e94c80cb8e329754de68b1f6"
+      "sha256": "e031d4452dc5efd091e2467b55e90ac2a30d02e9316f2e45123d812d89b1093b"
     }
   ]
 }

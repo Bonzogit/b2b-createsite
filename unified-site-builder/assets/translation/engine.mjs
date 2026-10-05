@@ -1,6 +1,6 @@
 // Portable engine only. The site owns publication checks, cache, durable tasks and quotas.
 export const DEFAULT_WORKERS_MODEL = '@cf/meta/m2m100-1.2b';
-const DEFAULT_LANGUAGES = ['en', 'zh', 'es', 'ar', 'ru'];
+const DEFAULT_LANGUAGES = ['en', 'zh', 'es', 'ar', 'ru', 'fr', 'de', 'pt'];
 const ALLOWED_ERRORS = new Set(['unauthorized', 'quota_exceeded', 'rate_limited', 'timeout', 'provider_error']);
 
 export class TranslationError extends Error {

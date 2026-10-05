@@ -12,7 +12,7 @@
 
 ## 内容与管理
 
-后台 /admin/，界面中文。默认英文源内容，用户可以指定其他源语言。产品/服务、分类、页面、文章、媒体、询盘、联系设置、翻译状态与账户按业务启用。不为服务网站硬套工厂或库存字段。
+后台 /admin/，界面中文。默认英文源内容、完整初始中文译文和 en/zh/es/ar/ru/fr/de/pt 8种语言选项；其余6种语言按需生成。用户可以指定其他源语言。初始中文按稳定块及源摘要关联；新增/改文缺失中文也调用统一翻译接口并缓存，见 translation.md。产品/服务、分类、页面、文章、媒体、询盘、联系设置、翻译状态与账户按业务启用。不为服务网站硬套工厂或库存字段。
 
 文章字段：id、slug、title、summary、body、cover、categoryId、tags、author、sortOrder、pinned、status、sourceLanguage、revision、createdAt、updatedAt、publishedAt。富文本用结构化块或经服务端白名单清洗的 HTML，不执行存储脚本。支持草稿、鉴权预览、发布、修改、下架、排序与删除确认。
 
