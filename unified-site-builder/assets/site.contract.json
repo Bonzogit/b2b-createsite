@@ -37,7 +37,7 @@
     "missingOrStale": "engine-then-persistent-cache",
     "unconfigured": "current-translations-then-source"
   },
-  "skillVersion": "1.5.0",
+  "skillVersion": "1.6.0",
   "translationContract": {
     "version": 2,
     "coreVersion": "unified-translation-v2:protected-v3",

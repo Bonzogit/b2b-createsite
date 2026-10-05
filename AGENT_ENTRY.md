@@ -1,6 +1,6 @@
 # Agent 读取入口
 
-当前规范版本见 [VERSION](VERSION)。本仓库是建站规范、参考数据和离线工具，不是已经接通的后台服务。
+当前规范版本见 [VERSION](VERSION)。本仓库提供建站规范、参考数据、离线工具及可运行的基础后台代码。新工程从对应运行适配开始，再按客户业务完成设计和集成。
 
 ## 按任务读取
 
@@ -9,7 +9,7 @@
 1. 阅读 [Skill 主入口](unified-site-builder/SKILL.md)。
 2. 首次接收阅读 [跨平台交接](unified-site-builder/references/portable-handoff.md)；只要求学习时止于读取和状态说明。
 3. 新建网站先阅读 [通用基础框架](unified-site-builder/references/site-foundation.md)，规划网站目标、页面职责、内容、后台管理项和询盘路径。
-4. 确定运行目标，读取 [Node](unified-site-builder/references/node-workbench.md) 或 [Cloudflare](unified-site-builder/references/cloudflare.md)，以及 [业务接口](unified-site-builder/references/business-contract.md)、[后台界面](unified-site-builder/references/admin-ui.md)、[邮件](unified-site-builder/references/resend-email.md)、[翻译](unified-site-builder/references/translation.md)。默认交付英文原文、完整初始中文及8种语言选项；其他6种和新增/修改内容缺失中文按需翻译。初始中文按块关联源摘要，先读有效译文再判断引擎。翻译在源码中实现双引擎、运行时注入、术语保护与持久缓存，部署配置绑定与变量；参考模块和离线测试不替代网站实际接入。
+4. 先读 [可运行后台与部署 profile](unified-site-builder/references/runtime-profiles.md)，用 create_site.py 创建空工程；已有项目沿用原数据和更新流程。确定运行目标，读取 [Node](unified-site-builder/references/node-workbench.md) 或 [Cloudflare](unified-site-builder/references/cloudflare.md)，以及 [业务接口](unified-site-builder/references/business-contract.md)、[后台界面](unified-site-builder/references/admin-ui.md)、[邮件](unified-site-builder/references/resend-email.md)、[翻译](unified-site-builder/references/translation.md)。默认交付英文原文、完整初始中文及8种语言选项；其他6种和新增/修改内容缺失中文按需翻译。初始中文按块关联源摘要，先读有效译文再判断引擎。翻译在源码中实现双引擎、运行时注入、术语保护与持久缓存，部署配置绑定与变量；参考模块和离线测试不替代网站实际接入。
 5. 阅读 [设计](unified-site-builder/references/design.md)、[参考选择](unified-site-builder/references/style-selection.md)、[Blocksy 参考库](site-reference-library/design-library.json) 和 [CKCC 企业站候选](site-reference-library/ckcc-b2b-candidates.json)。
 6. 按 [图片制作](unified-site-builder/references/visual-production.md) 准备或生成实际素材，先实现并查看带素材的首页与详情样板，再扩展全站。
 7. 按 [验收](unified-site-builder/references/acceptance.md) 完成实际检查、修正和交付。

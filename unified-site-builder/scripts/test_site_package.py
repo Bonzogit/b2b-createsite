@@ -116,6 +116,18 @@ class PackageTests(unittest.TestCase):
         self.assertTrue(report['structurePassed'], report)
         self.assertTrue(any('NOT verified' in w for w in report['warnings']))
 
+    def test_cloudflare_assets_equivalent_directory(self):
+        self.contract(runtime='cloudflare-workers',entry='worker.mjs')
+        self.write('worker.mjs','export default {};')
+        self.json('wrangler.json',{'main':'worker.mjs','assets':{'directory':'./public'},'compatibility_date':'2026-10-05'})
+        self.assertTrue(sp.inspect(self.root)[0]['structurePassed'])
+
+    def test_cloudflare_assets_escape_rejected(self):
+        self.contract(runtime='cloudflare-workers',entry='worker.mjs')
+        self.write('worker.mjs','export default {};')
+        self.json('wrangler.json',{'main':'worker.mjs','assets':{'directory':'../public'},'compatibility_date':'2026-10-05'})
+        self.assertFalse(sp.inspect(self.root)[0]['structurePassed'])
+
     def test_bad_cloudflare_assets(self):
         self.contract(runtime='cloudflare-workers')
         self.json('wrangler.json', {'main': 'server.mjs', 'assets': {'directory': 'missing'}, 'compatibility_date': '2026-10-02'})

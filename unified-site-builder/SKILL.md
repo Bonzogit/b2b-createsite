@@ -2,12 +2,12 @@
 name: unified-site-builder
 description: 创建或改造具有真实中文后台的企业展示与询盘网站，统一联系方式、邮件通知、文章发布、按需翻译和部署交付；根据产品及用户参考库选择不同视觉与页面组织方式。适用于统一建站、参考风格整理或工作台部署包；仅咨询概念时不自行生成网站。
 metadata:
-  version: "1.5.0"
+  version: "1.6.0"
 ---
 
 # 统一网站建站
 
-让不同 Agent 交付相同的业务行为与工程协议，按行业自由设计前台。用户提供产品或服务名称即可开始；已有工程先检查再改，不重置线上数据。本 Skill 是实施规范、模板和离线检查工具，不包含已实现的通用 CMS，不会自动提供云账号或翻译凭据。
+让不同 Agent 交付相同的业务行为与工程协议，按行业自由设计前台。用户提供产品或服务名称即可开始；已有工程先检查再改，不重置线上数据。本 Skill 包含实施规范、检查工具和可运行的基础后台参考代码；客户内容、前台设计及外部服务仍需按项目完成，不会自动提供云账号或翻译凭据。
 
 ## 平台无关的执行方式
 
@@ -20,6 +20,10 @@ metadata:
 ## 翻译公共核心与工作台兼容
 
 建站或升级翻译时先读 [翻译工作台协议 v2](references/translation-workbench-v2.md)。使用 install_translation.py 安装同版本公共模块，实际接入词汇库、持久存储和前台；新版安装包声明 translationContract v2。旧包兼容通过不等于新协议验收。默认部署沿用用户 Ubuntu 工作台；仅用户指定 Cloudflare 时生成其原生包。
+
+## 已验证后台与运行目标
+
+新建网站先读 [后台与部署 profile](references/runtime-profiles.md)，用 create_site.py 创建 Node 或 Cloudflare 基础工程，复用业务接口，再按客户产品扩展内容、前台和集成。服务器与 Cloudflare 使用同一后台代码，入口与持久存储各自适配；工作台接收对应 profile 并检查包，不把普通 Node 包当 Worker。
 
 ## 一致的业务行为
 
@@ -40,7 +44,7 @@ metadata:
 
 先读 [通用建站基础框架](references/site-foundation.md)，明确目标买家、完整页面职责、内容深度、询盘路径和后台管理项，记录到 docs/SITE-BRIEF.md。用户只给产品或业务，也应完成基础规划，不要求重复整份提示词。页面须帮助客户选型和判断合作，展开适用的场景、材料、规格、采购与服务信息；信息覆盖标准见基础框架。
 
-检查已有资料、项目、路由、API、存储与部署。读取 [业务与接口](references/business-contract.md)、[后台界面](references/admin-ui.md)、[按需翻译](references/translation.md) 和 [Resend 邮件后台](references/resend-email.md)。翻译的适配参考代码与离线测试位于 assets/translation/，复用时接好内容校验、持久缓存、任务和前台，不把参考模块当完整服务。优先复用用户已提供并验证的公共核心；规范本身不包含已实现的通用后台。
+检查已有资料、项目、路由、API、存储与部署。读取 [业务与接口](references/business-contract.md)、[后台界面](references/admin-ui.md)、[按需翻译](references/translation.md) 和 [Resend 邮件后台](references/resend-email.md)。翻译的适配参考代码与离线测试位于 assets/translation/，复用时接好内容校验、持久缓存、任务和前台，不把参考模块当完整服务。优先复用用户已提供并验证的公共核心；可运行基础后台的能力及未覆盖项见 runtime-profiles.md。
 
 - 普通服务器/腾讯云工作台：读 [Node 部署协议](references/node-workbench.md)。
 - Cloudflare：读 [Cloudflare 部署协议](references/cloudflare.md)，实际适配其运行与持久化环境。

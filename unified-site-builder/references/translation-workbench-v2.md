@@ -1,6 +1,6 @@
 # 翻译核心与工作台协议 v2
 
-本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.5.0、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
+本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.0、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
 
 ## 各 Agent 的执行入口
 
@@ -24,7 +24,7 @@ getAuthored 返回本站初始/人工译文。初始中文按实际全部初始�
 
 Ubuntu 默认走原 Node 工作台路径，外部翻译服务需实际配置；Node 无法直接读取 Worker 的 env.AI。指定 Cloudflare 时生成原生 Worker 包：根目录 site.contract.json、wrangler.json、完整源码/公共模块、public/、锁文件、词汇库和初始中文。
 
-工作台新增 v2 原生路径当前接受 AI + SQLite Durable Object 包，保留声明的对象类与迁移。统一入口 /healthz、/admin/、匿名 /api/v1/admin/overview 返回401；后台首次账号读取 SITE_ADMIN_PASSWORD。需要 D1/R2、其他资源或额外绑定时先明确适配，不转为静态发布。不要把普通 Node 工程改个 runtime 字段就当 Worker。
+工作台新增 v2 原生路径当前接受 AI + SQLite Durable Object 包；1.6 的可运行 profile 见 runtime-profiles.md，保留声明的对象类与迁移。统一入口 /healthz、/admin/、匿名 /api/v1/admin/overview 返回401；后台首次账号读取 SITE_ADMIN_PASSWORD。需要 D1/R2、其他资源或额外绑定时先明确适配，不转为静态发布。不要把普通 Node 工程改个 runtime 字段就当 Worker。
 
 旧包仍走已核对的旧模板兼容路径；旧包部署成功不等于通过 v2。原项目更新使用工作台待验证版本→检查→正式切换→失败回滚流程。存储或迁移声明变化时停止更新，要求明确迁移；不重新创建项目。
 

@@ -13,7 +13,7 @@ def install(project):
         item['sha256']=hashlib.sha256(target.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
     glossary=project/cfg['glossaryPath'];glossary.parent.mkdir(parents=True,exist_ok=True)
     if not glossary.exists():glossary.write_text(json.dumps({'version':'1','reviewStatus':'unreviewed','entries':[]},indent=2),encoding='utf-8')
-    contract['skillVersion']='1.5.0';contract['translationContract']=cfg
+    contract['skillVersion']='1.6.0';contract['translationContract']=cfg
     path.write_text(json.dumps(contract,ensure_ascii=False,indent=2),encoding='utf-8')
     return {'coreInstalled':True,'runtimeConnected':False,'glossaryPath':cfg['glossaryPath'],
       'initialChinesePath':cfg['initialChinesePath'],'next':'Implement persistent repository, generate glossary and Chinese records, then run real site acceptance'}

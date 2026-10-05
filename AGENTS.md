@@ -1,6 +1,6 @@
 # Repository guidance
 
-This repository contains a portable website-building specification and reference catalog. It does not contain a deployed website or shared CMS.
+This repository contains a portable website-building specification and reference catalog. It includes a runnable backend reference with Node and Cloudflare Workers adapters, not a completed customer website or hosted shared CMS.
 
 - For a website-building task, start with AGENT_ENTRY.md and follow the task-specific links.
 - For changes to this repository, edit the maintained Skill and reference sources rather than generated customer websites.

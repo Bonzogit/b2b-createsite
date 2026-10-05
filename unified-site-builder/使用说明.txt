@@ -1,8 +1,8 @@
-统一网站建站 Skill 1.5.0
+统一网站建站 Skill 1.6.0
 
 从仓库根目录README.md和AGENT_ENTRY.md开始，随后读取本目录SKILL.md。
 完整检出仓库同时保留同级site-reference-library目录；单独安装Skill时另指定参考库位置。
-这是规范、模板和离线检查工具，不是已实现的通用CMS。后台和接口统一，前台可整站或按模块参考不同网站。
+包含规范、检查工具和可运行基础后台参考。后台和接口统一，前台可整站或按模块参考不同网站。
 顺序：基础框架 → 参考设计 → 图片准备与生成 → 页面和功能实现 → 实际验收 → 打包交付。
 基础框架先规划各页面内容深度，参考库负责视觉选择，随后准备并接入实际素材。已有项目仅改本次范围。
 
@@ -13,8 +13,10 @@ python unified-site-builder/scripts/site_package.py pack <网站目录> --output
 结构检查通过不代表网站功能或部署通过。Cloudflare、Resend、AI与DNS需在实际环境配置并分别验证。
 翻译建站时实现双引擎：Cloudflare注入AI绑定，Node配置外部引擎；部署不临时改写翻译代码。
 默认英文原文、完整初始中文及en/zh/es/ar/ru/fr/de/pt；其余6种及新增/修改内容缺失中文按需翻译。无AI时有效中文和已有缓存可读。
-翻译参考模块包含适配、术语保护和初始译文身份/导入候选辅助，仍需接好内容校验、持久缓存、任务和前台；离线测试：
+生成器的基础后台已接通内容校验、持久缓存、初始中文和人工译文。自行改造其他工程时须完成这些接线和前台；离线测试：
 node --test unified-site-builder/assets/translation/test_engine.mjs unified-site-builder/assets/translation/test_seed.mjs unified-site-builder/assets/translation/test_resolver.mjs
 版本更新不会自动修改其他Agent、已部署网站或私有参考库。实际安装方式以宿主平台能力为准。
 
 新版翻译契约须先读取 references/translation-workbench-v2.md，安装公共核心并实际接好持久仓库、词汇库与前台。
+
+新建基础工程：python <skill>/scripts/create_site.py <空目录> --runtime node 或 cloudflare-workers。先读 references/runtime-profiles.md，再按客户业务、素材和设计完成网站。

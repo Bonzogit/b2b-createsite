@@ -177,7 +177,12 @@ def inspect(root, allow_legacy=False):
     elif runtime == 'cloudflare-workers':
         config = read_json('wrangler.json')
         assets = config.get('assets')
-        if config.get('main') != entry or not isinstance(assets, dict) or assets.get('directory') != public:
+        try:
+            directory=assets.get('directory') if isinstance(assets,dict) else None
+            if isinstance(directory,str) and directory.startswith('./'):directory=directory[2:]
+            if config.get('main')!=entry or project_path(directory).resolve()!=public_path.resolve():
+                problem('wrangler.json main/assets.directory must match contract')
+        except (ValueError,TypeError,AttributeError):
             problem('wrangler.json main/assets.directory must match contract')
         if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', str(config.get('compatibility_date', ''))):
             problem('wrangler.json requires compatibility_date')

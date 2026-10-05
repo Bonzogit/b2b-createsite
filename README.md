@@ -2,9 +2,9 @@
 
 为不同 AI Agent 提供同一套 B2B 询盘网站建设规范：**先规划基础内容，后台与接口统一，展示站按品牌设计。**
 
-A portable specification, reference catalog, and offline package checker for AI-built B2B inquiry websites.
+A portable specification, reference catalog, runnable backend foundation, and package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.5.0**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.6.0**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
@@ -16,7 +16,7 @@ A portable specification, reference catalog, and offline package checker for AI-
 - 整站参考或多个网站模块组合的设计方法。
 - 45 条 Blocksy 官方模板介绍索引、37 条 CKCC 企业站候选目录，以及离线包结构检查和打包工具。候选目录待实际画面复核。
 
-本仓库提供规范、模板和检查工具，**不包含已实现的通用 CMS、现成主题库或云端服务凭据**。生成结果需要功能、视觉和部署验收。
+本仓库提供规范、参考库、检查工具和可运行的基础后台：同一业务接口分别运行在 Node 服务器或 Cloudflare Workers + SQLite Durable Object。新建工程从 [运行目标与后台](unified-site-builder/references/runtime-profiles.md) 开始；客户内容、前台设计及邮件等外部集成仍按项目完成和验收。仓库不包含云端服务凭据。
 
 ## 给其他 Agent 使用
 

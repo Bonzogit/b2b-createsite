@@ -1,0 +1,17 @@
+import { DurableObject } from 'cloudflare:workers';
+import { initialize,createApplication } from './lib/app.mjs';
+import seed from './seed/content.json';
+import authored from './seed/translations.zh.json';
+import glossary from './config/translation-glossary.json';
+export class UnifiedSite extends DurableObject{
+ constructor(ctx,env){super(ctx,env);this.ctx=ctx;this.env=env;const sql=ctx.storage.sql;
+  sql.exec('CREATE TABLE IF NOT EXISTS documents (part INTEGER PRIMARY KEY, text TEXT NOT NULL)');
+  sql.exec('CREATE TABLE IF NOT EXISTS files (id TEXT, part INTEGER, bytes BLOB NOT NULL, PRIMARY KEY(id,part))');
+  const read=()=>{const chunks=sql.exec('SELECT text FROM documents ORDER BY part').toArray();return chunks.length?JSON.parse(chunks.map(v=>v.text).join('')):null;};
+  const write=db=>{const raw=JSON.stringify(db);sql.exec('DELETE FROM documents');for(let i=0;i<raw.length;i+=120000)sql.exec('INSERT INTO documents VALUES (?,?)',i/120000,raw.slice(i,i+120000));};
+  const storage={read:async()=>read(),initialize:async value=>ctx.storage.transactionSync(()=>{if(!read())write(value);}),mutate:async fn=>ctx.storage.transactionSync(()=>{const d=read();const result=fn(d);if(result?.then)throw Error('Storage mutation must be synchronous');write(d);return structuredClone(result);}),putFile:async(id,bytes)=>ctx.storage.transactionSync(()=>{sql.exec('DELETE FROM files WHERE id=?',id);for(let i=0;i<bytes.length;i+=65536)sql.exec('INSERT INTO files VALUES (?,?,?)',id,i/65536,bytes.slice(i,i+65536).buffer);}),getFile:async id=>{const parts=sql.exec('SELECT bytes FROM files WHERE id=? ORDER BY part',id).toArray().map(v=>new Uint8Array(v.bytes));const out=new Uint8Array(parts.reduce((n,v)=>n+v.length,0));let at=0;for(const part of parts){out.set(part,at);at+=part.length;}return out;}};
+  this.ready=ctx.blockConcurrencyWhile(()=>initialize(storage,seed,env,authored));this.app=createApplication({storage,env,glossary,release:env.SITE_RELEASE||'1.6.0',asset:request=>{const url=new URL(request.url);if(url.pathname.endsWith('/')){url.pathname+='index.html';request=new Request(url,request);}return env.ASSETS.fetch(request);}});
+ }
+ async fetch(request){await this.ready;return this.app(request);}
+}
+export default{async fetch(request,env){const u=new URL(request.url);if(u.pathname.startsWith('/assets/')||u.pathname==='/admin/'||u.pathname==='/contact/'){if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405});if(u.pathname.endsWith('/'))u.pathname+='index.html';const result=await env.ASSETS.fetch(new Request(u,request));return new Response(result.body,{status:result.status,headers:{...Object.fromEntries(result.headers),'cache-control':u.pathname.startsWith('/admin/')?'no-store':'public, max-age=60'}});}if(u.pathname.split('/').some(v=>v.startsWith('.')))return new Response('Not found',{status:404});if(!['GET','HEAD'].includes(request.method)){if(Number(request.headers.get('content-length')||0)>7*1024*1024)return new Response('Too large',{status:413});const reader=request.body?.getReader();if(reader){const parts=[];let size=0;for(;;){const {value,done}=await reader.read();if(done)break;size+=value.length;if(size>7*1024*1024){await reader.cancel();return new Response('Too large',{status:413});}parts.push(value);}const bytes=new Uint8Array(size);let at=0;for(const v of parts){bytes.set(v,at);at+=v.length;}request=new Request(request,{body:bytes});}}return env.SITE.get(env.SITE.idFromName('main')).fetch(request);}};

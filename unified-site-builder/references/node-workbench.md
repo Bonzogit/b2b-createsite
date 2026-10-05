@@ -1,6 +1,7 @@
 # Node / 普通服务器工作台
 
-基于用户工作台 1.8.2 已知协议；工作台变化时核对实际约定。Skill 安装不修改工作台。
+基于用户工作台当前已验证的 Node 协议；工作台变化时核对实际约定。Skill 安装不修改工作台。
+新建优先采用 runtime-profiles.md 的 unified-node-v1 基础后台，工作台首次生成后台密码，并在原项目更新时保留账号。
 根目录包含 package.json、package-lock.json、deploy.json、site.contract.json、server.mjs、lib/、public/、tests/、docs/。业务模块可细分。
 默认 type=module、npm start=node server.mjs，Node 22 兼容；需要更高小版本时明确并核实目标环境。交付前生成公开页面，默认部署不 build。文章发布依赖的构建工具必须实际在运行环境中，不假设 devDependencies 始终存在。
 复制 assets/deploy.node.json 为 deploy.json，不发明工作台未支持的自动建库或安装模型字段。
