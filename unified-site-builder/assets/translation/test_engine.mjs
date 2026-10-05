@@ -18,7 +18,7 @@ function mockResponse(input, transform = value => value) {
 test('unconfigured does not call a provider; same-language text bypasses AI', async () => {
   const engine = initTranslationEngine({ fetch: () => assert.fail('unexpected call') });
   assert.deepEqual(engine.engineStatus(), { provider: 'unconfigured', model: null, configured: false,
-    engineVersion: 'dual-engine-v1:protected-v1', glossaryVersion: '1' });
+    engineVersion: 'unified-translation-v2:protected-v3', glossaryVersion: '1' });
   await rejects(engine.callEngine(['Hello'], options), 'unconfigured');
   assert.deepEqual(await engine.callEngine(['Hello'], { targetLanguage: 'en' }), ['Hello']);
 });
@@ -192,4 +192,12 @@ test('budget reservation that finishes after timeout cannot initiate an AI call'
     AI: { run: () => assert.fail('late provider call') } });
   await rejects(engine.callEngine(['Hello'], options), 'timeout');
   reserved(true); await sleep(5);
+});
+
+test('Workers model never receives protected values and code restores every literal', async () => {
+ const calls=[];
+ const engine=initTranslationEngine({AI:{run:async (_,input)=>{calls.push(input.text);return {translated_text:'Traducido'};}}});
+ const result=await engine.callEngine(['Acme VS-101 full-grain leather 42 cm'],{...options, protectedTerms:['Acme'],glossary:[{source:'full-grain leather',sourceLanguage:'en',targetLanguage:'es',scope:'global',version:'1',mode:'translate',translation:'cuero plena flor'}]});
+ assert.ok(result[0].includes('Acme'));assert.ok(result[0].includes('VS-101'));assert.ok(result[0].includes('cuero plena flor'));assert.ok(result[0].includes('42'));
+ assert.ok(calls.every(t=>!t.includes('B2BT')&&!t.includes('VS-101')&&!t.includes('Acme')&&!t.includes('full-grain leather')));
 });

@@ -18,6 +18,10 @@ class PackageTests(unittest.TestCase):
         self.assets = Path(__file__).resolve().parents[1] / 'assets'
         shutil.copyfile(self.assets / 'site.contract.json', self.root / 'site.contract.json')
         shutil.copyfile(self.assets / 'deploy.node.json', self.root / 'deploy.json')
+        for name in ('engine','resolver','quality','seed'):
+            self.write('lib/translation/'+name+'.mjs', (self.assets/'translation'/f'{name}.mjs').read_text(encoding='utf-8'))
+        self.json('config/translation-glossary.json', {'version':'1','entries':[{'source':'leather','sourceLanguage':'en','targetLanguage':'zh','scope':'global','version':'1','mode':'translate','translation':'皮革'}]})
+        self.json('seed/translations.zh.json', [{'targetLanguage':'zh','origin':'seed','translation':'测试中文','sourceHash':'a'*64}])
         self.write('server.mjs', '// A structural fixture, not a working server.\n')
         self.write('public/index.html', '<html lang="en"><body>Fixture</body></html>')
         for doc in sp.DOCS:

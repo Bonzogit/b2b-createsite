@@ -24,6 +24,10 @@
 
 [seed.mjs](../assets/translation/seed.mjs) 是生成记录、查找当前有效人工/种子译文和筛选导入候选的参考辅助模块；调用前网站必须核验已发布内容及站点归属。它不实现数据库、事务、缓存、解析接口或AI回退。按 [专项验收](acceptance.md) 完成真实持久化与端到端测试。
 
+## 公共执行模块
+
+使用 [resolver.mjs](../assets/translation/resolver.mjs) 统一人工/初始译文、块缓存、词汇库传参和写入前版本核验；存储与持久任务由项目注入。使用 [v2 工作台协议](translation-workbench-v2.md) 安装、接线并检查指纹。quality.mjs 仅拦明显重复和残留，无法认证语义准确。
+
 ## 触发与优先级
 
 选择语言 → 查询已发布当前版本 → 读取人工译文、初始中文和缓存 → 缺失块入队 → 翻译、校验并持久化 → 后续访问复用。
@@ -55,7 +59,7 @@ const nodeEngine = initTranslationEngine({ env: process.env, glossaryVersion: '1
 `TRANSLATION_ENDPOINT` 是完整 HTTPS Chat Completions 地址，不猜测追加路径。外部引擎通过服务端密钥调用；批量请求返回等长、有序的 JSON 字符串数组，严格校验。已有地址语义不同则保留兼容映射。
 
 ```json
-{"provider":"workers-ai","configured":true,"model":"@cf/meta/m2m100-1.2b","engineVersion":"dual-engine-v1:protected-v1","glossaryVersion":"1"}
+{"provider":"workers-ai","configured":true,"model":"@cf/meta/m2m100-1.2b","engineVersion":"unified-translation-v2:protected-v3","glossaryVersion":"1"}
 ```
 
 provider 为 `workers-ai | openai-compatible | unconfigured`，未配置 model 为 null。configured 仅表示配置完整，不证明授权、额度或调用成功；后台另记最近调用结果。状态不含密钥和内部错误原文。已选引擎失败不静默切换供应商，尤其不能因 Cloudflare 失败调用收费外部引擎。
@@ -99,12 +103,12 @@ source 非空，sourceLanguage 为实际源语言。targetLanguage 为目标语�
 
 ## 占位符保护与校验
 
-两种引擎共用保护流程，外部引擎的 prompt 只作辅助：
+两种引擎共用品牌、型号、数字与术语识别，分别处理模型调用：
 
-1. 扫描品牌、型号、数字及单位、邮箱、网址、preserve 和 translate 术语，生成不重叠片段。避免 URL 中数字二次替换，重复术语每次有独立占位符。
-2. 生成不与原文冲突的标识，例如 `[[B2BT_<随机标识>_0]]`，替换后调用模型。任何格式都可能被修改，不能声称模型不会改动。
-3. 结果须为非空字符串，块数量相同；每个预期标识恰好一次，无未知、损坏或遗留标识。校验后用原文或指定目标译文还原。
-4. 缺失、重复、改写等为 `placeholder_mismatch`，该块失败，保留原文和有效缓存，不展示标识，也不取消保护后盲目重试。
+1. 扫描品牌、型号、数字及单位、邮箱、网址、preserve 和 translate 术语，生成不重叠片段，避免重复替换。
+2. Workers AI 翻译模型只接收其余文字片段；受保护值与指定术语译文始终留在代码中，翻译后按原顺序拼接。每个片段会消耗一次调用额度，短片段可能影响语句流畅度，需实际语言复核。
+3. 外部生成模型使用占位符及 prompt，恢复时校验唯一对应关系；无法可靠恢复则 placeholder_mismatch，保留原文和有效缓存，不展示标识。
+4. 两种引擎均检查非空结果和明显重复输出。保护与结构检查通过不代表语义质量通过，不得据此把 qualityVerified 设置为 true。
 
 参考实现覆盖常见数字/单位、邮箱、URL和带字母数字的型号；项目须补行业单位、品牌与型号并测试。保护成功不代表译文自然或规格含义正确，仍须抽查。
 
@@ -121,7 +125,7 @@ source 非空，sourceLanguage 为实际源语言。targetLanguage 为目标语�
 保留原有返回字段，兼容增加可选 reasonCode 与脱敏 engine：
 
 ```json
-{"ok":true,"data":{"status":"pending","sourceLanguage":"en","targetLanguage":"es","revision":3,"blocks":{},"retryAfterMs":2000,"engine":{"provider":"workers-ai","configured":true,"model":"@cf/meta/m2m100-1.2b","engineVersion":"dual-engine-v1:protected-v1","glossaryVersion":"2"}}}
+{"ok":true,"data":{"status":"pending","sourceLanguage":"en","targetLanguage":"es","revision":3,"blocks":{},"retryAfterMs":2000,"engine":{"provider":"workers-ai","configured":true,"model":"@cf/meta/m2m100-1.2b","engineVersion":"unified-translation-v2:protected-v3","glossaryVersion":"2"}}}
 ```
 
 | status | 含义 |

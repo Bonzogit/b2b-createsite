@@ -1,7 +1,7 @@
 # Cloudflare 目标
 
 业务接口和数据模型保持一致，运行与存储使用 Cloudflare 适配。新工程默认 Workers；已有 Pages 可保留，不为检查脚本重写可用网站。
-现有工作台 Cloudflare 流程只有部分静态/SUMMIT/豆包模板适配。site.contract.json 不会自动让任意后端获得数据库/邮件/AI。分别报告 Cloudflare 工程验证与工作台适配验证，不承诺通用包一键部署。
+工作台新增翻译协议 v2 原生 Worker 路径，当前支持 AI + SQLite Durable Object；旧站仍有部分静态/SUMMIT/豆包/已核对 Node 模板适配，具体边界见 translation-workbench-v2.md。site.contract.json 不会自动让任意后端获得数据库/邮件/AI。分别报告 Cloudflare 工程验证与工作台适配验证，不承诺通用包一键部署。
 
 Workers 工程：
 - 完整代码、素材、wrangler.json、依赖锁、迁移和测试；runtime=cloudflare-workers。main 与 assets.directory 必须实际存在，compatibility_date 明确。

@@ -15,6 +15,8 @@ site_package.py 只读文件，不执行网站代码、不联网。退出0仅表
 
 ## 翻译专项验收
 
+新版项目先通过 translationContract v2 的语言、词汇库、初始中文和核心指纹检查。每种语言的首页、代表详情、文章和询盘应有当前版本审核记录；明显错义、重复、漏译或不合理英文残留不通过。状态 ready 和型号保留只代表调用/保护结果，不代替语言质量验收。
+
 采用隔离测试内容与已授权服务，遵循 [翻译规范](translation.md)：
 
 1. 源码具有同一模块的两种引擎及运行时注入点；Cloudflare 入口实际传入 AI 绑定，Node 入口读取服务端配置。部署脚本不再为单个项目改写翻译代码。
@@ -36,7 +38,7 @@ site_package.py 只读文件，不执行网站代码、不联网。退出0仅表
 报告记录 provider/model、真实或模拟、语言方向、调用/缓存变化、实际存储、结果与限制，不提交密钥和私密日志。参考模块的离线测试只验证适配器行为，不能替代以上网站验收：
 
 ```text
-node --test unified-site-builder/assets/translation/test_engine.mjs unified-site-builder/assets/translation/test_seed.mjs
+node --test unified-site-builder/assets/translation/test_engine.mjs unified-site-builder/assets/translation/test_seed.mjs unified-site-builder/assets/translation/test_resolver.mjs
 ```
 
 真实邮件测试需要目标收件人与授权；供应商接受不等于实收。真实 AI 与模拟测试分开，无外部授权时完成本地测试并标记限制。

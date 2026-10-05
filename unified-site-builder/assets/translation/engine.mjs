@@ -1,10 +1,13 @@
+import { translationProblems } from './quality.mjs';
 // Portable engine only. The site owns publication checks, cache, durable tasks and quotas.
 export const DEFAULT_WORKERS_MODEL = '@cf/meta/m2m100-1.2b';
 const DEFAULT_LANGUAGES = ['en', 'zh', 'es', 'ar', 'ru', 'fr', 'de', 'pt'];
 const ALLOWED_ERRORS = new Set(['unauthorized', 'quota_exceeded', 'rate_limited', 'timeout', 'provider_error']);
 
 export class TranslationError extends Error {
-  constructor(code) { super(code); this.name = 'TranslationError'; this.code = code; }
+  constructor(code, diagnostics = null) {
+    super(code); this.name = 'TranslationError'; this.code = code; this.diagnostics = diagnostics;
+  }
 }
 const fail = code => { throw new TranslationError(code); };
 // Han words need substring matching; Latin/Cyrillic/etc. terms need word boundaries.
@@ -76,21 +79,123 @@ export function protectText(text, { sourceLanguage = 'en', targetLanguage,
     return { token, replacement: span.replacement };
   });
   masked += text.slice(position);
+  // Split a multi-token block into single-token segments so a weak model
+  // (m2m100) cannot drop later protected terms from a dense block.
+  const poses = tokens.map(t => {
+    const at = masked.indexOf(t.token);
+    return { at, end: at + t.token.length };
+  });
+  const segmentData = [];
+  if (!tokens.length) {
+    segmentData.push({ text: masked, restore: out => out });
+  } else for (let i = 0; i < tokens.length; i++) {
+    const start = i === 0 ? 0 : poses[i].at;
+    const end = i + 1 < tokens.length ? poses[i + 1].at : masked.length;
+    const tok = tokens[i];
+    segmentData.push({
+      text: masked.slice(start, end),
+      restore(out) {
+        const r = strictRestore(out, [tok]);
+        return r === null ? fuzzyRestore(out, [tok]) : r;
+      }
+    });
+  }
+  // Workers translation never sees protection tokens. Exact terms and specs stay in code.
+  const literalParts = []; let sourceCursor = 0;
+  for (const span of spans) {
+    const plain = text.slice(sourceCursor, span.start);
+    if (plain) literalParts.push({ text: plain });
+    literalParts.push({ literal: span.replacement }); sourceCursor = span.end;
+  }
+  if (sourceCursor < text.length) literalParts.push({ text: text.slice(sourceCursor) });
   return {
     text: masked,
+    literalSegments: () => literalParts,
+    splitSegments: () => segmentData,
+    get segmentCount() { return segmentData.length; },
     restore(output) {
       if (typeof output !== 'string' || !output.trim()) fail('invalid_engine_output');
-      let remaining = output;
-      for (const { token } of tokens) {
-        if (remaining.split(token).length !== 2) fail('placeholder_mismatch');
-        remaining = remaining.replace(token, '');
-      }
-      // A random per-call nonce also catches malformed/unknown tokens for this request.
-      if (remaining.includes('B2BT_')) fail('placeholder_mismatch');
-      for (const { token, replacement } of tokens) output = output.replace(token, () => replacement);
-      return output;
+      const strict = strictRestore(output, tokens);
+      return strict === null ? fuzzyRestore(output, tokens) : strict;
     }
   };
+}
+
+function strictRestore(output, tokens) {
+  let remaining = output;
+  for (const { token } of tokens) {
+    if (remaining.split(token).length !== 2) return null;
+    remaining = remaining.replace(token, '');
+  }
+  if (remaining.includes('B2BT_')) return null;
+  let result = output;
+  for (const { token, replacement } of tokens) result = result.replace(token, () => replacement);
+  return result;
+}
+
+const CYRILLIC_LOOKALIKE = { 'А': 'A', 'В': 'B', 'С': 'C', 'Е': 'E', 'Т': 'T' };
+const normToken = value => String(value).toUpperCase().split('')
+  .map(ch => CYRILLIC_LOOKALIKE[ch] || ch).join('').replace(/[^A-Z0-9]/g, '');
+
+function editDistance(a, b) {
+  const dp = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 0; j <= b.length; j++) dp[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    }
+  }
+  return dp[a.length][b.length];
+}
+
+function mismatch(output, tokens, candidates) {
+  throw new TranslationError('placeholder_mismatch', {
+    output: String(output).slice(0, 800),
+    wantedCount: tokens.length,
+    wanted: tokens.map(t => t.token),
+    foundCount: candidates ? candidates.length : null,
+    found: candidates || null
+  });
+}
+
+function fuzzyRestore(output, tokens) {
+  // Anchor on each B2BT occurrence: m2m100 may strip or misdirect brackets
+  // but keeps the B2BT_<hex>_<n> body.
+  // Tolerate Latin->Cyrillic look-alike transcription (B->В, T->Т).
+  const positions = [...output.matchAll(/[BВ]2[BВ][TТ]/gi)].map(m => m.index);
+  if (positions.length !== tokens.length) mismatch(output, tokens, positions);
+  const bodyRe = /(?:_[A-Za-z0-9\u0400-\u04FF]+)+/y;
+  const data = positions.map(pos => {
+    bodyRe.lastIndex = pos + 4;
+    const m = bodyRe.exec(output);
+    return { pos, bodyEnd: m ? m.index + m[0].length : pos + 4, start: pos, end: 0 };
+  });
+  // Trailing right brackets belong to each token.
+  data.forEach(d => {
+    let e = d.bodyEnd;
+    while (output[e] === ']') e++;
+    d.end = e;
+  });
+  // Leading left brackets belong to a token, but a bracket shared with the
+  // previous token (e.g. "..._0[B2BT...") is assigned to the later token.
+  data.forEach((d, i) => {
+    let s = d.pos;
+    const limit = i === 0 ? 0 : data[i - 1].end;
+    while (s > limit && output[s - 1] === '[') s--;
+    d.start = s;
+  });
+  const wanted = tokens.map(t => ({ token: t.token, replacement: t.replacement, norm: normToken(t.token) }));
+  const found = data.map(d => ({ raw: output.slice(d.start, d.end), norm: 0 }));
+  found.forEach((f, i) => {
+    f.norm = normToken(f.raw);
+    const d = editDistance(f.norm, wanted[i].norm);
+    if (d > Math.max(3, Math.floor(wanted[i].norm.length * 0.1))) mismatch(output, tokens, found.map(x => x.raw));
+  });
+  let result = output;
+  wanted.forEach((w, i) => { result = result.replace(found[i].raw, () => w.replacement); });
+  if (/B2BT/i.test(result)) mismatch(output, tokens, found.map(x => x.raw));
+  return result;
 }
 
 function limiter(limit) {
@@ -142,7 +247,7 @@ export function initTranslationEngine(runtime = {}) {
   function engineStatus() {
     const selected = selection();
     return { ...selected, configured: selected.provider !== 'unconfigured',
-      engineVersion: 'dual-engine-v1:protected-v1', glossaryVersion: string(runtime.glossaryVersion) || '1' };
+      engineVersion: 'unified-translation-v2:protected-v3', glossaryVersion: string(runtime.glossaryVersion) || '1' };
   }
   async function reserve(provider, blocks) {
     if (runtime.reserveUsage && await runtime.reserveUsage({ provider, blocks }) === false) fail('quota_exceeded');
@@ -160,22 +265,32 @@ export function initTranslationEngine(runtime = {}) {
     if (provider === 'workers-ai') {
       // Other models need an explicit adapter and verified language configuration.
       if (model !== DEFAULT_WORKERS_MODEL && typeof runtime.workersAdapter !== 'function') fail('unsupported_model');
-      const results = await Promise.allSettled(protectedBlocks.map(block => deadline(schedule, async signal => {
-        await reserve(provider, 1);
-        if (signal.aborted) fail('timeout');
-        try {
-          if (runtime.workersAdapter) return await runtime.workersAdapter({ AI, model, text: block.text, source, target });
-          const response = await AI.run(model, { text: block.text, source_lang: source, target_lang: target });
-          return response?.translated_text;
-        } catch (error) {
-          if (error instanceof TranslationError) throw error;
-          const code = runtime.mapWorkersError?.(error);
-          fail(ALLOWED_ERRORS.has(code) ? code : 'provider_error');
-        }
-      }, timeoutMs)));
-      const rejected = results.find(result => result.status === 'rejected');
-      if (rejected) throw rejected.reason;
-      output = results.map(result => result.value);
+      const pieces = protectedBlocks.map(block => block.literalSegments());
+      const tasks = pieces.flatMap(parts => parts.map(part => {
+        if ('literal' in part) return Promise.resolve(part.literal);
+        if (!/[\p{L}]/u.test(part.text)) return Promise.resolve(part.text);
+        return deadline(schedule, async signal => {
+          await reserve(provider, 1);
+          if (signal.aborted) fail('timeout');
+          let translated;
+          try {
+            if (runtime.workersAdapter) translated = await runtime.workersAdapter({ AI, model, text: part.text.trim(), source, target });
+            else translated = (await AI.run(model, { text: part.text.trim(), source_lang: source, target_lang: target }))?.translated_text;
+          } catch(error) {
+            const code=runtime.mapWorkersError?.(error);
+            fail(ALLOWED_ERRORS.has(code) ? code : 'provider_error');
+          }
+          if (typeof translated !== 'string' || !translated.trim()) fail('invalid_engine_output');
+          const leading=part.text.match(/^\s*/)[0], trailing=part.text.match(/\s*$/)[0];
+          return leading+translated.trim()+trailing;
+        }, timeoutMs);
+      }));
+      const results=await Promise.allSettled(tasks);
+      const rejected=results.find(r=>r.status==='rejected');
+      if(rejected)throw rejected.reason;
+      let cursor=0;
+      output=pieces.map(parts=>{const value=results.slice(cursor,cursor+parts.length).map(r=>r.value).join('');cursor+=parts.length;return value;});
+
     } else {
       let url;
       try { url = new URL(endpoint); } catch { fail('invalid_config'); }
@@ -200,7 +315,12 @@ export function initTranslationEngine(runtime = {}) {
       }, timeoutMs);
     }
     if (!Array.isArray(output) || output.length !== texts.length) fail('invalid_engine_output');
-    return output.map((text, index) => protectedBlocks[index].restore(text));
+    const restored = provider === 'workers-ai' ? output : output.map((text, index) => protectedBlocks[index].restore(text));
+    for (const text of restored) {
+      const problems = translationProblems(text);
+      if (problems.length) throw new TranslationError('quality_rejected', { problems });
+    }
+    return restored;
   }
   return { engineStatus, callEngine };
 }

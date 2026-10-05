@@ -4,7 +4,7 @@
 
 A portable specification, reference catalog, and offline package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.4.1**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.5.0**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
@@ -71,3 +71,7 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 ## 许可与来源
 
 本项目原创代码和文档按 [MIT License](LICENSE) 提供。模板品牌、外链素材和第三方作品仍归各自权利人；详见 [第三方来源说明](THIRD_PARTY_NOTICES.md)。仓库不分发 Blocksy 的主题、图片、字体、演示站源码或付费插件。
+
+## 技能更新与同步
+
+更新 Skill 后，运行相关检查，同步 VERSION、更新记录和 manifest.json，然后提交并推送到此 GitHub 仓库。无法推送时明确报告未同步，不能只提供本地 ZIP 就声称 GitHub 已更新。

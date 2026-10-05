@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "coreVersion": "unified-translation-v2:protected-v3",
+  "languages": [
+    "en",
+    "zh",
+    "es",
+    "ar",
+    "ru",
+    "fr",
+    "de",
+    "pt"
+  ],
+  "modules": {
+    "engine": {
+      "path": "lib/translation/engine.mjs",
+      "sha256": "c2c056840f50a8e5e264dddf7a364a9df9a0a586202c053a0e5c3c1be05726d4"
+    },
+    "resolver": {
+      "path": "lib/translation/resolver.mjs",
+      "sha256": "a6a4e9a145a83b504add2a0429ee15fca49d9986f8c1f71b9ad41775e204ed0c"
+    },
+    "quality": {
+      "path": "lib/translation/quality.mjs",
+      "sha256": "f44bf1c664dc8a2723001768673c465b543ab688ec85b8cdb9147c10d1f01c2e"
+    },
+    "seed": {
+      "path": "lib/translation/seed.mjs",
+      "sha256": "df774c5e7b681cec29c0cca00a34157d241deff3336872f626d943011e7ca11e"
+    }
+  },
+  "glossaryPath": "config/translation-glossary.json",
+  "initialChinesePath": "seed/translations.zh.json"
+}

@@ -9,3 +9,5 @@ This repository contains a portable website-building specification and reference
 - Run the existing package-checker tests when changing its implementation. Documentation changes need link and JSON validation.
 - Do not mark a generated website as tested merely because this repository's offline checks pass.
 
+
+- The user requires every Skill update to be committed and pushed to this GitHub repository after relevant validation. Keep VERSION, CHANGELOG.md, VALIDATION.md and manifest.json current; report any failed synchronization explicitly.

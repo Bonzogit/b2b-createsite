@@ -44,7 +44,7 @@ def excluded(rel):
                               '.pfx', '.log', '.pyc', '.zip', '.tar', '.gz', '.bak')))
 
 
-def inspect(root):
+def inspect(root, allow_legacy=False):
     root = Path(root).resolve()
     errors, warnings, selected, omitted = [], [], [], []
     if not root.is_dir():
@@ -118,6 +118,15 @@ def inspect(root):
                 problem(f'integrations.{key}: unsupported status')
             elif state != 'verified':
                 warnings.append(f'{key}: {state}; service behavior is not verified by this tool')
+
+    from translation_contract import inspect_translation
+    if contract.get('translationContract') or contract.get('skillVersion', '').startswith('1.5.'):
+        for message in inspect_translation(root, contract):
+            problem(message)
+    elif allow_legacy:
+        warnings.append('Legacy translation contract: no v2 core/glossary/seed compatibility verified')
+    else:
+        problem('Missing translationContract v2; use explicit --allow-legacy only for a legacy migration review')
 
     entry = contract.get('entry')
     public = contract.get('publicDir')
@@ -253,8 +262,9 @@ def main():
     parser.add_argument('action', choices=['check', 'pack'])
     parser.add_argument('project', type=Path)
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--allow-legacy', action='store_true', help='Review a legacy package without claiming v2 compatibility')
     args = parser.parse_args()
-    report, files = inspect(args.project)
+    report, files = inspect(args.project, allow_legacy=args.allow_legacy)
     if report['structurePassed'] and args.action == 'pack':
         try:
             if args.output is None:
