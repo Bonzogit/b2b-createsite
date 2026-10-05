@@ -2,7 +2,7 @@
 name: unified-site-builder
 description: 创建或改造具有真实中文后台的企业展示与询盘网站，统一联系方式、邮件通知、文章发布、按需翻译和部署交付；根据产品及用户参考库选择不同视觉与页面组织方式。适用于统一建站、参考风格整理或工作台部署包；仅咨询概念时不自行生成网站。
 metadata:
-  version: "1.6.0"
+  version: "1.6.1"
 ---
 
 # 统一网站建站
@@ -46,9 +46,8 @@ metadata:
 
 检查已有资料、项目、路由、API、存储与部署。读取 [业务与接口](references/business-contract.md)、[后台界面](references/admin-ui.md)、[按需翻译](references/translation.md) 和 [Resend 邮件后台](references/resend-email.md)。翻译的适配参考代码与离线测试位于 assets/translation/，复用时接好内容校验、持久缓存、任务和前台，不把参考模块当完整服务。优先复用用户已提供并验证的公共核心；可运行基础后台的能力及未覆盖项见 runtime-profiles.md。
 
-- 普通服务器/腾讯云工作台：读 [Node 部署协议](references/node-workbench.md)。
-- Cloudflare：读 [Cloudflare 部署协议](references/cloudflare.md)，实际适配其运行与持久化环境。
-- 未指定且上下文无法判断时默认 Node 工作台包并说明；不同时开发两套版本。
+- 完整网站默认交付服务器和 Cloudflare 两个独立部署 ZIP，分别读取 [Node 部署协议](references/node-workbench.md) 与 [Cloudflare 部署协议](references/cloudflare.md)，复用同一前台、后台、业务接口和翻译核心，仅适配运行入口、存储和部署配置；不重复开发两套独立网站。用户明确只要某一平台时按其要求交付。
+- 实际部署目标与交付包数量分开：默认沿用用户 Ubuntu 工作台，仅在用户要求时发布 Cloudflare。准备两个包不自动授权两个平台部署，也不自动迁移或复制线上数据。
 
 ### 2. 从参考库选择展示方式
 
@@ -81,10 +80,13 @@ python <skill-dir>/scripts/site_package.py check <project-dir>
 ### 6. 打包交付
 
 ```text
-python <skill-dir>/scripts/site_package.py pack <project-dir> --output <outside-project>/site-workbench.zip
+python <skill-dir>/scripts/site_package.py check <server-project-dir>
+python <skill-dir>/scripts/site_package.py check <cloudflare-project-dir>
+python <skill-dir>/scripts/site_package.py pack <server-project-dir> --output <outside-project>/site-server.zip
+python <skill-dir>/scripts/site_package.py pack <cloudflare-project-dir> --output <outside-project>/site-cloudflare.zip
 ```
 
-交付源码、ZIP、中文说明、测试与状态报告。脚本拒绝覆盖已有包并排除依赖、运行数据与已知秘密文件；仍需审查公开代码是否硬编码密钥。写明后台入口、目标、尚未完成的素材或服务和未验证项；生成包不自动授权部署。云服务参数执行前核对当前官方文档。
+默认分别提供可直接上传的 `site-server.zip` 和 `site-cloudflare.zip` 两个文件，文件名可加项目名称。每个 ZIP 根目录就是对应平台的完整项目，包含源码、依赖锁、公共模块、中文说明、测试与状态报告。不要将两个 ZIP 再嵌套进合集作为默认下载包，也不要只改 runtime 字段伪装另一平台；两个包的具体整理与检查见 runtime-profiles.md。脚本拒绝覆盖已有包并排除依赖、运行数据与已知秘密文件；仍需审查公开代码是否硬编码密钥。写明后台入口、目标、尚未完成的素材或服务和未验证项；生成包不自动授权部署。云服务参数执行前核对当前官方文档。
 
 ## 更换 Agent 接续
 

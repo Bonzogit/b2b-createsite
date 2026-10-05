@@ -54,7 +54,7 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 - docs/DESIGN.md：页面与界面规则、素材用途和实际文件清单，包含真实/概念属性及待补项目。
 - docs/TEST-REPORT.md：pass/fail/unverified、实际环境/命令/日期、真实或模拟服务、证据位置和限制。
 
-features是功能声明，不是测试结果；integrations是实际接入状态。打包后干净目录解压安装并启动，不把测试计划标成通过。报告ZIP大小、SHA-256及实际检测范围。
+features是功能声明，不是测试结果；integrations是实际接入状态。打包后干净目录解压安装并启动，不把测试计划标成通过。默认分别报告服务器和 Cloudflare 两个 ZIP 的大小、SHA-256及实际检测范围，提供各自直接下载链接；不要交付需先拆出子包的合集作为默认部署文件。
 
 交付结论分别列出包结构、业务运行、外部服务、内容与素材、视觉验收的实际状态。未查看画面或关键素材待补时可交付明确标注的阶段性版本，不得汇总成“完整验收通过”。本仓库的检查器不评判审美，证据文件存在也不能自动证明其内容有效。
 

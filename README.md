@@ -4,7 +4,7 @@
 
 A portable specification, reference catalog, runnable backend foundation, and package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.6.0**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.6.1**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
@@ -12,7 +12,7 @@ A portable specification, reference catalog, runnable backend foundation, and pa
 - 按基础框架、参考设计、图片准备与生成、页面实现、实际验收的顺序完成网站。
 - 中文真实后台约定、业务数据与接口协议。
 - Resend 邮件通知、WhatsApp、文章发布；默认英文原文、完整初始中文和8种语言选项，其余6种语言及新增/改文缺失中文按需翻译并缓存；双翻译引擎的运行时注入、术语保护参考模块及测试。
-- Node 工作台及 Cloudflare 的不同部署要求。
+- 网站完成后默认分别提供服务器 ZIP 和 Cloudflare ZIP，共用业务源码，两个包均为可直接上传的项目根目录；默认实际部署仍为用户 Ubuntu 工作台。
 - 整站参考或多个网站模块组合的设计方法。
 - 45 条 Blocksy 官方模板介绍索引、37 条 CKCC 企业站候选目录，以及离线包结构检查和打包工具。候选目录待实际画面复核。
 

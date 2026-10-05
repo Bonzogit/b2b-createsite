@@ -1,6 +1,6 @@
 # 翻译核心与工作台协议 v2
 
-本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.0、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
+本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.1、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
 
 ## 各 Agent 的执行入口
 

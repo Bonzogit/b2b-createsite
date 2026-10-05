@@ -7,9 +7,22 @@
 默认服务器：`python <skill>/scripts/create_site.py <空目录> --runtime node --brand <品牌>`。
 明确指定 Cloudflare：`python <skill>/scripts/create_site.py <空目录> --runtime cloudflare-workers --brand <品牌>`。
 
-生成器拒绝覆盖非空项目。已有站点先读取实际工程并沿用原项目更新，不重新生成初始数据。示例产品和页面用于部署验收，必须替换成客户的内容、词汇库、完整中文、真实素材及独立设计。默认不为客户同时建立两份独立网站。
+生成器拒绝覆盖非空项目。已有站点先读取实际工程并沿用原项目更新，不重新生成初始数据。示例产品和页面用于部署验收，必须替换成客户的内容、词汇库、完整中文、真实素材及独立设计。默认完成同一网站后交付两个可直接上传的部署包，不同时建立两份独立网站或两套业务代码。
 
 两种目标复用 lib/app.mjs、公开接口和翻译核心，仅入口和存储适配不同。修改站点后重新执行结构与真实功能检查。不要绕过核心指纹校验；如需更改公共翻译核心，先升级协议登记。
+
+## 默认双 ZIP 交付
+
+完整网站完成后，默认分别提供 `<项目>-server.zip` 和 `<项目>-cloudflare.zip`，直接在回复中给两个文件的下载链接；用户明确只要一个平台时可只提供对应包。不要将两包嵌套进合集当作默认部署包。
+
+从完成的网站整理两个暂存目录，复用相同前台、中文后台、业务代码、公共翻译核心、词汇库和初始内容。只替换运行入口、持久存储适配及部署配置，不再次运行空工程生成器重建客户内容；两个干净安装的初始内容与稳定内容ID保持一致。
+
+- 服务器包根目录包含 server.mjs、deploy.json、site.contract.json、package.json、依赖锁和完整资源；声明 runtime=node、deploymentProfile=unified-node-v1，使用 /data 与 /uploads 持久目录。
+- Cloudflare 包根目录包含 worker.mjs、wrangler.json、site.contract.json、package.json、依赖锁和完整资源；声明 runtime=cloudflare-workers、deploymentProfile=unified-worker-do-v1，实际配置 SITE/ASSETS/AI 与 SQLite Durable Object。保留对应对象类、对象名和迁移，密码及凭据用 Secret。
+- 分别运行 site_package.py check 与 pack，分别验证干净解压启动或原生 Worker 打包，并按实际能力记录两个目标的运行状态；未执行云端部署不写成已部署。
+- 包内不包含账号口令、云凭据、运行数据库、用户附件或依赖目录。已有项目继续使用原平台更新流程并保留数据；双包不是跨平台数据迁移方案。
+
+实际部署默认仍为用户 Ubuntu 工作台；提供 Cloudflare ZIP 不意味着自动创建或发布第二个线上网站。平台缺少适配或绑定时明确未完成范围，不把不能运行的包标成可直接部署。其他静态或无服务器平台的兼容另行适配，不由这两个包自动保证。
 
 ## 受支持的工作台 profile
 

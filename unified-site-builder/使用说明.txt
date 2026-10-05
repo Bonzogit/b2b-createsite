@@ -1,4 +1,4 @@
-统一网站建站 Skill 1.6.0
+统一网站建站 Skill 1.6.1
 
 从仓库根目录README.md和AGENT_ENTRY.md开始，随后读取本目录SKILL.md。
 完整检出仓库同时保留同级site-reference-library目录；单独安装Skill时另指定参考库位置。
@@ -20,3 +20,5 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 新版翻译契约须先读取 references/translation-workbench-v2.md，安装公共核心并实际接好持久仓库、词汇库与前台。
 
 新建基础工程：python <skill>/scripts/create_site.py <空目录> --runtime node 或 cloudflare-workers。先读 references/runtime-profiles.md，再按客户业务、素材和设计完成网站。
+
+完整网站默认交付两个可直接上传的ZIP：服务器包与Cloudflare包。共用业务代码，分别适配运行入口与存储，不再用嵌套合集作为默认下载；实际部署默认仍为用户Ubuntu工作台。

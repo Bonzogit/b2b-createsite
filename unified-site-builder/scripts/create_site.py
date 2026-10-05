@@ -11,7 +11,7 @@ def create(target,runtime,brand='Reference Workshop'):
     else:(target/'server.mjs').unlink()
     def write(name,value):
         p=target/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
-    contract=json.loads((skill/'assets/site.contract.json').read_text(encoding='utf-8'));contract.update(runtime=runtime,entry='server.mjs' if runtime=='node' else 'worker.mjs',skillVersion='1.6.0',deploymentProfile='unified-node-v1' if runtime=='node' else 'unified-worker-do-v1');write('site.contract.json',contract)
+    contract=json.loads((skill/'assets/site.contract.json').read_text(encoding='utf-8'));contract.update(runtime=runtime,entry='server.mjs' if runtime=='node' else 'worker.mjs',skillVersion='1.6.1',deploymentProfile='unified-node-v1' if runtime=='node' else 'unified-worker-do-v1');write('site.contract.json',contract)
     for name in ('engine','resolver','quality','seed'):
         p=target/'lib/translation'/f'{name}.mjs';p.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(skill/'assets/translation'/f'{name}.mjs',p)
     package={'name':'unified-site','version':'1.0.0','type':'module','scripts':{'start':'node server.mjs'} if runtime=='node' else {},'engines':{'node':'>=22'}}
