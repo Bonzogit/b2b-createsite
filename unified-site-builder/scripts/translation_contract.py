@@ -2,8 +2,8 @@
 import hashlib,json
 from pathlib import Path,PurePosixPath
 
-CORE_VERSION='unified-translation-v2:protected-v3'
-CORE_HASHES={'engine': 'c2c056840f50a8e5e264dddf7a364a9df9a0a586202c053a0e5c3c1be05726d4', 'resolver': 'a6a4e9a145a83b504add2a0429ee15fca49d9986f8c1f71b9ad41775e204ed0c', 'quality': 'f44bf1c664dc8a2723001768673c465b543ab688ec85b8cdb9147c10d1f01c2e', 'seed': 'df774c5e7b681cec29c0cca00a34157d241deff3336872f626d943011e7ca11e'}
+CORE_VERSION='unified-translation-v2:hymt-v1'
+CORE_HASHES={'engine': '0238bfa0d08254902b386ecc3e7b55c20b9fbae953a799dd45c951d76c725f56', 'resolver': 'a6a4e9a145a83b504add2a0429ee15fca49d9986f8c1f71b9ad41775e204ed0c', 'quality': 'f44bf1c664dc8a2723001768673c465b543ab688ec85b8cdb9147c10d1f01c2e', 'seed': 'df774c5e7b681cec29c0cca00a34157d241deff3336872f626d943011e7ca11e'}
 def inspect_translation(root,contract):
     root=Path(root).resolve();errors=[]
     cfg=contract.get('translationContract')

@@ -227,27 +227,31 @@ function deadline(schedule, task, ms) {
 export function initTranslationEngine(runtime = {}) {
   const env = runtime.env || {};
   const AI = runtime.AI;
-  const endpoint = string(env.TRANSLATION_ENDPOINT);
+  const requestedProvider = string(env.TRANSLATION_PROVIDER);
+  if (requestedProvider && !['hymt', 'openai-compatible', 'workers-ai'].includes(requestedProvider)) fail('invalid_config');
+  const endpoint = string(env.TRANSLATION_ENDPOINT) || (requestedProvider === 'hymt' ? 'https://43.162.83.155/translation/translate' : '');
   const apiKey = string(env.TRANSLATION_API_KEY);
-  const externalModel = string(env.TRANSLATION_MODEL);
+  const externalModel = string(env.TRANSLATION_MODEL) || (requestedProvider === 'hymt' ? 'Hy-MT2-1.8B-Q4_K_M' : '');
   const workersModel = string(env.WORKERS_AI_TRANSLATION_MODEL) || DEFAULT_WORKERS_MODEL;
   const languages = runtime.supportedLanguages || DEFAULT_LANGUAGES;
   const fetcher = runtime.fetch || globalThis.fetch;
-  const concurrency = runtime.concurrency ?? 3;
-  const timeoutMs = runtime.timeoutMs ?? 15_000;
+  const concurrency = runtime.concurrency ?? (requestedProvider === 'hymt' ? 1 : 3);
+  const timeoutMs = runtime.timeoutMs ?? (requestedProvider === 'hymt' ? 60_000 : 15_000);
   if (!Number.isInteger(concurrency) || concurrency < 1 || concurrency > 8 ||
       !Number.isInteger(timeoutMs) || timeoutMs < 1 || timeoutMs > 120_000 ||
       !Array.isArray(languages) || !languages.every(value => typeof value === 'string')) fail('invalid_config');
   const schedule = limiter(concurrency);
   function selection() {
-    if (AI && typeof AI.run === 'function') return { provider: 'workers-ai', model: workersModel };
+    if (requestedProvider === 'hymt') return { provider: apiKey ? 'hymt' : 'unconfigured', model: apiKey ? externalModel : null };
+    if (requestedProvider === 'workers-ai') return { provider: AI && typeof AI.run === 'function' ? 'workers-ai' : 'unconfigured', model: AI ? workersModel : null };
     if (endpoint && apiKey && externalModel) return { provider: 'openai-compatible', model: externalModel };
+    if (!requestedProvider && AI && typeof AI.run === 'function') return { provider: 'workers-ai', model: workersModel };
     return { provider: 'unconfigured', model: null };
   }
   function engineStatus() {
     const selected = selection();
     return { ...selected, configured: selected.provider !== 'unconfigured',
-      engineVersion: 'unified-translation-v2:protected-v3', glossaryVersion: string(runtime.glossaryVersion) || '1' };
+      engineVersion: 'unified-translation-v2:hymt-v1', glossaryVersion: string(runtime.glossaryVersion) || '1' };
   }
   async function reserve(provider, blocks) {
     if (runtime.reserveUsage && await runtime.reserveUsage({ provider, blocks }) === false) fail('quota_exceeded');
@@ -262,7 +266,59 @@ export function initTranslationEngine(runtime = {}) {
     if (provider === 'unconfigured') fail('unconfigured');
     const protectedBlocks = texts.map(text => protectText(text, { ...options, sourceLanguage: source }));
     let output;
-    if (provider === 'workers-ai') {
+    if (provider === 'hymt') {
+      let url;
+      try { url = new URL(endpoint); } catch { fail('invalid_config'); }
+      if (url.protocol !== 'https:' || url.username || url.password || url.hash || typeof fetcher !== 'function') fail('invalid_config');
+      // Keep each request small; the server serializes inference across sites.
+      output = [];
+      for (const block of protectedBlocks) {
+        const pairs = []; let index = 0;
+        const masked = block.text.replace(/\[\[B2BT_[a-f0-9]+_\d+\]\]/g, original => {
+          let short;
+          do { short = `[[B2BT_${index++}]]`; } while (block.text.includes(short));
+          pairs.push({ original, short }); return short;
+        });
+        const value = await deadline(schedule, async signal => {
+          await reserve(provider, 1);
+          if (signal.aborted) fail('timeout');
+          for (let attempt = 0; attempt < 3; attempt++) {
+            let response;
+            try { response = await fetcher(url.href, { method: 'POST', redirect: 'error', signal,
+              headers: { 'content-type': 'application/json', authorization: `Bearer ${apiKey}` },
+              body: JSON.stringify({ from: source, to: target, text: masked, html: false }) }); }
+            catch { fail(signal.aborted ? 'timeout' : 'provider_error'); }
+            if (response.status === 429 && attempt < 2) {
+              await new Promise((resolve, reject) => {
+                const abort = () => { clearTimeout(timer); reject(new TranslationError('timeout')); };
+                const timer = setTimeout(() => { signal.removeEventListener('abort', abort); resolve(); }, 2000 * (attempt + 1));
+                signal.addEventListener('abort', abort, { once: true });
+                if (signal.aborted) abort();
+              }); continue;
+            }
+            if (!response.ok) fail(response.status === 401 || response.status === 403 ? 'unauthorized' : response.status === 429 ? 'rate_limited' : 'provider_error');
+            let result;
+            try { result = (await response.json()).result; } catch { fail('invalid_engine_output'); }
+            if (typeof result !== 'string' || !result.trim()) fail('invalid_engine_output');
+            for (const { short, original } of pairs) {
+              if (result.split(short).length !== 2) fail('placeholder_mismatch');
+              result = result.replace(short, () => original);
+            }
+            // Reject unchanged prose, excluding intentionally protected literals.
+            const plain = masked.replace(/\[\[B2BT_\d+\]\]/g, '').trim();
+            if (/[\p{L}]/u.test(plain) && result.trim() === block.text.trim()) fail('quality_rejected');
+            if (source === 'en' && target === 'zh' && /[A-Za-z]/.test(plain)) {
+              const prose = result.replace(/\[\[B2BT_[^\]]+\]\]/g, '');
+              const sourceWords = new Set((plain.toLowerCase().match(/[a-z]{3,}/g) || []));
+              const leftover = new Set((prose.toLowerCase().match(/[a-z]{3,}/g) || []).filter(w => sourceWords.has(w)));
+              if (!/\p{Script=Han}/u.test(prose) || leftover.size >= 3) fail('quality_rejected');
+            }
+            return result;
+          }
+        }, timeoutMs);
+        output.push(value);
+      }
+    } else if (provider === 'workers-ai') {
       // Other models need an explicit adapter and verified language configuration.
       if (model !== DEFAULT_WORKERS_MODEL && typeof runtime.workersAdapter !== 'function') fail('unsupported_model');
       const pieces = protectedBlocks.map(block => block.literalSegments());

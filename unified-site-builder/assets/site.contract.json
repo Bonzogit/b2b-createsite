@@ -37,10 +37,10 @@
     "missingOrStale": "engine-then-persistent-cache",
     "unconfigured": "current-translations-then-source"
   },
-  "skillVersion": "1.6.1",
+  "skillVersion": "1.6.2",
   "translationContract": {
     "version": 2,
-    "coreVersion": "unified-translation-v2:protected-v3",
+    "coreVersion": "unified-translation-v2:hymt-v1",
     "languages": [
       "en",
       "zh",
@@ -54,7 +54,7 @@
     "modules": {
       "engine": {
         "path": "lib/translation/engine.mjs",
-        "sha256": "c2c056840f50a8e5e264dddf7a364a9df9a0a586202c053a0e5c3c1be05726d4"
+        "sha256": "0238bfa0d08254902b386ecc3e7b55c20b9fbae953a799dd45c951d76c725f56"
       },
       "resolver": {
         "path": "lib/translation/resolver.mjs",

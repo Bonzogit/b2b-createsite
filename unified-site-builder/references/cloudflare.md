@@ -1,5 +1,8 @@
 # Cloudflare 目标
 
+1.6.2 默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
+
+
 业务接口和数据模型保持一致，运行与存储使用 Cloudflare 适配。新工程默认 Workers；经用户工作台部署时优先使用 runtime-profiles.md 的 unified-worker-do-v1；已有 Pages 可保留，不为检查脚本重写可用网站。
 工作台新增翻译协议 v2 原生 Worker 路径，当前支持 AI + SQLite Durable Object；旧站仍有部分静态/SUMMIT/豆包/已核对 Node 模板适配，具体边界见 translation-workbench-v2.md。site.contract.json 不会自动让任意后端获得数据库/邮件/AI。分别报告 Cloudflare 工程验证与工作台适配验证，不承诺通用包一键部署。
 

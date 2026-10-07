@@ -18,7 +18,7 @@ function mockResponse(input, transform = value => value) {
 test('unconfigured does not call a provider; same-language text bypasses AI', async () => {
   const engine = initTranslationEngine({ fetch: () => assert.fail('unexpected call') });
   assert.deepEqual(engine.engineStatus(), { provider: 'unconfigured', model: null, configured: false,
-    engineVersion: 'unified-translation-v2:protected-v3', glossaryVersion: '1' });
+    engineVersion: 'unified-translation-v2:hymt-v1', glossaryVersion: '1' });
   await rejects(engine.callEngine(['Hello'], options), 'unconfigured');
   assert.deepEqual(await engine.callEngine(['Hello'], { targetLanguage: 'en' }), ['Hello']);
 });
@@ -30,9 +30,9 @@ test('partial external config stays unconfigured and status contains no secrets'
   assert.ok(!JSON.stringify(engine.engineStatus()).includes('test-only'));
 });
 
-test('Workers AI wins over external config and uses one synchronous call per block', async () => {
+test('explicit Workers AI wins over external config and uses one synchronous call per block', async () => {
   const calls = [];
-  const engine = initTranslationEngine({ env: external,
+  const engine = initTranslationEngine({ env: { ...external, TRANSLATION_PROVIDER: 'workers-ai' },
     AI: { run: async (model, input) => { calls.push({ model, input }); return { translated_text: 'Traducido: ' + input.text }; } },
     fetch: () => assert.fail('fallback must not run') });
   assert.equal(engine.engineStatus().provider, 'workers-ai');

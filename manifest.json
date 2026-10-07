@@ -1,5 +1,5 @@
 {
-  "version": "1.6.1",
+  "version": "1.6.2",
   "scope": "public specification, reference catalog, runnable backend and translation adapters",
   "entry": "AGENT_ENTRY.md",
   "license": "MIT",
@@ -9,16 +9,16 @@
       "sha256": "06360afa17a5f1b460b873b9a33de816ebaa4932fb166cc999e3bc717b9c8f99"
     },
     {
-      "path": "AGENT_ENTRY.md",
-      "sha256": "43dbe611d5690e35f75368f9ebde3e172128f35dffd3a1e177071b1c0c12f9e0"
-    },
-    {
       "path": "AGENTS.md",
       "sha256": "f0eed78e8e326afc542b2a2a1217f1389f15b98d07fe92b6436c7aeb61ea4a97"
     },
     {
+      "path": "AGENT_ENTRY.md",
+      "sha256": "43dbe611d5690e35f75368f9ebde3e172128f35dffd3a1e177071b1c0c12f9e0"
+    },
+    {
       "path": "CHANGELOG.md",
-      "sha256": "8d663d3a39492315258a2b837832de0b9438ee5675210cb0baf3b5a97a0f63ab"
+      "sha256": "7a8940f62e5e2dc962cbc22ec62986645a69ab5336b7d527839edc5296031095"
     },
     {
       "path": "LICENSE",
@@ -26,31 +26,31 @@
     },
     {
       "path": "README.md",
-      "sha256": "6f18a1ce9d333e4e29bb457059ee08ca7311764ddc8e804fda5d00a18b9c7270"
+      "sha256": "1a9c6c08a28cc61898f34d838baf50037a526cfa43a69126a87c9c87c91b35e9"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "78c7877a4aae6d38261d55deaf75012ff3659f0cc51566b89bc934209f51433a"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "7a6ab2cf6e85cd39ee2ec8e50a836eb7b8e2064be34547cd636b873310ee20a3"
+    },
+    {
+      "path": "VERSION",
+      "sha256": "a2d5e268fe70979caccd895156b3d33bd61a3cc7e660ab7a5b07066849b3e248"
     },
     {
       "path": "site-reference-library/ckcc-b2b-candidates.json",
       "sha256": "2a2cf668911a19c50ef2d68942c53e81c8b989a8e3376845aed404b62c630735"
     },
     {
-      "path": "site-reference-library/CKCC企业站候选目录.html",
-      "sha256": "0dfd17fcaa351925f44f86f15c4e0dfad12a91ca7ca18fb8de838ac77900d67a"
-    },
-    {
       "path": "site-reference-library/design-library.json",
       "sha256": "e3a524de292d537029f44122f4bda898700acfd1324ac651ea46fbb23cbf5875"
     },
     {
-      "path": "site-reference-library/使用说明.txt",
-      "sha256": "14ba1f286188b4b1dfa1e2fa0b24a1b4c7acc74d4b7c978c5dd4d197f886ae49"
-    },
-    {
-      "path": "site-reference-library/参考库总览.html",
-      "sha256": "293c857c08813fd66cb41731b6fc4663646d04e8accf31c191152f5fbee8e0f2"
-    },
-    {
-      "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "78c7877a4aae6d38261d55deaf75012ff3659f0cc51566b89bc934209f51433a"
+      "path": "unified-site-builder/SKILL.md",
+      "sha256": "46b1ab6edfd4267a59c4b4d6b2ff784a32b6b7a9bfd91b8c45c913004462e982"
     },
     {
       "path": "unified-site-builder/agents/openai.yaml",
@@ -94,23 +94,23 @@
     },
     {
       "path": "unified-site-builder/assets/runtime/server.mjs",
-      "sha256": "a65af48d371a80935505fd9b124bf039e06b12fcecdc07bf0dcf4fa12a3d6a6c"
+      "sha256": "204263ea7863f040bc61b01e013abc98aeb62db7ebadc7238d6575fb2455f9af"
     },
     {
       "path": "unified-site-builder/assets/runtime/worker.mjs",
-      "sha256": "c316a9fee4628232b1732d7d5e6f16a51defc237d8ac571c70f8e93fc4302f90"
+      "sha256": "71232d23b80ad21de1ae0ac3199714dc2897a5ec6cccb6a6f41aa2c96aa6ccf3"
     },
     {
       "path": "unified-site-builder/assets/site.contract.json",
-      "sha256": "8031e4eef840e7978f403635f124f61875068b2b31f052098be18730d6aa8a1b"
+      "sha256": "82a4ed09c140528b1f3ceaffc43a32b2e57bd70628bd7b285e8787ebe0269040"
     },
     {
       "path": "unified-site-builder/assets/translation/core-manifest.json",
-      "sha256": "d12083b7393a58df583e8c9595484db5a87433b2175c4596242f850bc21cba10"
+      "sha256": "22bceb1b5f29236648274f1456a38a3d4960a42080a6c1e25fe6efee0a436834"
     },
     {
       "path": "unified-site-builder/assets/translation/engine.mjs",
-      "sha256": "c2c056840f50a8e5e264dddf7a364a9df9a0a586202c053a0e5c3c1be05726d4"
+      "sha256": "0238bfa0d08254902b386ecc3e7b55c20b9fbae953a799dd45c951d76c725f56"
     },
     {
       "path": "unified-site-builder/assets/translation/quality.mjs",
@@ -126,7 +126,11 @@
     },
     {
       "path": "unified-site-builder/assets/translation/test_engine.mjs",
-      "sha256": "bf69511f9c5ec95199ab01a50a561dc6630db1439ca69d863000d3d5ef90461c"
+      "sha256": "4f30810253f23d7fca169884623c2dce7fcfe5dfe20499cd788bfef099a339b8"
+    },
+    {
+      "path": "unified-site-builder/assets/translation/test_hymt.mjs",
+      "sha256": "1f7d0330aff1db82b1d5d633ab81292bc3e8b67795302ec8e721ced5090bd54c"
     },
     {
       "path": "unified-site-builder/assets/translation/test_resolver.mjs",
@@ -150,11 +154,15 @@
     },
     {
       "path": "unified-site-builder/references/cloudflare.md",
-      "sha256": "693d869bf987f4467ca7692d31f37589b17e9dae648441bfa95e27842da73cb1"
+      "sha256": "5820ad3cebd8d2161a7fa5e516d3bbf3d4d1dad854d670fe1e5dcacdf7da2364"
     },
     {
       "path": "unified-site-builder/references/design.md",
       "sha256": "62f81d16a9548e4dc18e29ad5583031e4e507ec1afbca4b60c8a036818267ec8"
+    },
+    {
+      "path": "unified-site-builder/references/hymt-default.md",
+      "sha256": "e3fe49551b3e3ba4af4d4c68ecd70a9174987f0d870724fcbe9837fbbc36e568"
     },
     {
       "path": "unified-site-builder/references/node-workbench.md",
@@ -170,7 +178,7 @@
     },
     {
       "path": "unified-site-builder/references/runtime-profiles.md",
-      "sha256": "8a8e976fec491438d486836d76e04e5dd8f0d431e7f264f2028d0020d3d81176"
+      "sha256": "42fc35da2f4292607654b96591587787185a0674bbba49b85d7b36e46666013e"
     },
     {
       "path": "unified-site-builder/references/site-foundation.md",
@@ -182,11 +190,11 @@
     },
     {
       "path": "unified-site-builder/references/translation-workbench-v2.md",
-      "sha256": "840aae3050c12b8b2b192187e0fafa89ab966ea4ee2068c87b99e1d2bf7a4504"
+      "sha256": "0d9b3ff1f0454f1b06f2e14da8ad980cd7dcad8522200841a57acb7222c857a4"
     },
     {
       "path": "unified-site-builder/references/translation.md",
-      "sha256": "6086522dfe21e1c941eb1d392ac3bb9a621448a418b8c1f3768739704e71f4fd"
+      "sha256": "decc8b7382dc576d56b7904cad3eb0528fe6529abf13c1b73dffd81ad95ac42c"
     },
     {
       "path": "unified-site-builder/references/visual-production.md",
@@ -194,7 +202,7 @@
     },
     {
       "path": "unified-site-builder/scripts/create_site.py",
-      "sha256": "969539cf5cac26124feacd1a9a850c889500de8488e62064dacb2fe4426b7a1d"
+      "sha256": "37cecb55b6564210968fb01cdf097a16c370b39c97bec07a01853c603a18f632"
     },
     {
       "path": "unified-site-builder/scripts/e2e_site.mjs",
@@ -202,7 +210,7 @@
     },
     {
       "path": "unified-site-builder/scripts/install_translation.py",
-      "sha256": "8fdd9fe0dcc21517cf22d05c385fad2959b804b308135bfb5cb2d045b9ff467c"
+      "sha256": "c04395c61863e37712eeb5037f1838596c5a11daf8298d6a325ac1307e72611c"
     },
     {
       "path": "unified-site-builder/scripts/site_package.py",
@@ -214,31 +222,11 @@
     },
     {
       "path": "unified-site-builder/scripts/translation_contract.py",
-      "sha256": "2ddf0a6d172608ce7fe30cbea71bc3ba6bb85ea090d29918ad2a974de2acb7d7"
+      "sha256": "ac05a2956915556382983d85202fbde1cbc757f4245ae0d95704a795b4c6d5d8"
     },
     {
       "path": "unified-site-builder/scripts/verify_preservation.mjs",
       "sha256": "4df2ded2b7acd8456591a5254c3bc6fcfc8c7fd67c463425d69121656532690f"
-    },
-    {
-      "path": "unified-site-builder/SKILL.md",
-      "sha256": "71de124deb84977b46d2e64cfdec7ebaeb2d030236b7d7015c4414d4832c2858"
-    },
-    {
-      "path": "unified-site-builder/使用说明.txt",
-      "sha256": "dfd924f4baa3785269ffdeb5c00496e57b0332be77022408bf682932acff2bc6"
-    },
-    {
-      "path": "unified-site-builder/验证结果.txt",
-      "sha256": "fe46030f0283acb792bb4a12c19a974fa8ec93aaa23261b2a1cd31d9f13652df"
-    },
-    {
-      "path": "VALIDATION.md",
-      "sha256": "5218cd82adddf63e46211f1761aca33ba391bbcc3791af468ce5636df7fa0e39"
-    },
-    {
-      "path": "VERSION",
-      "sha256": "6430a242e9486093ef6f71d9086d48f61ba102f0d2fb0f5b95334c6007a46db3"
     }
   ]
 }

@@ -1,5 +1,8 @@
 # 按需翻译
 
+1.6.2 默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
+
+
 默认源语言 `en`；默认8种语言为英文 `en`、中文 `zh`、西班牙语 `es`、阿拉伯语 `ar`、俄语 `ru`、法语 `fr`、德语 `de`、葡萄牙语 `pt`，用户可调整。英文是内容原文，中文是建站时预先提供的目标译文；中文后台不改变源语言。后台维护源文，已有人工语言版本导入时保留内容关联与版本。
 
 建站时在源码中实现两种引擎、运行时注入、术语保护、初始中文导入、持久缓存和前台触发；部署负责绑定资源和配置，不为单个项目临时改写翻译代码。
@@ -59,7 +62,7 @@ const nodeEngine = initTranslationEngine({ env: process.env, glossaryVersion: '1
 `TRANSLATION_ENDPOINT` 是完整 HTTPS Chat Completions 地址，不猜测追加路径。外部引擎通过服务端密钥调用；批量请求返回等长、有序的 JSON 字符串数组，严格校验。已有地址语义不同则保留兼容映射。
 
 ```json
-{"provider":"workers-ai","configured":true,"model":"@cf/meta/m2m100-1.2b","engineVersion":"unified-translation-v2:protected-v3","glossaryVersion":"1"}
+{"provider":"workers-ai","configured":true,"model":"@cf/meta/m2m100-1.2b","engineVersion":"unified-translation-v2:hymt-v1","glossaryVersion":"1"}
 ```
 
 provider 为 `workers-ai | openai-compatible | unconfigured`，未配置 model 为 null。configured 仅表示配置完整，不证明授权、额度或调用成功；后台另记最近调用结果。状态不含密钥和内部错误原文。已选引擎失败不静默切换供应商，尤其不能因 Cloudflare 失败调用收费外部引擎。
@@ -125,7 +128,7 @@ source 非空，sourceLanguage 为实际源语言。targetLanguage 为目标语�
 保留原有返回字段，兼容增加可选 reasonCode 与脱敏 engine：
 
 ```json
-{"ok":true,"data":{"status":"pending","sourceLanguage":"en","targetLanguage":"es","revision":3,"blocks":{},"retryAfterMs":2000,"engine":{"provider":"workers-ai","configured":true,"model":"@cf/meta/m2m100-1.2b","engineVersion":"unified-translation-v2:protected-v3","glossaryVersion":"2"}}}
+{"ok":true,"data":{"status":"pending","sourceLanguage":"en","targetLanguage":"es","revision":3,"blocks":{},"retryAfterMs":2000,"engine":{"provider":"workers-ai","configured":true,"model":"@cf/meta/m2m100-1.2b","engineVersion":"unified-translation-v2:hymt-v1","glossaryVersion":"2"}}}
 ```
 
 | status | 含义 |
