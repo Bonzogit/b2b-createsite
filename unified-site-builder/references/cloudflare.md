@@ -20,3 +20,7 @@ Workers 工程：
 官方核对：https://developers.cloudflare.com/workers/ 、https://developers.cloudflare.com/d1/ 、https://developers.cloudflare.com/r2/ 、https://developers.cloudflare.com/workers-ai/
 
 临时代理与正式域名的来源配置及页面源块一致性按 [翻译规范](translation.md#页面源块与入口一致性) 核对；GET 首页可访问不证明翻译 POST、后台保存或询盘成功。换域名后验证相关写接口，保留精确来源校验。
+
+## 后台翻译调度
+
+使用共享 translation-jobs.mjs 与当前 SQLite Durable Object 的 Alarm，按 [后台翻译任务](translation-admin.md)验收关闭页面及对象重建后的继续执行。不要用请求结束后的普通 setTimeout 承诺持久任务。现有 DO/Alarm 配额和外部引擎预算仍须按实际账户核对；此实现不要求额外创建 Cloudflare Queues。

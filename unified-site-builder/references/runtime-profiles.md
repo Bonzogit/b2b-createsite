@@ -55,3 +55,7 @@ Node 与 Cloudflare 新工程均默认 Hy-MT2，密钥分别由服务端环境�
 先运行 site_package.py check，再通过正常工作台上传。用独立验收项目执行 e2e_site.mjs；要求 SITE_TEST_ORIGIN、私密 SITE_TEST_PASSWORD 和 SITE_E2E_ALLOW_WRITE=1。脚本会写测试内容，只能用于明确的隔离项目。
 
 检查公网首页/后台、权限与来源/CSRF、草稿隔离、发布/更新/下架、询盘去重、附件鉴权、公开媒体、联系方式同步、初始中文、人工优先和过期原文拒绝。随后在原项目升级并重启，核对原账号、测试内容、私密附件、媒体和翻译缓存仍可读。真实 Workers AI 与服务器外部引擎状态、邮件发送、语义质量及浏览器画面分别记录，不把模拟检查当线上验收。
+
+## 持久翻译任务
+
+1.6.6 的共享运行库实现 [后台翻译任务](translation-admin.md)。Node 将任务保存在原 DATA_DIR，启动恢复；Worker 将任务保存在原 SQLite Durable Object 并由 Alarm 唤醒。升级保留既有数据位置、对象命名和迁移。两种目标共用 resolver/缓存/术语及预算规则，密钥只由服务端注入。

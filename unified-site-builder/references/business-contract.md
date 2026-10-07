@@ -66,3 +66,7 @@ WhatsApp 使用经校验的国际号码生成 wa.me，预填产品名称、型�
 
 标准密码哈希、限速、过期与可注销 HttpOnly 会话；HTTPS 使用 Secure，本机 HTTP 开发明确区分。无初始密码时后台锁定，禁止抢注。升级时不重置密码。
 数据事务或等价原子操作防并发丢失；迁移有版本且可恢复。草稿、账户、询盘、附件不进公开缓存或翻译。导出内容不等于完整备份，备份含一致数据与文件并在隔离环境恢复验证。
+
+## 后台翻译接口
+
+后台登录、精确来源与 CSRF 校验沿用现有规则。`GET/PUT /api/v1/admin/translation-settings` 管理 displayLanguages、translationTargets、autoTranslateArticles；`GET/POST /api/v1/admin/translation-jobs` 查询或创建内容的目标语言任务，POST 返回 202；`POST /api/v1/admin/translation-jobs/:id/retry` 按最新版本重试。公开 `GET /api/v1/languages` 只返回源语言及展示语言，公开解析拒绝隐藏语言和草稿。接口字段、持久性和测试见 [后台翻译任务](translation-admin.md)。

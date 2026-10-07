@@ -35,9 +35,18 @@
     "sourceFingerprint": "source-v1:sha256-text-context",
     "seedImport": "initialization-only",
     "missingOrStale": "engine-then-persistent-cache",
-    "unconfigured": "current-translations-then-source"
+    "unconfigured": "current-translations-then-source",
+    "adminJobs": {
+      "persisted": true,
+      "manual": "selected-or-all-target-languages",
+      "articleSave": "automatic-configurable",
+      "displayLanguages": "admin-configurable",
+      "drafts": "authenticated-admin-jobs-only",
+      "progress": "per-language-completed-blocks",
+      "generationIsReview": false
+    }
   },
-  "skillVersion": "1.6.5",
+  "skillVersion": "1.6.6",
   "translationContract": {
     "version": 2,
     "coreVersion": "unified-translation-v2:hymt-v1",

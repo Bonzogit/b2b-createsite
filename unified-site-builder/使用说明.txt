@@ -14,3 +14,5 @@ python <skill>/scripts/site_package.py pack <project> --output <项目外>/<项�
 node --test <skill>/assets/translation/test_engine.mjs <skill>/assets/translation/test_hymt.mjs <skill>/assets/translation/test_seed.mjs <skill>/assets/translation/test_resolver.mjs
 
 结构、业务、外部服务、素材和视觉分别报告。具体历史结果见完整仓库 VALIDATION.md；Skill 更新不自动改变已部署网站。维护更新需验证、同步 GitHub 并保留固定版本分支。
+
+后台翻译：读取 references/translation-admin.md；支持一键全部/所选语言、展示语言设置、文章保存后自动翻译及持久进度。生成完成仍需校对；旧网站须单独升级接线。

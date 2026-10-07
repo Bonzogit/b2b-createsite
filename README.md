@@ -4,14 +4,14 @@
 
 A portable specification, reference catalog, runnable backend foundation, and package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.6.5**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.6.6**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
 - 通用建站框架：首页、产品或服务、企业能力、合作流程、文章和询盘等内容职责与内容深度。
 - 按基础框架、参考设计、图片准备与生成、页面实现、实际验收的顺序完成网站。
 - 中文真实后台约定、业务数据与接口协议。
-- Resend 邮件通知、WhatsApp、文章发布；默认英文原文、完整初始中文和8种语言选项，其余6种语言及新增/改文缺失中文按需翻译并缓存；默认自有 Hy-MT2、可显式选择其它引擎的运行时注入、术语保护参考模块及测试。
+- Resend 邮件通知、WhatsApp、文章发布；默认英文原文、完整初始中文和8种语言选项，其余语言缺失译文可按需补齐；后台一键翻译所选/全部语言、选择前台展示语言，文章保存/更新/发布可自动翻译并持久记录进度；默认自有 Hy-MT2、可显式选择其它引擎的运行时注入、术语保护参考模块及测试。
 - 网站完成后默认分别提供服务器 ZIP 和 Cloudflare ZIP，共用业务源码，两个包均为可直接上传的项目根目录；默认实际部署仍为用户 Ubuntu 工作台。
 - 整站参考或多个网站模块组合的设计方法。
 - 45 条 Blocksy 官方模板介绍索引、37 条 CKCC 企业站候选目录，以及离线包结构检查和打包工具。候选目录待实际画面复核。
@@ -91,5 +91,8 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 - [旧版 1.6.3](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.3)
 
 
-- [当前 1.6.5](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.5)
+- [历史 1.6.5](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.5)
 - [历史 1.6.4](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.4)
+
+- [当前 1.6.6](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.6)
+- [后台翻译任务规范](unified-site-builder/references/translation-admin.md)

@@ -2,7 +2,7 @@
 name: unified-site-builder
 description: 创建或改造有真实中文后台的企业展示与询盘网站，统一内容管理、询盘、邮件、文章和按需翻译，按产品及参考库设计前台，并交付部署包或完成指定部署。适用于完整建站和已有站点升级；仅咨询或参考分析时不创建网站。
 metadata:
-  version: "1.6.5"
+  version: "1.6.6"
 ---
 
 # 统一网站建站
@@ -19,7 +19,7 @@ metadata:
 | 已有网站修改 | 实际代码、site.contract.json 和 docs/HANDOFF.md；仅加载涉及功能及目标平台的规范，保留数据库、附件、账号和域名 |
 | 参考分析或前台改版 | [设计](references/design.md)、[参考选择](references/style-selection.md)；涉及图片时读 [图片制作](references/visual-production.md)，不扩大为后台重建 |
 | 邮件配置或检查 | [Resend 邮件](references/resend-email.md)，复用已有授权及安全凭据；测试地址与业务收件人分开 |
-| 翻译接入或修复 | [翻译规范](references/translation.md)、[Hy-MT2](references/hymt-default.md)、[协议 v2](references/translation-workbench-v2.md)，保留人工译文和缓存 |
+| 翻译接入或修复 | [翻译规范](references/translation.md)、[Hy-MT2](references/hymt-default.md)、[协议 v2](references/translation-workbench-v2.md)、[后台翻译任务](references/translation-admin.md)，保留人工译文和缓存 |
 | 打包、部署或升级 | 运行目标及对应 [Node](references/node-workbench.md) / [Cloudflare](references/cloudflare.md)；按 [验收](references/acceptance.md)核对影响范围 |
 
 小范围修改验证所改功能、关联流程和数据保留，不重做整站设计、全部语言审核或另一平台部署包。完整新建按完整验收执行。已有检查通过后，仅在新变更、失败或未解决问题出现时重跑。
@@ -29,7 +29,7 @@ metadata:
 - 中文真实后台，默认维护英文源内容；用户可指定其他语言。联系方式集中配置，公开入口读取同一数据。
 - 询盘与私密附件先持久化再返回成功；邮件状态独立，发信失败不丢询盘。打开 WhatsApp 不算已发送。
 - 文章发布、修改及下架同步列表、详情和元信息，失败保留旧版，无需重新上传 ZIP。
-- 初始英文、完整中文及 en/zh/es/ar/ru/fr/de/pt 8种语言选项；其余6种及新增/改文缺失中文按需生成。人工译文 → 有效初始中文 → 持久缓存 → 引擎，改文只失效受影响块。
+- 初始英文、完整中文及 en/zh/es/ar/ru/fr/de/pt 8种语言选项；其余6种缺失译文按需生成；后台可一键翻译所选或全部目标语言，独立选择前台展示语言，文章保存/更新/发布默认自动排队翻译所选目标语言，可关闭或调整。人工译文 → 有效初始中文 → 持久缓存 → 引擎，改文只失效受影响块。
 - 新工程默认 Hy-MT2，凭据在服务端注入；其他引擎按明确选择启用，失败不跨供应商切换。含中文括号、品牌或型号的正文按 [混排识别](references/translation.md#中英文混排与页面识别)处理。
 - 发布后的线上内容是来源，初始示例只首次导入；升级不覆盖用户编辑、账号、询盘和附件。主要正文直接包含在 HTML 响应中。
 

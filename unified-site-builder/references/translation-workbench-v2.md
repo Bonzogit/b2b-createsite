@@ -3,7 +3,7 @@
 默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
 
 
-本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.5、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
+本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.6、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
 
 ## 各 Agent 的执行入口
 
@@ -17,7 +17,7 @@
 
 runtime：Worker 传 env 与所选引擎需要的绑定，Node 传服务端 env；Hy-MT2 在两种平台均使用服务端密钥，Workers AI 仅在明确选择时传 AI:env.AI；必须提供持久预算 reserveUsage。示例限制不是免费额度保证。不得在供应商失败后静默转付费接口。
 
-repository 必须实现 getContent、getAuthored、getCached、putCached、withLock、getEngineIdentity、putEngineIdentity。getContent 只返回本站已发布内容，含 status/revision/kind/context/blocks；每块含稳定 id/text/context。withLock 使用持久任务协调、租约与恢复，同一站点跨实例去重；回调完成后释放，任务正在执行可返回 undefined。数据库和附件由本站存储实现，resolver 不冒充数据库。
+repository 必须实现 getContent、getAuthored、getCached、putCached、withLock、getEngineIdentity、putEngineIdentity。公开 resolver 的 getContent 只返回本站已发布内容；[后台持久任务](translation-admin.md)使用独立私有适配器处理经授权的文章草稿，不放宽公开接口。内容含 status/revision/kind/context/blocks；每块含稳定 id/text/context。withLock 使用持久任务协调、租约与恢复，同一站点跨实例去重；回调完成后释放，任务正在执行可返回 undefined。数据库和附件由本站存储实现，resolver 不冒充数据库。
 
 getAuthored 返回本站初始/人工译文。初始中文按实际全部初始块生成 seed/translations.zh.json，使用 seed.mjs 的源摘要规则。重启/升级不覆盖管理员内容。词汇库 config/translation-glossary.json 使用 translation.md 的条目格式，传 glossary.entries，不能只传 glossaryVersion 或 protectedTerms。
 
