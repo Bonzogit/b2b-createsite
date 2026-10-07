@@ -4,7 +4,7 @@
 
 A portable specification, reference catalog, runnable backend foundation, and package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.6.4**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.6.5**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
@@ -91,4 +91,5 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 - [旧版 1.6.3](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.3)
 
 
-- [当前 1.6.4](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.4)
+- [当前 1.6.5](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.5)
+- [历史 1.6.4](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.4)

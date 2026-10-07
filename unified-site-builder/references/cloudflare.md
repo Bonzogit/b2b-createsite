@@ -18,3 +18,5 @@ Workers 工程：
 保留已有 Pages _worker.js/functions 及依赖；不能过滤后端后冒充完整静态成功。本包脚本结构检查 Workers JSON 配置，Pages/JSONC 项目另行验收并写明范围。
 默认托管地址、真实域名、trycloudflare 通道分别说明；通道依赖实际运行连接器，不能当成永久域名。
 官方核对：https://developers.cloudflare.com/workers/ 、https://developers.cloudflare.com/d1/ 、https://developers.cloudflare.com/r2/ 、https://developers.cloudflare.com/workers-ai/
+
+临时代理与正式域名的来源配置及页面源块一致性按 [翻译规范](translation.md#页面源块与入口一致性) 核对；GET 首页可访问不证明翻译 POST、后台保存或询盘成功。换域名后验证相关写接口，保留精确来源校验。

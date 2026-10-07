@@ -3,7 +3,7 @@
 默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
 
 
-本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.4、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
+本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.5、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
 
 ## 各 Agent 的执行入口
 

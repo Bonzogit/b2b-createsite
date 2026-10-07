@@ -1,5 +1,5 @@
 {
-  "version": "1.6.4",
+  "version": "1.6.5",
   "scope": "public specification, reference catalog, runnable backend and translation adapters",
   "entry": "AGENT_ENTRY.md",
   "license": "MIT",
@@ -9,16 +9,16 @@
       "sha256": "06360afa17a5f1b460b873b9a33de816ebaa4932fb166cc999e3bc717b9c8f99"
     },
     {
-      "path": "AGENTS.md",
-      "sha256": "f0eed78e8e326afc542b2a2a1217f1389f15b98d07fe92b6436c7aeb61ea4a97"
-    },
-    {
       "path": "AGENT_ENTRY.md",
       "sha256": "834bffac4989ddcbc5eeb3b6405490c21f118bda3339139badc2bb01aeb5e844"
     },
     {
+      "path": "AGENTS.md",
+      "sha256": "f0eed78e8e326afc542b2a2a1217f1389f15b98d07fe92b6436c7aeb61ea4a97"
+    },
+    {
       "path": "CHANGELOG.md",
-      "sha256": "4b7f8548423710b2cf29533a6955d447f4a44b5416c72f423c07aa0f38db30ef"
+      "sha256": "894e773aa51237a9eb3b95507de258ee7504d22863b861e99c62a5eba9e2bd84"
     },
     {
       "path": "LICENSE",
@@ -26,27 +26,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "5ca0497668e0580bd88a60fad60b11db87e403636e71cb0fc020b528b8017cb6"
-    },
-    {
-      "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "78c7877a4aae6d38261d55deaf75012ff3659f0cc51566b89bc934209f51433a"
-    },
-    {
-      "path": "VALIDATION.md",
-      "sha256": "c3e2b8e7ccf5290ea9999785d6d3ad2824795d4be5635753e938b8f8d023f559"
-    },
-    {
-      "path": "VERSION",
-      "sha256": "d7e7472c262184ba0da49b97c323fda8a0ecbeee33d7b34db48405efafd655de"
-    },
-    {
-      "path": "site-reference-library/CKCC企业站候选目录.html",
-      "sha256": "0dfd17fcaa351925f44f86f15c4e0dfad12a91ca7ca18fb8de838ac77900d67a"
+      "sha256": "5bc1828dcab68fef95b3c7f07f9a506b2f05c259930f591827d08d432ee37578"
     },
     {
       "path": "site-reference-library/ckcc-b2b-candidates.json",
       "sha256": "2a2cf668911a19c50ef2d68942c53e81c8b989a8e3376845aed404b62c630735"
+    },
+    {
+      "path": "site-reference-library/CKCC企业站候选目录.html",
+      "sha256": "0dfd17fcaa351925f44f86f15c4e0dfad12a91ca7ca18fb8de838ac77900d67a"
     },
     {
       "path": "site-reference-library/design-library.json",
@@ -61,8 +49,8 @@
       "sha256": "293c857c08813fd66cb41731b6fc4663646d04e8accf31c191152f5fbee8e0f2"
     },
     {
-      "path": "unified-site-builder/SKILL.md",
-      "sha256": "84b217dbd664b6f61cfd128dcafab7d7153a179e6ab42ed1a1bd29b302fb4add"
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "78c7877a4aae6d38261d55deaf75012ff3659f0cc51566b89bc934209f51433a"
     },
     {
       "path": "unified-site-builder/agents/openai.yaml",
@@ -86,23 +74,23 @@
     },
     {
       "path": "unified-site-builder/assets/runtime/public/admin/index.html",
-      "sha256": "4c1c544b3b0964eb9cef0daccd9b1bc4cf27d9b500f6f92064f8c3c6779c9080"
+      "sha256": "389a6ee25da4144ab0075a3c9c8c5205fccaf505b77a49199544410a63ed2928"
     },
     {
       "path": "unified-site-builder/assets/runtime/public/assets/admin.js",
-      "sha256": "cd096c2e1cef0e20f772bd86103526df7b6ee293319dd222ca3dcbc0ae49e733"
+      "sha256": "354b99c6fb098804e28022c76935152af1d9451e85600da26a6d374054a921be"
     },
     {
       "path": "unified-site-builder/assets/runtime/public/assets/site.css",
-      "sha256": "a740e64d3814a63ee782ead68e4d0153b3005e150943482fc7a53b6b6408902c"
+      "sha256": "f1bd2e49043f4060568c529cb7192df280ed65b7ec75c2a1d06b9aaf5eead50d"
     },
     {
       "path": "unified-site-builder/assets/runtime/public/assets/site.js",
-      "sha256": "88eb6eb028ed0a02f9f5efaa26e83c2192627435b7c07714b4ef36c768ba838a"
+      "sha256": "912e8f44009d6f37286cedc96ec2240ccbd7b4c8d1c933b72928dbff40afd03f"
     },
     {
       "path": "unified-site-builder/assets/runtime/public/contact/index.html",
-      "sha256": "f587e0b359f75aa185a1b3d87890141f2d4bba61ba1e90451364cad184a46a53"
+      "sha256": "f3a0b58fd8274f86ac49a700e66c4341e3b741ca7c22ffda68e929da890550e2"
     },
     {
       "path": "unified-site-builder/assets/runtime/server.mjs",
@@ -114,7 +102,7 @@
     },
     {
       "path": "unified-site-builder/assets/site.contract.json",
-      "sha256": "be6186d547ebae2a1bcb6623d55f5d0b3f3551e0ec7c07182522f6f13a60b6d2"
+      "sha256": "c44c90abdc4ab1c82b90566f9840413b1b8f1c69e48976a4b407cad9b87d486d"
     },
     {
       "path": "unified-site-builder/assets/translation/core-manifest.json",
@@ -154,11 +142,11 @@
     },
     {
       "path": "unified-site-builder/references/acceptance.md",
-      "sha256": "07c37a39966fd880cdf1ddce9e2e9d67d01aad3e6494ad12a7ca7564e325e1fd"
+      "sha256": "14931c874b142360f729b27a746638cfece7827d08fa3c17db3a1741dce41082"
     },
     {
       "path": "unified-site-builder/references/admin-ui.md",
-      "sha256": "8466c0a20aa4cc8d78a1ddc4bee7a2d3c886cbafcdd1aa1de923dc118967a4ea"
+      "sha256": "048061372b9a9330c511f99f760db8356ad6335de9c87ce92346e7be165e755e"
     },
     {
       "path": "unified-site-builder/references/business-contract.md",
@@ -166,11 +154,11 @@
     },
     {
       "path": "unified-site-builder/references/cloudflare.md",
-      "sha256": "3a687516639ee4ce3defebbde8bd67272985c93518b5c8264241f7ac854023ae"
+      "sha256": "5e73b63728cb9364911920aa5c51291b7c39b1301ec896b763804b3e23e7d41d"
     },
     {
       "path": "unified-site-builder/references/design.md",
-      "sha256": "62f81d16a9548e4dc18e29ad5583031e4e507ec1afbca4b60c8a036818267ec8"
+      "sha256": "3fa266351db2d566eb8bbcba92c85c3e29f547564481389c1a820fcbabe3f10b"
     },
     {
       "path": "unified-site-builder/references/hymt-default.md",
@@ -178,11 +166,11 @@
     },
     {
       "path": "unified-site-builder/references/node-workbench.md",
-      "sha256": "53fc519886c9c7e9b193bdd01999fd7f7995af3a06d744ff7d4b10828fa51710"
+      "sha256": "7f1f44afb5f8fb8ef236506d6a0e1d6f249654547f6c7482f41d55cb4a3be678"
     },
     {
       "path": "unified-site-builder/references/portable-handoff.md",
-      "sha256": "c04c7ba08ac437541ab50b267cc3ba3a889bba4c7b6c30c11afae2726f49586b"
+      "sha256": "1026fe50147a3016e0e51af2aed97c39aced433a8f418a6c8de801cb19aa394a"
     },
     {
       "path": "unified-site-builder/references/resend-email.md",
@@ -194,7 +182,7 @@
     },
     {
       "path": "unified-site-builder/references/site-foundation.md",
-      "sha256": "f961f0aa49ac98e1978237425a6f72b82da9c1ee29d7f0093e2659629c6978cf"
+      "sha256": "5dd25024c0e76eaaf19d2a21c7585c519ed8e261ed5dd5ba0ea6c1ea50b0d2e9"
     },
     {
       "path": "unified-site-builder/references/style-selection.md",
@@ -202,19 +190,19 @@
     },
     {
       "path": "unified-site-builder/references/translation-workbench-v2.md",
-      "sha256": "691abab5aa47bd83a2104feefbcbeb398de731661e4f735bd974e00f24c1e946"
+      "sha256": "845c47fa444b9e8d4f8f7c6c7799a04c7c167a46af2dc614c9d4654f7639ab9c"
     },
     {
       "path": "unified-site-builder/references/translation.md",
-      "sha256": "f123b716b0ebbdaba788e272cd3eb37337027ec855108d0dc15895fe06d38be4"
+      "sha256": "b7339bf1a4ce65b799edaa5a8cec426d285633ea369cad4608b8d21236520658"
     },
     {
       "path": "unified-site-builder/references/visual-production.md",
-      "sha256": "9c04902e945d5258bddcfd870bbed06f6655968de88cb49d51209a46baabb0bf"
+      "sha256": "534690344dbb980dce2efd7accd710e24ebbd6a51fa286c00e9e9cec45fe146c"
     },
     {
       "path": "unified-site-builder/scripts/create_site.py",
-      "sha256": "22fdea3122a0aa53adf300fd4cd1d4f098c68cbebef1d2152b3380b71200327c"
+      "sha256": "410570a99d0371372e86e3e68ab9e1533ebb7fe0fc69563c1552876e27c0161d"
     },
     {
       "path": "unified-site-builder/scripts/e2e_site.mjs",
@@ -222,7 +210,7 @@
     },
     {
       "path": "unified-site-builder/scripts/install_translation.py",
-      "sha256": "d9758fa7d768a8bf605c4715156da83dc88eea4adcca77e185c12a009e1057e1"
+      "sha256": "7b44c77699ecade0504444c61fb8eace6c2e501417133f42659bd9e8dcdfb6ac"
     },
     {
       "path": "unified-site-builder/scripts/site_package.py",
@@ -241,12 +229,24 @@
       "sha256": "4df2ded2b7acd8456591a5254c3bc6fcfc8c7fd67c463425d69121656532690f"
     },
     {
+      "path": "unified-site-builder/SKILL.md",
+      "sha256": "3a45b51a9aa5b9072878bf242ecbab597dada182d6559700c42a58c3a6401a9c"
+    },
+    {
       "path": "unified-site-builder/使用说明.txt",
       "sha256": "99d0d6f8c6ca7a6cf7bcad3008c4e6d48f43dc7ab0b665532e31b195ee246e65"
     },
     {
       "path": "unified-site-builder/验证结果.txt",
       "sha256": "166841082494aebd9e5c2c3df7421b84140101f9c7e7544510be9d1d8b695b1a"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "d09c8ac50a2a89b89eee7e37d7fc3c70fc25fc80753b2e1dc236f6215de7a6a9"
+    },
+    {
+      "path": "VERSION",
+      "sha256": "8317adf0a074d2b6cc6c4fdf29adaf2f7469be6561f211d09a033b784260262e"
     }
   ]
 }
