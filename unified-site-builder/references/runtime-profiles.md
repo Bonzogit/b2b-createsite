@@ -59,3 +59,5 @@ Node 与 Cloudflare 新工程均默认 Hy-MT2，密钥分别由服务端环境�
 ## 持久翻译任务
 
 1.6.6 的共享运行库实现 [后台翻译任务](translation-admin.md)。Node 将任务保存在原 DATA_DIR，启动恢复；Worker 将任务保存在原 SQLite Durable Object 并由 Alarm 唤醒。升级保留既有数据位置、对象命名和迁移。两种目标共用 resolver/缓存/术语及预算规则，密钥只由服务端注入。
+
+1.6.7：公开首屏仅从源数据、人工/初始译文及持久缓存渲染；浏览器缺失块与后台共用原 Node/Alarm 队列。列表标题、摘要和询盘界面纳入语言处理。工作台须登记 unified-translation-v2:hymt-v2 的公共模块指纹；旧 hymt-v1 保留，不能放宽指纹校验替代升级。

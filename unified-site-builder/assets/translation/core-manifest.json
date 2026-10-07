@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "coreVersion": "unified-translation-v2:hymt-v1",
+  "coreVersion": "unified-translation-v2:hymt-v2",
   "languages": [
     "en",
     "zh",
@@ -18,7 +18,7 @@
     },
     "resolver": {
       "path": "lib/translation/resolver.mjs",
-      "sha256": "a6a4e9a145a83b504add2a0429ee15fca49d9986f8c1f71b9ad41775e204ed0c"
+      "sha256": "b4d3bde569e83aec87b8abc6ec259e13350a5ca599277ff28c0e6c9e93080219"
     },
     "quality": {
       "path": "lib/translation/quality.mjs",

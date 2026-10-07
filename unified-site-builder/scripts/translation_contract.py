@@ -4,12 +4,14 @@ from pathlib import Path,PurePosixPath
 
 CORE_VERSION='unified-translation-v2:hymt-v1'
 CORE_HASHES={'engine': '0238bfa0d08254902b386ecc3e7b55c20b9fbae953a799dd45c951d76c725f56', 'resolver': 'a6a4e9a145a83b504add2a0429ee15fca49d9986f8c1f71b9ad41775e204ed0c', 'quality': 'f44bf1c664dc8a2723001768673c465b543ab688ec85b8cdb9147c10d1f01c2e', 'seed': 'df774c5e7b681cec29c0cca00a34157d241deff3336872f626d943011e7ca11e'}
+CORE_RELEASES={CORE_VERSION:CORE_HASHES,'unified-translation-v2:hymt-v2':{'engine': '0238bfa0d08254902b386ecc3e7b55c20b9fbae953a799dd45c951d76c725f56', 'resolver': 'b4d3bde569e83aec87b8abc6ec259e13350a5ca599277ff28c0e6c9e93080219', 'quality': 'f44bf1c664dc8a2723001768673c465b543ab688ec85b8cdb9147c10d1f01c2e', 'seed': 'df774c5e7b681cec29c0cca00a34157d241deff3336872f626d943011e7ca11e'}}
 def inspect_translation(root,contract):
     root=Path(root).resolve();errors=[]
     cfg=contract.get('translationContract')
     if not isinstance(cfg,dict) or cfg.get('version')!=2:
         return ['Missing translationContract version 2; legacy packages need explicit migration']
-    if cfg.get('coreVersion')!=CORE_VERSION:errors.append('Unsupported translation core version')
+    expected_hashes=CORE_RELEASES.get(cfg.get('coreVersion'),{})
+    if not expected_hashes:errors.append('Unsupported translation core version')
     if cfg.get('languages')!=contract.get('languages'):errors.append('Translation and site language lists differ')
     def read_file(value):
         if not isinstance(value,str) or '\\' in value or ':' in value or PurePosixPath(value).is_absolute() or any(p in ('..','.') for p in value.split('/')):
@@ -26,7 +28,7 @@ def inspect_translation(root,contract):
         for name,item in modules.items():
             try:
                 body=read_file(item['path'])
-                if hashlib.sha256(body.replace(b'\r\n',b'\n')).hexdigest()!=item.get('sha256') or item.get('sha256')!=CORE_HASHES[name]:errors.append('Translation module fingerprint mismatch: '+name)
+                if hashlib.sha256(body.replace(b'\r\n',b'\n')).hexdigest()!=item.get('sha256') or item.get('sha256')!=expected_hashes.get(name):errors.append('Translation module fingerprint mismatch: '+name)
             except (ValueError,KeyError,TypeError,OSError) as e:errors.append(str(e))
     try:
         glossary=json.loads(read_file(cfg.get('glossaryPath')))

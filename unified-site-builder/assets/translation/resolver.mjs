@@ -14,7 +14,7 @@ export function createTranslationService({ siteId, languages, sourceLanguage = '
   if (typeof runtime?.reserveUsage !== 'function') throw new Error('missing_persistent_budget');
   const engine = initTranslationEngine({ ...runtime, supportedLanguages: languages,
     glossaryVersion: glossary.version });
-  async function resolve({ contentId, targetLanguage, revision, blockIds }) {
+  async function resolve({ contentId, targetLanguage, revision, blockIds, cacheOnly = false }) {
     if (!languages.includes(targetLanguage)) throw new Error('unsupported_direction');
     const content = await repository.getContent(contentId);
     if (!content || content.status !== 'published') throw new Error('content_not_found');
@@ -38,6 +38,7 @@ export function createTranslationService({ siteId, languages, sourceLanguage = '
       const cached = identity ? await repository.getCached(key) : null;
       if (cached && !translationProblems(cached.translation).length) { result[block.id] = cached.translation; continue; }
       if (!status.configured) { errors.push('unconfigured'); continue; }
+      if (cacheOnly) { pending = true; continue; }
       try {
         const translated = await repository.withLock(key, async () => {
           const again = await repository.getCached(key);

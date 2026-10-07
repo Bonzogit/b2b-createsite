@@ -12,20 +12,22 @@ export function translationSettings(db) {
 }
 const active=j=>['queued','running','waiting_quota','retrying'].includes(j.status);
 const stamp=()=>new Date().toISOString();
+const priorityOf=j=>Math.min(...j.blockIds.filter(id=>!j.completed.includes(id)).map(id=>j.blockPriorities?.[id]??j.priority??10),10);
 export function createTranslationJobs({storage,getContent,resolve,schedule=async()=>{},clock=Date.now}) {
  async function wake(){const db=await storage.read(),jobs=Object.values(db.translationJobs||{}).filter(active),running=jobs.filter(j=>j.status==='running'&&j.leaseUntil>clock());const times=(running.length?running:jobs).map(j=>j.status==='running'?j.leaseUntil:j.nextRunAt||clock());if(times.length)await schedule(Math.max(clock()+100,Math.min(...times)));}
- async function enqueue(contentId,targets){
+ async function enqueue(contentId,targets,options={}){
   const db=await storage.read();targets=languageSelection(targets,{source:db.settings.sourceLanguage||'en',allowSource:false});
   const content=getContent(db,contentId);if(!content)throw Object.assign(Error('content_not_found'),{status:404});
-  const result=await storage.mutate(d=>enqueueInto(d,contentId,targets));await wake();return result;
+  const result=await storage.mutate(d=>enqueueInto(d,contentId,targets,options));await wake();return result;
  }
- function enqueueInto(db,contentId,targets){
+ function enqueueInto(db,contentId,targets,{blockIds,priority=10}={}){
   const content=getContent(db,contentId);if(!content)throw Object.assign(Error('content_not_found'),{status:404});
   db.translationJobs||={};
   for(const j of Object.values(db.translationJobs))if(j.contentId===contentId&&j.revision!==content.revision&&active(j)){j.status='cancelled';j.reasonCode='stale_revision';j.updatedAt=stamp();}
   return targets.map(targetLanguage=>{
-   const existing=Object.values(db.translationJobs).find(j=>j.contentId===contentId&&j.targetLanguage===targetLanguage&&j.revision===content.revision&&active(j));if(existing)return existing;
-   const j={id:crypto.randomUUID(),contentId,revision:content.revision,targetLanguage,blockIds:content.blocks.map(b=>b.id),completed:[],total:content.blocks.length,status:content.blocks.length?'queued':'completed',reasonCode:null,attempts:0,nextRunAt:clock(),createdAt:stamp(),updatedAt:stamp()};db.translationJobs[j.id]=j;return j;
+   const selected=blockIds?content.blocks.filter(b=>blockIds.includes(b.id)):content.blocks;
+   const existing=Object.values(db.translationJobs).find(j=>j.contentId===contentId&&j.targetLanguage===targetLanguage&&j.revision===content.revision&&active(j));if(existing){existing.blockPriorities||=Object.fromEntries(existing.blockIds.map(id=>[id,existing.priority??10]));for(const b of selected)existing.blockPriorities[b.id]=Math.min(existing.blockPriorities[b.id]??10,priority);existing.priority=priorityOf(existing);existing.blockIds=[...new Set([...existing.blockIds,...selected.map(b=>b.id)])];existing.total=existing.blockIds.length;return existing;}
+   const j={id:crypto.randomUUID(),contentId,revision:content.revision,targetLanguage,priority,blockPriorities:Object.fromEntries(selected.map(b=>[b.id,priority])),blockIds:selected.map(b=>b.id),completed:[],total:selected.length,status:selected.length?'queued':'completed',reasonCode:null,attempts:0,nextRunAt:clock(),createdAt:stamp(),updatedAt:stamp()};db.translationJobs[j.id]=j;return j;
   });
  }
  function cancelInto(db,contentId){for(const j of Object.values(db.translationJobs||{}))if(j.contentId===contentId&&active(j)){j.status='cancelled';j.reasonCode='content_unpublished';j.updatedAt=stamp();}}
@@ -35,12 +37,12 @@ export function createTranslationJobs({storage,getContent,resolve,schedule=async
    db.translationJobs||={};
    // One engine call per site. Expired leases recover after process/instance restart.
    if(Object.values(db.translationJobs).some(j=>j.status==='running'&&j.leaseUntil>t))return null;
-   const j=Object.values(db.translationJobs).filter(j=>active(j)&&(j.status==='running'?j.leaseUntil<=t:j.nextRunAt<=t)).sort((a,b)=>(a.nextRunAt||0)-(b.nextRunAt||0))[0];if(!j)return null;
+   const j=Object.values(db.translationJobs).filter(j=>active(j)&&(j.status==='running'?j.leaseUntil<=t:j.nextRunAt<=t)).sort((a,b)=>priorityOf(a)-priorityOf(b)||(a.nextRunAt||0)-(b.nextRunAt||0))[0];if(!j)return null;
    const c=getContent(db,j.contentId);if(!c||c.revision!==j.revision){j.status='cancelled';j.reasonCode='stale_revision';return null;}
    j.status='running';j.leaseToken=token;j.leaseUntil=t+120000;j.updatedAt=stamp();return j;
   });
   if(!job){await wake();return;}
-  const blockId=job.blockIds.find(v=>!job.completed.includes(v));let result;
+  const blockId=job.blockIds.filter(v=>!job.completed.includes(v)).sort((a,b)=>(job.blockPriorities?.[a]??job.priority??10)-(job.blockPriorities?.[b]??job.priority??10))[0];let result;
   try{result=await resolve({contentId:job.contentId,revision:job.revision,targetLanguage:job.targetLanguage,blockIds:[blockId]});}
   catch(e){result={blocks:{},reasonCode:['content_not_found','stale_revision'].includes(e.message)?e.message:'provider_error'};}
   await storage.mutate(db=>{

@@ -3,7 +3,7 @@
 默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
 
 
-本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.6、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
+本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.7、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
 
 ## 各 Agent 的执行入口
 
@@ -40,3 +40,5 @@ Ubuntu 默认走原 Node 工作台路径，外部翻译服务需实际配置；N
 交接中记录 skill/core/glossary/协议版本和部署目标。当前安装 skill 不会改变旧网站或其他 Agent 已下载的包；跨平台重新分发完整新包。
 
 Workers AI 分支将品牌、型号、数字和指定词汇保留在代码中，只把其余文本片段交给模型，随后按原顺序拼接。片段翻译仍可能影响语句流畅度，需进行目标语言人工复核。
+
+1.6.7 的公共 resolver 增加 cacheOnly 模式，登记 coreVersion=unified-translation-v2:hymt-v2；引擎源码及 engineVersion 仍为 hymt-v1，既有有效机器译文可继续复用。安装器只复制模块，原工作台仍需明确登记新版本及指纹；包检查器兼容旧 hymt-v1。公开页面与前台必须同时接线才能获得异步行为。
