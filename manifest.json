@@ -1,5 +1,5 @@
 {
-  "version": "1.6.2",
+  "version": "1.6.3",
   "scope": "public specification, reference catalog, runnable backend and translation adapters",
   "entry": "AGENT_ENTRY.md",
   "license": "MIT",
@@ -18,7 +18,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "7a8940f62e5e2dc962cbc22ec62986645a69ab5336b7d527839edc5296031095"
+      "sha256": "98bfba960d486a84c148733fa513e3d5b7ee9e173d52f8664fdf74bc2910b11f"
     },
     {
       "path": "LICENSE",
@@ -26,7 +26,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "1a9c6c08a28cc61898f34d838baf50037a526cfa43a69126a87c9c87c91b35e9"
+      "sha256": "d8c87d8cfa56f7d60d9f14729f73ec8646e5c4311c061edd71de0457ec83bb73"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -34,11 +34,15 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "7a6ab2cf6e85cd39ee2ec8e50a836eb7b8e2064be34547cd636b873310ee20a3"
+      "sha256": "00e273be40715f3c2152a447cb2efc82a65a380ab5a663718c4c0e6cfa34bc80"
     },
     {
       "path": "VERSION",
-      "sha256": "a2d5e268fe70979caccd895156b3d33bd61a3cc7e660ab7a5b07066849b3e248"
+      "sha256": "86f8fa832a76358201d6e2fcf0bb47727efe2db23af730db64cead6527776bea"
+    },
+    {
+      "path": "site-reference-library/CKCC企业站候选目录.html",
+      "sha256": "0dfd17fcaa351925f44f86f15c4e0dfad12a91ca7ca18fb8de838ac77900d67a"
     },
     {
       "path": "site-reference-library/ckcc-b2b-candidates.json",
@@ -49,8 +53,16 @@
       "sha256": "e3a524de292d537029f44122f4bda898700acfd1324ac651ea46fbb23cbf5875"
     },
     {
+      "path": "site-reference-library/使用说明.txt",
+      "sha256": "14ba1f286188b4b1dfa1e2fa0b24a1b4c7acc74d4b7c978c5dd4d197f886ae49"
+    },
+    {
+      "path": "site-reference-library/参考库总览.html",
+      "sha256": "293c857c08813fd66cb41731b6fc4663646d04e8accf31c191152f5fbee8e0f2"
+    },
+    {
       "path": "unified-site-builder/SKILL.md",
-      "sha256": "46b1ab6edfd4267a59c4b4d6b2ff784a32b6b7a9bfd91b8c45c913004462e982"
+      "sha256": "cb599971dfa14d2211b58ced4892b520ba38530bd28c3c95c062331666cbd301"
     },
     {
       "path": "unified-site-builder/agents/openai.yaml",
@@ -94,15 +106,15 @@
     },
     {
       "path": "unified-site-builder/assets/runtime/server.mjs",
-      "sha256": "204263ea7863f040bc61b01e013abc98aeb62db7ebadc7238d6575fb2455f9af"
+      "sha256": "eaaad0204787cf52ca4d717fef9bddf7a5e9a873279b656427045d14f97d7f7e"
     },
     {
       "path": "unified-site-builder/assets/runtime/worker.mjs",
-      "sha256": "71232d23b80ad21de1ae0ac3199714dc2897a5ec6cccb6a6f41aa2c96aa6ccf3"
+      "sha256": "adfd730feb0e35654b969414f004459f5d10c70ae0915e1c6b3bd6fccd703a46"
     },
     {
       "path": "unified-site-builder/assets/site.contract.json",
-      "sha256": "82a4ed09c140528b1f3ceaffc43a32b2e57bd70628bd7b285e8787ebe0269040"
+      "sha256": "6a8f66f03e8682f8819368179636a92f3e7657fcd9916eeb633b9a736bf9e5a6"
     },
     {
       "path": "unified-site-builder/assets/translation/core-manifest.json",
@@ -142,7 +154,7 @@
     },
     {
       "path": "unified-site-builder/references/acceptance.md",
-      "sha256": "52cd1466e02dadeaa271c652e15596a76354960e27d437fd900ea40633b163d8"
+      "sha256": "a4e71ea2e502c4ecfe26c9616772e11f80bf030098afe422f9f1c03cfd35a823"
     },
     {
       "path": "unified-site-builder/references/admin-ui.md",
@@ -190,11 +202,11 @@
     },
     {
       "path": "unified-site-builder/references/translation-workbench-v2.md",
-      "sha256": "0d9b3ff1f0454f1b06f2e14da8ad980cd7dcad8522200841a57acb7222c857a4"
+      "sha256": "b23797828765d7317fcef278afb6bc43db1b0e69c830037b73c4d47cb7bc1d45"
     },
     {
       "path": "unified-site-builder/references/translation.md",
-      "sha256": "decc8b7382dc576d56b7904cad3eb0528fe6529abf13c1b73dffd81ad95ac42c"
+      "sha256": "2a7e1752df4132ff0c53929c23487dae977caa6a7324c92a45c4725269a6848b"
     },
     {
       "path": "unified-site-builder/references/visual-production.md",
@@ -202,7 +214,7 @@
     },
     {
       "path": "unified-site-builder/scripts/create_site.py",
-      "sha256": "37cecb55b6564210968fb01cdf097a16c370b39c97bec07a01853c603a18f632"
+      "sha256": "fc634b846274b5420dd01140bdb167f157ae4732e4271db7042cf03e61788373"
     },
     {
       "path": "unified-site-builder/scripts/e2e_site.mjs",
@@ -210,7 +222,7 @@
     },
     {
       "path": "unified-site-builder/scripts/install_translation.py",
-      "sha256": "c04395c61863e37712eeb5037f1838596c5a11daf8298d6a325ac1307e72611c"
+      "sha256": "06b42fca4b80af06f18990646942b8559eb07f4d1369b46852e6e3c718a3ba51"
     },
     {
       "path": "unified-site-builder/scripts/site_package.py",
@@ -227,6 +239,14 @@
     {
       "path": "unified-site-builder/scripts/verify_preservation.mjs",
       "sha256": "4df2ded2b7acd8456591a5254c3bc6fcfc8c7fd67c463425d69121656532690f"
+    },
+    {
+      "path": "unified-site-builder/使用说明.txt",
+      "sha256": "c81433199b7b9dc4320c7f16c3f67e83c7eac7a996673194a84b13d89cb482dd"
+    },
+    {
+      "path": "unified-site-builder/验证结果.txt",
+      "sha256": "d19117eb3be6e2f1f8875780129e152e2e031f75204b7389aec307ab90447931"
     }
   ]
 }

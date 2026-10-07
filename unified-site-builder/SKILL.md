@@ -2,7 +2,7 @@
 name: unified-site-builder
 description: 创建或改造具有真实中文后台的企业展示与询盘网站，统一联系方式、邮件通知、文章发布、按需翻译和部署交付；根据产品及用户参考库选择不同视觉与页面组织方式。适用于统一建站、参考风格整理或工作台部署包；仅咨询概念时不自行生成网站。
 metadata:
-  version: "1.6.2"
+  version: "1.6.3"
 ---
 
 # 统一网站建站
@@ -19,7 +19,7 @@ metadata:
 
 ## 翻译公共核心与工作台兼容
 
-新建站默认接入用户的 Hy-MT2 翻译基站，先读 [Hy-MT2 接入](references/hymt-default.md)。凭据只在部署环境注入；Cloudflare Workers AI 仅在明确选择时启用。人工译文与本站持久缓存仍优先。
+新建站默认接入用户的 Hy-MT2 翻译基站，先读 [Hy-MT2 接入](references/hymt-default.md)。凭据只在部署环境注入；Cloudflare Workers AI 仅在明确选择时启用。人工译文与本站持久缓存仍优先。正文含中文括号或中英文混排不能整段跳过；按 [翻译规范](references/translation.md#中英文混排与页面识别) 接线，并执行混排验收。
 
 建站或升级翻译时先读 [翻译工作台协议 v2](references/translation-workbench-v2.md)。使用 install_translation.py 安装同版本公共模块，实际接入词汇库、持久存储和前台；新版安装包声明 translationContract v2。旧包兼容通过不等于新协议验收。默认部署沿用用户 Ubuntu 工作台；仅用户指定 Cloudflare 时生成其原生包。
 
