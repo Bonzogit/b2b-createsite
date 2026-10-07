@@ -4,7 +4,7 @@
 
 A portable specification, reference catalog, runnable backend foundation, and package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.6.3**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.6.4**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
@@ -37,7 +37,7 @@ A portable specification, reference catalog, runnable backend foundation, and pa
 | [基础框架](unified-site-builder/references/site-foundation.md) | 页面职责、内容、询盘方向 |
 | [图片制作](unified-site-builder/references/visual-production.md) | 素材规划、实际生成与页面验证 |
 | [业务接口](unified-site-builder/references/business-contract.md) | 后台、接口及数据行为 |
-| [翻译规范](unified-site-builder/references/translation.md) | 双引擎、术语保护、内容块、缓存与验收 |
+| [翻译规范](unified-site-builder/references/translation.md) | 三种引擎适配、术语保护、内容块、缓存与验收 |
 | [参考库](site-reference-library/design-library.json) | 45 条候选与来源链接 |
 | [中文参考目录](site-reference-library/参考库总览.html) | 下载后可在浏览器打开的目录 |
 | [CKCC 企业站候选](site-reference-library/ckcc-b2b-candidates.json) | 37 个行业案例的目录链接、演示地址与核对状态 |
@@ -59,7 +59,7 @@ Python 3.11+，检查器仅使用标准库，不执行目标网站代码、不�
 python -m unittest discover -s unified-site-builder/scripts -p "test_*.py" -v
 python unified-site-builder/scripts/site_package.py check /path/to/website
 python unified-site-builder/scripts/site_package.py pack /path/to/website --output /path/outside/website.zip
-node --test unified-site-builder/assets/translation/test_engine.mjs unified-site-builder/assets/translation/test_seed.mjs
+node --test unified-site-builder/assets/translation/test_engine.mjs unified-site-builder/assets/translation/test_hymt.mjs unified-site-builder/assets/translation/test_seed.mjs unified-site-builder/assets/translation/test_resolver.mjs
 ```
 
 结构通过不能替代真实后台、询盘保存、邮件收件、翻译和上线测试。
@@ -88,4 +88,7 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 - [旧版 1.6.2](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.2)
 - [旧版 1.6.1](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.1)
 
-- [当前 1.6.3](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.3)
+- [旧版 1.6.3](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.3)
+
+
+- [当前 1.6.4](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.4)

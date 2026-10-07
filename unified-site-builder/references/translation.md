@@ -1,11 +1,11 @@
 # 按需翻译
 
-1.6.2 默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
+默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
 
 
 默认源语言 `en`；默认8种语言为英文 `en`、中文 `zh`、西班牙语 `es`、阿拉伯语 `ar`、俄语 `ru`、法语 `fr`、德语 `de`、葡萄牙语 `pt`，用户可调整。英文是内容原文，中文是建站时预先提供的目标译文；中文后台不改变源语言。后台维护源文，已有人工语言版本导入时保留内容关联与版本。
 
-建站时在源码中实现两种引擎、运行时注入、术语保护、初始中文导入、持久缓存和前台触发；部署负责绑定资源和配置，不为单个项目临时改写翻译代码。
+建站时复用支持 Hy-MT2、Workers AI 与 OpenAI 兼容接口的公共核心，实现运行时注入、术语保护、初始中文导入、持久缓存和前台触发；部署负责绑定资源和配置，不为单个项目临时改写翻译代码。
 
 ## 初始中文与8种语言选项
 
@@ -42,30 +42,31 @@
 - 正确设置 `lang` 和 RTL；快速切换时核对当前语言、内容版本、请求序号，丢弃迟到结果。不替换访客输入，不丢失筛选与表单。
 - 默认不生成大量语言 HTML。客户端切换不等于多语言 SEO；需要独立收录时另实现稳定语言地址与实际译文 HTML，验证后才设置 `hreflang`。
 
-## 源码内的双引擎
+## 公共引擎与运行时选择
 
 `initTranslationEngine(runtime)` 返回站点作用域实例，提供 `engineStatus()` 与 `callEngine(texts, options)`；等价接口记录兼容映射。参考代码 [engine.mjs](../assets/translation/engine.mjs) 只实现引擎和保护，网站仍须实现内容校验、缓存、任务和前台。
 
 ```js
 // Cloudflare 引导程序注入实际绑定；与本项目存储注入和路由一起实现。
 const engine = initTranslationEngine({ AI: env.AI, env, glossaryVersion: '1' });
-// Node 启动，两个分支使用同一翻译模块。
+// Node 与 Worker 复用同一模块；新工程 env.TRANSLATION_PROVIDER 为 hymt。
 const nodeEngine = initTranslationEngine({ env: process.env, glossaryVersion: '1' });
 ```
 
 不能把请求 env 写入多租户共用的可变全局变量。实例复用范围与站点和账号一致。`callEngine` 内选引擎，`engineStatus` 使用相同逻辑：
 
-1. 已注入且有可调用的 `AI.run` → `workers-ai`。
-2. 未注入 AI，且 `TRANSLATION_ENDPOINT、TRANSLATION_API_KEY、TRANSLATION_MODEL` 三者齐全 → `openai-compatible`。
-3. 均不可用 → `unconfigured`，不调用模型，前台保留原文。
+1. 新工程显式设置 `TRANSLATION_PROVIDER=hymt`，使用 Hy-MT2 原生接口、默认地址/模型及服务端密钥；缺密钥为 `unconfigured`。详见 hymt-default.md。
+2. 明确设置 `workers-ai` 时仅使用可调用的 `AI.run`；明确设置 `openai-compatible` 时要求 endpoint/key/model 完整。指定引擎配置缺失不回退到其他引擎。
+3. 兼容旧工程未指定 provider 的情况：完整外部配置优先选择 `openai-compatible`，否则采用已有可调用 AI 绑定，均缺失为 `unconfigured`。未知 provider 为配置错误。
+4. 引擎失败保留原文及有效缓存，不跨供应商切换；引擎选择不改变人工/初始译文优先级。
 
-`TRANSLATION_ENDPOINT` 是完整 HTTPS Chat Completions 地址，不猜测追加路径。外部引擎通过服务端密钥调用；批量请求返回等长、有序的 JSON 字符串数组，严格校验。已有地址语义不同则保留兼容映射。
+在 `openai-compatible` 模式，`TRANSLATION_ENDPOINT` 是完整 HTTPS Chat Completions 地址，不猜测追加路径。外部引擎通过服务端密钥调用；批量请求返回等长、有序的 JSON 字符串数组，严格校验。已有地址语义不同则保留兼容映射。
 
 ```json
 {"provider":"workers-ai","configured":true,"model":"@cf/meta/m2m100-1.2b","engineVersion":"unified-translation-v2:hymt-v1","glossaryVersion":"1"}
 ```
 
-provider 为 `workers-ai | openai-compatible | unconfigured`，未配置 model 为 null。configured 仅表示配置完整，不证明授权、额度或调用成功；后台另记最近调用结果。状态不含密钥和内部错误原文。已选引擎失败不静默切换供应商，尤其不能因 Cloudflare 失败调用收费外部引擎。
+provider 为 `hymt | workers-ai | openai-compatible | unconfigured`，未配置 model 为 null。configured 仅表示配置完整，不证明授权、额度或调用成功；后台另记最近调用结果。状态不含密钥和内部错误原文。已选引擎失败不静默切换供应商，尤其不能因 Cloudflare 失败调用收费外部引擎。
 
 ## Workers AI 适配
 
@@ -106,12 +107,12 @@ source 非空，sourceLanguage 为实际源语言。targetLanguage 为目标语�
 
 ## 占位符保护与校验
 
-两种引擎共用品牌、型号、数字与术语识别，分别处理模型调用：
+三种适配共用品牌、型号、数字与术语识别，分别处理模型调用：
 
 1. 扫描品牌、型号、数字及单位、邮箱、网址、preserve 和 translate 术语，生成不重叠片段，避免重复替换。
 2. Workers AI 翻译模型只接收其余文字片段；受保护值与指定术语译文始终留在代码中，翻译后按原顺序拼接。每个片段会消耗一次调用额度，短片段可能影响语句流畅度，需实际语言复核。
 3. 外部生成模型使用占位符及 prompt，恢复时校验唯一对应关系；无法可靠恢复则 placeholder_mismatch，保留原文和有效缓存，不展示标识。
-4. 两种引擎均检查非空结果和明显重复输出。保护与结构检查通过不代表语义质量通过，不得据此把 qualityVerified 设置为 true。
+4. Hy-MT2 使用原生 from/to/text 逐块调用及简短保护标记，严格还原；细节见 hymt-default.md。各适配均检查非空结果和明显重复输出。保护与结构检查通过不代表语义质量通过，不得据此把 qualityVerified 设置为 true。
 
 参考实现覆盖常见数字/单位、邮箱、URL和带字母数字的型号；项目须补行业单位、品牌与型号并测试。保护成功不代表译文自然或规格含义正确，仍须抽查。
 
@@ -165,9 +166,9 @@ DOM 接入保持 HTML 结构、链接、强调样式和受保护文字，校验�
 
 ## 建站与交接
 
-源码实现两种分支并做隔离测试，不要求同时部署两套网站。跨平台部署仍要适配路由、数据库、附件和任务，双引擎不能让任意 Node ZIP 自动成为 Worker。
+源码保留公共核心的三种适配并做隔离测试，不要求同时部署两套网站。跨平台部署仍要适配路由、数据库、附件和任务，共用引擎不能让任意 Node ZIP 自动成为 Worker。
 
-复制参考模块到网站服务端，例如 lib/translation-engine.mjs；调用时传源/目标语言、服务端保护清单、`glossary.entries`、scope 和公开 context。生产环境必须在解析接口/任务层实施权限、持久预算和去重。模块提供可选 `reserveUsage({provider,blocks})` 预算钩子（返回 false 阻止调用）及 `mapWorkersError(error)` SDK 错误映射；这些钩子的模拟测试不等于已实现持久预算。默认并发3、最长单块3000字符、单批50块、超时15秒均是示例值，按目标平台限制调整并记录。
+复制参考模块到网站服务端，例如 lib/translation-engine.mjs；调用时传源/目标语言、服务端保护清单、`glossary.entries`、scope 和公开 context。生产环境必须在解析接口/任务层实施权限、持久预算和去重。模块提供可选 `reserveUsage({provider,blocks})` 预算钩子（返回 false 阻止调用）及 `mapWorkersError(error)` SDK 错误映射；这些钩子的模拟测试不等于已实现持久预算。Hy-MT2 默认单并发、60秒超时；其他适配默认并发3、15秒超时。最长单块3000字符、单批50块均是示例值，按目标平台限制调整并记录。
 
 Workers 默认适配器仅处理上述翻译模型。更换模型须提供经过验证的 workersAdapter 与 supportedLanguages，未知 schema 明确失败。模型不能额外接收语境 prompt 时，选择足够完整的语义块和术语约束，并抽查上下文质量。参考模块不持久化任何正文或缓存。
 

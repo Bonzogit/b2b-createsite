@@ -1,6 +1,6 @@
-# Hy-MT2 默认翻译基站（1.6.2）
+# Hy-MT2 默认翻译基站
 
-新建 Node 工程默认 TRANSLATION_PROVIDER=hymt；Worker 工程 vars 同样指定 hymt，不再默认创建 AI 绑定。用户明确指定其他服务时尊重其选择。本规范覆盖其他旧参考中“Workers AI 优先”的默认说明。
+新建 Node 工程默认 TRANSLATION_PROVIDER=hymt；Worker 工程 vars 同样指定 hymt，不再默认创建 AI 绑定。用户明确指定其他服务时尊重其选择。引擎选择规则与 translation.md 保持一致。
 
 服务端配置：
 - TRANSLATION_PROVIDER=hymt

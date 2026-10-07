@@ -1,6 +1,6 @@
 # 可运行后台与两种部署路径
 
-1.6.2 默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
+默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
 
 
 1.6.0 提供 assets/runtime 的可运行基础后台。它实现中文登录与管理界面、产品/分类/页面/文章编辑和发布、联系方式、询盘去重及跟进、公开媒体和私密附件、邮件设置、初始中文/人工译文及按需翻译。复用后按客户业务补齐内容模型、界面和验收；不是已经完成所有客户页面与集成的网站。
@@ -21,7 +21,7 @@
 从完成的网站整理两个暂存目录，复用相同前台、中文后台、业务代码、公共翻译核心、词汇库和初始内容。只替换运行入口、持久存储适配及部署配置，不再次运行空工程生成器重建客户内容；两个干净安装的初始内容与稳定内容ID保持一致。
 
 - 服务器包根目录包含 server.mjs、deploy.json、site.contract.json、package.json、依赖锁和完整资源；声明 runtime=node、deploymentProfile=unified-node-v1，使用 /data 与 /uploads 持久目录。
-- Cloudflare 包根目录包含 worker.mjs、wrangler.json、site.contract.json、package.json、依赖锁和完整资源；声明 runtime=cloudflare-workers、deploymentProfile=unified-worker-do-v1，实际配置 SITE/ASSETS/AI 与 SQLite Durable Object。保留对应对象类、对象名和迁移，密码及凭据用 Secret。
+- Cloudflare 包根目录包含 worker.mjs、wrangler.json、site.contract.json、package.json、依赖锁和完整资源；声明 runtime=cloudflare-workers、deploymentProfile=unified-worker-do-v1，实际配置 SITE/ASSETS 与 SQLite Durable Object；仅选择 Workers AI 时添加 AI 绑定。保留对应对象类、对象名和迁移，密码及凭据用 Secret。
 - 分别运行 site_package.py check 与 pack，分别验证干净解压启动或原生 Worker 打包，并按实际能力记录两个目标的运行状态；未执行云端部署不写成已部署。
 - 包内不包含账号口令、云凭据、运行数据库、用户附件或依赖目录。已有项目继续使用原平台更新流程并保留数据；双包不是跨平台数据迁移方案。
 
@@ -34,7 +34,7 @@
 |profile|入口|持久存储|工作台处理|
 |---|---|---|---|
 |unified-node-v1|server.mjs|DATA_DIR 的原子 JSON 文档；UPLOADS_DIR 文件|容器监听 0.0.0.0，挂载 /data 与 /uploads，首次生成私密后台密码|
-|unified-worker-do-v1|worker.mjs|SQLite Durable Object；附件分块存储|SITE/ASSETS/AI 绑定，首次 SITE_ADMIN_PASSWORD Secret|
+|unified-worker-do-v1|worker.mjs|SQLite Durable Object；附件分块存储|SITE/ASSETS 绑定，AI 按选择添加，首次 SITE_ADMIN_PASSWORD Secret|
 
 当前基础实现适合单站、小型内容库及每个5 MB以内的附件。Node 单进程串行写入；Worker 数据与文件使用 SQLite 同步事务。不要把它作为已验证的大规模数据库或多进程共享文件方案。
 
@@ -48,7 +48,7 @@ Cloudflare 资源目录允许 public 或 ./public，工作台归一化为 ./publ
 
 Cloudflare 更新保留对象类 UnifiedSite、对象绑定 SITE、对象名 main 和既有迁移。需要更改存储或迁移时先制定迁移和恢复流程，不把拒绝变化的保护去掉。Node 更新保留原项目 /data、/uploads 与账号。
 
-Node 使用外部翻译引擎配置；Cloudflare 使用 AI 绑定。无引擎时当前中文及人工译文可读，缺失内容准确返回 unconfigured。AI/机器词汇未经语言审核不能声称高质量翻译。邮件默认关闭，询盘照常保存；外部发件域名、送达回调及邮件质量仍需实际配置和单独验收。
+Node 与 Cloudflare 新工程均默认 Hy-MT2，密钥分别由服务端环境或 Worker Secret 注入；只有明确选择 Workers AI 时才配置 AI 绑定。无引擎时当前中文及人工译文可读，缺失内容准确返回 unconfigured。AI/机器词汇未经语言审核不能声称高质量翻译。邮件默认关闭，询盘照常保存；外部发件域名、送达回调及邮件质量仍需实际配置和单独验收。
 
 ## 功能与升级验收
 

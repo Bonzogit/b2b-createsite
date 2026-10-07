@@ -1,9 +1,9 @@
 # 翻译核心与工作台协议 v2
 
-1.6.2 默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
+默认服务及引擎选择以 [Hy-MT2 接入](hymt-default.md) 为准；Workers AI 仅在明确选择时启用。
 
 
-本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.3、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
+本版本将服务器已验证的型号修复合入公共引擎，新增 resolver、明显重复输出检查和包检查。当前 skillVersion=1.6.4、translationContract.version=2；具体文件指纹见 assets/translation/core-manifest.json。
 
 ## 各 Agent 的执行入口
 
@@ -15,7 +15,7 @@
 
 复制的 lib/translation/resolver.mjs 导出 createTranslationService。每站独立创建实例，传 siteId、统一 languages、sourceLanguage、runtime、repository、glossary、结构化品牌/型号清单。源码、菜单、后台设置、接口都使用这份 languages；不维护额外硬编码列表。
 
-runtime：Worker 传 AI:env.AI，Node 传服务端 env；必须提供持久预算 reserveUsage。示例限制不是免费额度保证。不得在供应商失败后静默转付费接口。
+runtime：Worker 传 env 与所选引擎需要的绑定，Node 传服务端 env；Hy-MT2 在两种平台均使用服务端密钥，Workers AI 仅在明确选择时传 AI:env.AI；必须提供持久预算 reserveUsage。示例限制不是免费额度保证。不得在供应商失败后静默转付费接口。
 
 repository 必须实现 getContent、getAuthored、getCached、putCached、withLock、getEngineIdentity、putEngineIdentity。getContent 只返回本站已发布内容，含 status/revision/kind/context/blocks；每块含稳定 id/text/context。withLock 使用持久任务协调、租约与恢复，同一站点跨实例去重；回调完成后释放，任务正在执行可返回 undefined。数据库和附件由本站存储实现，resolver 不冒充数据库。
 
@@ -27,7 +27,7 @@ getAuthored 返回本站初始/人工译文。初始中文按实际全部初始�
 
 Ubuntu 默认走原 Node 工作台路径，外部翻译服务需实际配置；Node 无法直接读取 Worker 的 env.AI。指定 Cloudflare 时生成原生 Worker 包：根目录 site.contract.json、wrangler.json、完整源码/公共模块、public/、锁文件、词汇库和初始中文。
 
-工作台新增 v2 原生路径当前接受 AI + SQLite Durable Object 包；1.6 的可运行 profile 见 runtime-profiles.md，保留声明的对象类与迁移。统一入口 /healthz、/admin/、匿名 /api/v1/admin/overview 返回401；后台首次账号读取 SITE_ADMIN_PASSWORD。需要 D1/R2、其他资源或额外绑定时先明确适配，不转为静态发布。不要把普通 Node 工程改个 runtime 字段就当 Worker。
+工作台新增 v2 原生路径当前接受 SQLite Durable Object 包，按所选引擎注入 Secret 或 AI 绑定；1.6 的可运行 profile 见 runtime-profiles.md，保留声明的对象类与迁移。统一入口 /healthz、/admin/、匿名 /api/v1/admin/overview 返回401；后台首次账号读取 SITE_ADMIN_PASSWORD。需要 D1/R2、其他资源或额外绑定时先明确适配，不转为静态发布。不要把普通 Node 工程改个 runtime 字段就当 Worker。
 
 旧包仍走已核对的旧模板兼容路径；旧包部署成功不等于通过 v2。原项目更新使用工作台待验证版本→检查→正式切换→失败回滚流程。存储或迁移声明变化时停止更新，要求明确迁移；不重新创建项目。
 

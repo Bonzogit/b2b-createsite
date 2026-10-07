@@ -1,24 +1,16 @@
-统一网站建站 Skill 1.6.3
+统一网站建站 Skill 1.6.4
 
-从仓库根目录README.md和AGENT_ENTRY.md开始，随后读取本目录SKILL.md。
-完整检出仓库同时保留同级site-reference-library目录；单独安装Skill时另指定参考库位置。
-包含规范、检查工具和可运行基础后台参考。后台和接口统一，前台可整站或按模块参考不同网站。
-顺序：基础框架 → 参考设计 → 图片准备与生成 → 页面和功能实现 → 实际验收 → 打包交付。
-基础框架先规划各页面内容深度，参考库负责视觉选择，随后准备并接入实际素材。已有项目仅改本次范围。
+完整仓库从 AGENT_ENTRY.md 进入；单独安装从 SKILL.md 进入，按任务读取相关规范。参考库独立维护，完整仓库保留同级 site-reference-library；空白 assets/design-library.json 不是实际参考库。
 
-检查工具要求Python3.11+，仅标准库。
-python unified-site-builder/scripts/site_package.py check <网站目录>
-python unified-site-builder/scripts/site_package.py pack <网站目录> --output <网站目录外的ZIP路径>
+新建流程：内容规划 → 参考设计和实际素材 → 样板与全站 → 功能、服务及画面验收 → 打包/指定部署。
+已有网站只修改请求范围，保留数据、账号和域名；不重做整站或另造部署。
+完整网站默认两个独立 ZIP，共用代码并适配平台；实际部署默认沿用用户 Ubuntu 工作台。只要一个平台或只做修复时按实际范围交付。
+新工程默认 Hy-MT2，密钥由服务端注入；其他引擎明确选择。默认英文、完整中文及8语言选项，其余语言和新增/改文缺失中文按需翻译，人工译文与有效缓存优先。混排正文不得因出现汉字而整段跳过。
+邮件检查复用已授权测试地址及安全凭据，不改变业务通知收件人；服务商投递与网站询盘/通知流程分别验证。
 
-结构检查通过不代表网站功能或部署通过。Cloudflare、Resend、AI与DNS需在实际环境配置并分别验证。
-翻译建站时实现双引擎：Cloudflare注入AI绑定，Node配置外部引擎；部署不临时改写翻译代码。
-默认英文原文、完整初始中文及en/zh/es/ar/ru/fr/de/pt；其余6种及新增/修改内容缺失中文按需翻译。无AI时有效中文和已有缓存可读。
-生成器的基础后台已接通内容校验、持久缓存、初始中文和人工译文。自行改造其他工程时须完成这些接线和前台；离线测试：
-node --test unified-site-builder/assets/translation/test_engine.mjs unified-site-builder/assets/translation/test_seed.mjs unified-site-builder/assets/translation/test_resolver.mjs
-版本更新不会自动修改其他Agent、已部署网站或私有参考库。实际安装方式以宿主平台能力为准。
+Python 3.11+，结构检查不联网或执行网站：
+python <skill>/scripts/site_package.py check <project>
+python <skill>/scripts/site_package.py pack <project> --output <项目外>/<项目>-server.zip
+node --test <skill>/assets/translation/test_engine.mjs <skill>/assets/translation/test_hymt.mjs <skill>/assets/translation/test_seed.mjs <skill>/assets/translation/test_resolver.mjs
 
-新版翻译契约须先读取 references/translation-workbench-v2.md，安装公共核心并实际接好持久仓库、词汇库与前台。
-
-新建基础工程：python <skill>/scripts/create_site.py <空目录> --runtime node 或 cloudflare-workers。先读 references/runtime-profiles.md，再按客户业务、素材和设计完成网站。
-
-完整网站默认交付两个可直接上传的ZIP：服务器包与Cloudflare包。共用业务代码，分别适配运行入口与存储，不再用嵌套合集作为默认下载；实际部署默认仍为用户Ubuntu工作台。
+结构、业务、外部服务、素材和视觉分别报告。具体历史结果见完整仓库 VALIDATION.md；Skill 更新不自动改变已部署网站。维护更新需验证、同步 GitHub 并保留固定版本分支。

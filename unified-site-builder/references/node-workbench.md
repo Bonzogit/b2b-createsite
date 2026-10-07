@@ -15,7 +15,7 @@
 - 仅信任明确配置代理，例如 TRUSTED_PROXY_IP，不无条件信任转发头。
 
 选用与实际运行环境兼容的 SQLite 或事务安全文件存储。SQLite 放 DATA_DIR；一致备份需处理 WAL/快照，不能随意复制正在写入的单个文件。
-邮件与翻译放服务端配置，未配置不阻断浏览、后台和收单，状态如实显示。翻译模块在源码中实现运行时注入及两种引擎；Node 读取 TRANSLATION_ENDPOINT（完整 HTTPS Chat Completions 地址）、TRANSLATION_API_KEY、TRANSLATION_MODEL，三项完整才启用外部引擎。缓存/任务放持久数据目录，详见 [翻译规范](translation.md)，不在浏览器中保存服务密钥。
+邮件与翻译放服务端配置，未配置不阻断浏览、后台和收单，状态如实显示。翻译模块复用公共核心和运行时注入。新工程默认 TRANSLATION_PROVIDER=hymt，使用默认原生地址/模型，TRANSLATION_API_KEY 由服务端注入；地址/模型可覆盖。明确选择 openai-compatible 时配置完整 HTTPS Chat Completions 地址、密钥和模型；Workers AI 仅适用于实际具备 AI 绑定的环境。缓存/任务放持久数据目录，详见 [翻译规范](translation.md)，不在浏览器中保存服务密钥。
 ZIP <=120 MiB，解压 <=600 MiB / 20,000 文件；不含依赖、密钥、运行数据、数据库、私人附件和符号链接。公开初始素材可包含。
 新 ZIP 上传通常创建新站，不自动等于升级原站；升级指定目标、备份并沿用持久化目录。隧道由工作台负责，网站不自行启动 tunnel。
 可访问实际包检测器时实测，否则写“离线结构通过，未实际部署”，不能声称工作台已验收。
