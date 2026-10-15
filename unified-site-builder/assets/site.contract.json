@@ -46,7 +46,7 @@
       "generationIsReview": false
     }
   },
-  "skillVersion": "1.8.0",
+  "skillVersion": "1.8.1",
   "translationContract": {
     "version": 2,
     "coreVersion": "unified-translation-v2:hymt-v2",

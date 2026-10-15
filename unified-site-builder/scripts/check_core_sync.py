@@ -32,6 +32,7 @@ CORE_FILES = [
     ('runtime/lib/public-ui.mjs', 'lib/public-ui.mjs'),
     ('runtime/lib/translation-jobs.mjs', 'lib/translation-jobs.mjs'),
     ('runtime/public/assets/admin.js', 'public/assets/admin.js'),
+    ('runtime/public/assets/site.js', 'public/assets/site.js'),
     ('runtime/lib/render.mjs', 'lib/render.mjs'),
     ('translation/engine.mjs', 'lib/translation/engine.mjs'),
     ('translation/resolver.mjs', 'lib/translation/resolver.mjs'),
