@@ -15,7 +15,8 @@ document.querySelector('#language')?.addEventListener('change',e=>{const u=new U
 const lang=document.documentElement.lang;
 const messages={en:['Translating…','Some translations are unavailable. Original text is shown.','Retry'],zh:['正在翻译…','部分内容暂时无法翻译，已保留原文。','重试'],es:['Traduciendo…','Algunas traducciones no están disponibles. Se muestra el original.','Reintentar'],ar:['جارٍ الترجمة…','بعض الترجمات غير متاحة. يظهر النص الأصلي.','إعادة المحاولة'],ru:['Перевод…','Некоторые переводы недоступны. Показан оригинал.','Повторить'],fr:['Traduction…','Certaines traductions sont indisponibles. Le texte original est affiché.','Réessayer'],de:['Übersetzung…','Einige Übersetzungen sind nicht verfügbar. Der Originaltext wird angezeigt.','Erneut versuchen'],pt:['Traduzindo…','Algumas traduções estão indisponíveis. O original é exibido.','Tentar novamente']};
 const words=messages[lang]||messages.en,state=document.querySelector('#translation-state'),retry=document.querySelector('#translation-retry');
-const abort=new AbortController();addEventListener('pagehide',()=>abort.abort(),{once:true});
+let abort=new AbortController();addEventListener('pagehide',()=>abort.abort());
+addEventListener('pageshow',event=>{if(event.persisted){abort=new AbortController();running=false;translate();}});
 let running=false;
 async function translate(retrying=false){
  if(running||lang==='en'||abort.signal.aborted)return;const nodes=[...document.querySelectorAll('[data-translation-block]')];if(!nodes.length){if(state)state.hidden=true;return;}running=true;let failed=false;const deadline=performance.now()+30000;
