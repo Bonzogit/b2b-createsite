@@ -3,6 +3,10 @@ import { initialize,createApplication } from './lib/app.mjs';
 import seed from './seed/content.json';
 import authored from './seed/translations.zh.json';
 import glossary from './config/translation-glossary.json';
+import {createRenderer} from './lib/theme.mjs';
+const renderer=await createRenderer();
+if(renderer!==null&&typeof renderer?.render!=='function')throw Error('theme_render_required');
+
 export class UnifiedSite extends DurableObject{
  constructor(ctx,env){super(ctx,env);this.ctx=ctx;this.env=env;const sql=ctx.storage.sql;
   sql.exec('CREATE TABLE IF NOT EXISTS documents (part INTEGER PRIMARY KEY, text TEXT NOT NULL)');
@@ -10,7 +14,7 @@ export class UnifiedSite extends DurableObject{
   const read=()=>{const chunks=sql.exec('SELECT text FROM documents ORDER BY part').toArray();return chunks.length?JSON.parse(chunks.map(v=>v.text).join('')):null;};
   const write=db=>{const raw=JSON.stringify(db);sql.exec('DELETE FROM documents');for(let i=0;i<raw.length;i+=120000)sql.exec('INSERT INTO documents VALUES (?,?)',i/120000,raw.slice(i,i+120000));};
   const storage={read:async()=>read(),initialize:async value=>ctx.storage.transactionSync(()=>{if(!read())write(value);}),mutate:async fn=>ctx.storage.transactionSync(()=>{const d=read();const result=fn(d);if(result?.then)throw Error('Storage mutation must be synchronous');write(d);return structuredClone(result);}),putFile:async(id,bytes)=>ctx.storage.transactionSync(()=>{sql.exec('DELETE FROM files WHERE id=?',id);for(let i=0;i<bytes.length;i+=65536)sql.exec('INSERT INTO files VALUES (?,?,?)',id,i/65536,bytes.slice(i,i+65536).buffer);}),getFile:async id=>{const parts=sql.exec('SELECT bytes FROM files WHERE id=? ORDER BY part',id).toArray().map(v=>new Uint8Array(v.bytes));const out=new Uint8Array(parts.reduce((n,v)=>n+v.length,0));let at=0;for(const part of parts){out.set(part,at);at+=part.length;}return out;}};
-  this.ready=ctx.blockConcurrencyWhile(()=>initialize(storage,seed,env,authored));this.app=createApplication({storage,env,glossary,release:env.SITE_RELEASE||'1.6.7',scheduleTranslation:async time=>{const existing=await ctx.storage.getAlarm();if(existing===null||existing>time)await ctx.storage.setAlarm(time);},asset:request=>{const url=new URL(request.url);if(url.pathname.endsWith('/')){url.pathname+='index.html';request=new Request(url,request);}return env.ASSETS.fetch(request);}});
+  this.ready=ctx.blockConcurrencyWhile(()=>initialize(storage,seed,env,authored));this.app=createApplication({storage,env,glossary,release:env.SITE_RELEASE||'1.8.0',renderer,scheduleTranslation:async time=>{const existing=await ctx.storage.getAlarm();if(existing===null||existing>time)await ctx.storage.setAlarm(time);},asset:request=>{const url=new URL(request.url);if(url.pathname.endsWith('/')){url.pathname+='index.html';request=new Request(url,request);}return env.ASSETS.fetch(request);}});
  }
  async fetch(request){await this.ready;await this.app.translationJobs.wake();return this.app(request);}
  async alarm(){await this.ready;try{await this.app.translationJobs.tick();}finally{await this.app.translationJobs.wake();}}

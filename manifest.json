@@ -1,5 +1,5 @@
 {
-  "version": "1.6.7",
+  "version": "1.8.0",
   "scope": "public specification, reference catalog, runnable backend and translation adapters",
   "entry": "AGENT_ENTRY.md",
   "license": "MIT",
@@ -9,16 +9,16 @@
       "sha256": "06360afa17a5f1b460b873b9a33de816ebaa4932fb166cc999e3bc717b9c8f99"
     },
     {
-      "path": "AGENT_ENTRY.md",
-      "sha256": "834bffac4989ddcbc5eeb3b6405490c21f118bda3339139badc2bb01aeb5e844"
-    },
-    {
       "path": "AGENTS.md",
       "sha256": "f0eed78e8e326afc542b2a2a1217f1389f15b98d07fe92b6436c7aeb61ea4a97"
     },
     {
+      "path": "AGENT_ENTRY.md",
+      "sha256": "834bffac4989ddcbc5eeb3b6405490c21f118bda3339139badc2bb01aeb5e844"
+    },
+    {
       "path": "CHANGELOG.md",
-      "sha256": "38cd520aa335e6d3884d708871da1e433b5273967620f4eaeecfa3da17e3b3d0"
+      "sha256": "e809dabcb411443f86d0f8ce0b533d33bf7dbeca54631b0077b03c7c0f89a22c"
     },
     {
       "path": "LICENSE",
@@ -26,31 +26,35 @@
     },
     {
       "path": "README.md",
-      "sha256": "8926d2b324fc21e555bbbaea4ffe097eba0165ce1cbc2ed5bcd281f055243b2b"
+      "sha256": "cfecb5a86468e5292fd1bc656184cb4018393b51c71afd4734338ae762626e52"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "78c7877a4aae6d38261d55deaf75012ff3659f0cc51566b89bc934209f51433a"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "d5420667383aa61ad7ab89984145b48a2cd3f51ea1787e190a3e0ad07e8e1d09"
+    },
+    {
+      "path": "VERSION",
+      "sha256": "3eb1ef94b5890ca727158b106142685c8733b0ace5bcb4cf3f0ac14f9f0643f4"
     },
     {
       "path": "site-reference-library/ckcc-b2b-candidates.json",
       "sha256": "2a2cf668911a19c50ef2d68942c53e81c8b989a8e3376845aed404b62c630735"
     },
     {
-      "path": "site-reference-library/CKCC企业站候选目录.html",
-      "sha256": "0dfd17fcaa351925f44f86f15c4e0dfad12a91ca7ca18fb8de838ac77900d67a"
-    },
-    {
       "path": "site-reference-library/design-library.json",
       "sha256": "e3a524de292d537029f44122f4bda898700acfd1324ac651ea46fbb23cbf5875"
     },
     {
-      "path": "site-reference-library/使用说明.txt",
-      "sha256": "14ba1f286188b4b1dfa1e2fa0b24a1b4c7acc74d4b7c978c5dd4d197f886ae49"
+      "path": "tools/refresh_manifest.py",
+      "sha256": "53ccb4bd84381759db4a8a49f67859d49d60655f92ae25b8c685fb6a996f3c03"
     },
     {
-      "path": "site-reference-library/参考库总览.html",
-      "sha256": "293c857c08813fd66cb41731b6fc4663646d04e8accf31c191152f5fbee8e0f2"
-    },
-    {
-      "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "78c7877a4aae6d38261d55deaf75012ff3659f0cc51566b89bc934209f51433a"
+      "path": "unified-site-builder/SKILL.md",
+      "sha256": "5f85156359a2eb1cf0173411f6fa165b639cb016a9ac4b6900b5309bc2da5b90"
     },
     {
       "path": "unified-site-builder/agents/openai.yaml",
@@ -69,12 +73,28 @@
       "sha256": "c83bc60ee0d53c9186d26a9ccfda1814930962dc93d85e3a4ad6ccf706ffdb54"
     },
     {
+      "path": "unified-site-builder/assets/design-spec.json",
+      "sha256": "bff5ada7ed21d23074144975552157943373724af1f1a50306750d81878378b6"
+    },
+    {
       "path": "unified-site-builder/assets/runtime/lib/app.mjs",
-      "sha256": "c0ed43c6c99b74b2ce950a2426a013cacac07ac37f3bacc018d57ce66ce9a816"
+      "sha256": "06f469c889a2a15292447fcf6a9e857756ccaa696aa4c05daaa04acf3537185e"
+    },
+    {
+      "path": "unified-site-builder/assets/runtime/lib/modules.mjs",
+      "sha256": "5fee643b42157472fa1a5294a47e2705e770b58d5628fdcb6ba10a72bbef8040"
     },
     {
       "path": "unified-site-builder/assets/runtime/lib/public-ui.mjs",
       "sha256": "daa399da7f6fccafb7bc9d9350a74677ccaa75d78ee1fb94fd4778d7802c1f4a"
+    },
+    {
+      "path": "unified-site-builder/assets/runtime/lib/render.mjs",
+      "sha256": "aed9af00da460240e2f334b500fc0c70404a5895837a1e03a884c418864fe5eb"
+    },
+    {
+      "path": "unified-site-builder/assets/runtime/lib/theme.mjs",
+      "sha256": "ecf9f1fb01d636f79245f1444a66c755e0e05dfd4f7149efa749b9e280ce3214"
     },
     {
       "path": "unified-site-builder/assets/runtime/lib/translation-jobs.mjs",
@@ -86,7 +106,7 @@
     },
     {
       "path": "unified-site-builder/assets/runtime/public/assets/admin.js",
-      "sha256": "55bbf30106c21296c0e02ae338caf3a9a58cefd02915eff0d434ade638f66db5"
+      "sha256": "e4d061cf3f422c0125209554327114aeb057de8984ddbcab3549f4cd25a1e98f"
     },
     {
       "path": "unified-site-builder/assets/runtime/public/assets/site.css",
@@ -102,15 +122,15 @@
     },
     {
       "path": "unified-site-builder/assets/runtime/server.mjs",
-      "sha256": "b48e37bfb27a289da8128889fe1a791ec22a7b72e53414e4f3f3e7bf9e33ef4b"
+      "sha256": "9d64a8d9770aef1087e2451bcf56299a57f0a44ef4d9f3697f92f0962257a627"
     },
     {
       "path": "unified-site-builder/assets/runtime/worker.mjs",
-      "sha256": "5088b54ef5baa165e33f00f61440ec2c7526c10efde66eb5f29c2a8e93fbbb97"
+      "sha256": "b22fe610c69c710c8bc12cdd5b62bde3b7d00e2ae8564bac095bcf24ff9b8b5a"
     },
     {
       "path": "unified-site-builder/assets/site.contract.json",
-      "sha256": "9b117e3aab65bf20f142c4ae3c1d01faaccb1d03fbb62527d5017db5f3ea1f0e"
+      "sha256": "af11e8472630003a22e37d8bfa16e470a87b8ecf6b0b8d0ba89f7155bc6471d7"
     },
     {
       "path": "unified-site-builder/assets/translation/core-manifest.json",
@@ -149,12 +169,20 @@
       "sha256": "ac00687b11d26637f8cb02cbeb06152b16d0381175e37833d3a757de7705f310"
     },
     {
+      "path": "unified-site-builder/assets/workflow.json",
+      "sha256": "9e6ebc78f6cd6b151bda7f6e8541912366b63e5f3dba5a75fcb74c1401155949"
+    },
+    {
       "path": "unified-site-builder/references/acceptance.md",
       "sha256": "e374f90a814171ac2d3ed96767567f0f262fbdb88c12ccf0279d50738111db41"
     },
     {
       "path": "unified-site-builder/references/admin-ui.md",
-      "sha256": "070afd6784bf0f3730d6b5fc0464ddf17c8901354a8ee48387de75b8ab17405c"
+      "sha256": "1a4f35e07e2842dad628e3127f1cc05e15ef6ad383f9e33bbea691ee809ce787"
+    },
+    {
+      "path": "unified-site-builder/references/aux-capabilities.md",
+      "sha256": "a4a7a502893859fa750953614d1f116e14e1ec160bd07dd60a9d1971cbbb564e"
     },
     {
       "path": "unified-site-builder/references/business-contract.md",
@@ -165,12 +193,20 @@
       "sha256": "f1680e8e5862633b93f1c9f04c94348c12fa0cdf3073b9ee84f38465088aad00"
     },
     {
+      "path": "unified-site-builder/references/delivery-package.md",
+      "sha256": "bda8d086eef76c5d52a8abf37353b9954a45b7287264009b935811f7068d1ddb"
+    },
+    {
       "path": "unified-site-builder/references/design.md",
-      "sha256": "62f81d16a9548e4dc18e29ad5583031e4e507ec1afbca4b60c8a036818267ec8"
+      "sha256": "95f8c229c591ddc7a1c29af9a7c12c5d12f626ecef2adaf28eb38d6610dce6e6"
     },
     {
       "path": "unified-site-builder/references/hymt-default.md",
       "sha256": "205edc10e99f3a2b51d9b1cf69ec64b610be104321199568d39223808d799d8c"
+    },
+    {
+      "path": "unified-site-builder/references/module-wiring.md",
+      "sha256": "cce5f17dcaa7a7b9c1cceddafe0443720f812434661eb80ffdbab926cc422382"
     },
     {
       "path": "unified-site-builder/references/node-workbench.md",
@@ -202,7 +238,7 @@
     },
     {
       "path": "unified-site-builder/references/translation-workbench-v2.md",
-      "sha256": "02b0c231a793dabd22eb1ba5fd1d0bebfc10384893344cd9fcf0f2dbc651577a"
+      "sha256": "d09e9481781f4c8000c243f031dbfda013fffe28187ff87e91842d97bc27d3da"
     },
     {
       "path": "unified-site-builder/references/translation.md",
@@ -213,8 +249,36 @@
       "sha256": "9c04902e945d5258bddcfd870bbed06f6655968de88cb49d51209a46baabb0bf"
     },
     {
+      "path": "unified-site-builder/references/workflow-protocol.md",
+      "sha256": "00049fedfb4a9a162bbd8ac1ac9d87a7eb2a7b4c4c6c8e62a6ed92b28f3ba6d0"
+    },
+    {
+      "path": "unified-site-builder/scripts/aux-adapters/galaxy_pick.py",
+      "sha256": "ed6f74889d1c41de63d88dca4d722ccebbdc6582e33ac1101ba7fccca45f10fe"
+    },
+    {
+      "path": "unified-site-builder/scripts/aux-adapters/gsap_setup.py",
+      "sha256": "d3ccd291d2f919db3f2a8868d0a91b65bbe81c16c2c423bb28f4b8027ec3163b"
+    },
+    {
+      "path": "unified-site-builder/scripts/aux-adapters/impeccable_detect.py",
+      "sha256": "ebef61992190673de17c93407800b2640a53706f60f941b8226f1c1f416cf1cd"
+    },
+    {
+      "path": "unified-site-builder/scripts/aux-adapters/pro_max_search.py",
+      "sha256": "a841f825bc4de8d64ebba0f8da0bd8830d10b66fcabcc59bb3aa00ed0819f332"
+    },
+    {
+      "path": "unified-site-builder/scripts/check_core_sync.py",
+      "sha256": "dbe13ae4df532023b7d20076a14849ba990ae8aa620c8025187e7c576b5e22c7"
+    },
+    {
       "path": "unified-site-builder/scripts/create_site.py",
-      "sha256": "4197258b0a9a49a1cb4170cae4daf84e7a5a1030076257fe56b7ffa41ed78e0d"
+      "sha256": "1f318cd42e6e0f91c1864f686b64c7a9b2654a5d7e7f80f414e9585e504a184a"
+    },
+    {
+      "path": "unified-site-builder/scripts/delivery_manifest.py",
+      "sha256": "24c84a340be6d649d5c77be3a11e973a516801d22d1a6cd7d7232af45449589c"
     },
     {
       "path": "unified-site-builder/scripts/e2e_site.mjs",
@@ -222,11 +286,35 @@
     },
     {
       "path": "unified-site-builder/scripts/install_translation.py",
-      "sha256": "0f93be0aa6b4cf567d4467fcc9d4ab0fe84d2bf65909351a1294204c803cbbed"
+      "sha256": "698f5c7b99c3400c85039beaeafb3795b65613e2b777507dfcb15a54af663384"
+    },
+    {
+      "path": "unified-site-builder/scripts/lint_seed.py",
+      "sha256": "8d709dcb9e45f047f4b6407cd301c0ae048763361ffcfb30f3d2be26078a9f87"
+    },
+    {
+      "path": "unified-site-builder/scripts/reference_capture.py",
+      "sha256": "f835344b932e6cb849145be989e497129715b35465778c73e8df3284ec2a499d"
+    },
+    {
+      "path": "unified-site-builder/scripts/review_snapshot.py",
+      "sha256": "4696efe60fb75411ab78f616dfc73d26c1dfb9659cc1e8f937b4900d65d540f5"
     },
     {
       "path": "unified-site-builder/scripts/site_package.py",
       "sha256": "e0fb71dc25eb961b86bea78569f53d21fab08c3c19c96e3d2caadc410cdd9429"
+    },
+    {
+      "path": "unified-site-builder/scripts/stage_app.py",
+      "sha256": "aeac12b8c996cf427f5b811af3ba9764afc818d2bda38f70faafd782ecb9cc91"
+    },
+    {
+      "path": "unified-site-builder/scripts/test_merge.mjs",
+      "sha256": "05e31353743c018c23629a5aae0b38e5a40e0bcb1f526b50956fb1e843b46e6f"
+    },
+    {
+      "path": "unified-site-builder/scripts/test_merge_tools.py",
+      "sha256": "b267b6fc1aec568b2b2be467ca0f175dd05f6f9a055683191953dd2683618a98"
     },
     {
       "path": "unified-site-builder/scripts/test_public_translation.mjs",
@@ -242,7 +330,11 @@
     },
     {
       "path": "unified-site-builder/scripts/test_worker_translation_jobs.mjs",
-      "sha256": "452ac3dfbd298b73ecde296d789bae93a8e384d41658d84849362caff2877f7c"
+      "sha256": "598590f70a452b0147ddde6b54d54d6238e3fb2c5dc37f1502e7951c77062e92"
+    },
+    {
+      "path": "unified-site-builder/scripts/test_workflow.py",
+      "sha256": "ca386244bc296e3c2cb963056b80c2e9fb78692333ade0064239ea0566df111d"
     },
     {
       "path": "unified-site-builder/scripts/translation_contract.py",
@@ -253,24 +345,8 @@
       "sha256": "4df2ded2b7acd8456591a5254c3bc6fcfc8c7fd67c463425d69121656532690f"
     },
     {
-      "path": "unified-site-builder/SKILL.md",
-      "sha256": "b2679b23eb5f920a01f3ea83eb19d47d2f398b25364607e543359cf2e1757313"
-    },
-    {
-      "path": "unified-site-builder/使用说明.txt",
-      "sha256": "42f7efdeb39229785f34eab96a2bd2b3ae3c54c9398bbe77244bf035087fbe84"
-    },
-    {
-      "path": "unified-site-builder/验证结果.txt",
-      "sha256": "cf6622e026220f226c344bd1b091a48fed0a96a6e82aa5cee279be9dbd7a77d2"
-    },
-    {
-      "path": "VALIDATION.md",
-      "sha256": "b3788ac408653240b4c2fb76957a1525d9fa194046c2de9af39acb301d69a1aa"
-    },
-    {
-      "path": "VERSION",
-      "sha256": "440031e799a6323ba88b40d71261399d1c65380c5b283810bdaf995b703fb499"
+      "path": "unified-site-builder/scripts/workflow.py",
+      "sha256": "b845a114fe7758c75362682f832ee53b89eaf5c580989428124e25e5ae8bc556"
     }
   ]
 }

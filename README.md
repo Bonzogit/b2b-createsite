@@ -4,7 +4,7 @@
 
 A portable specification, reference catalog, runnable backend foundation, and package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.6.7**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.8.0**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
@@ -13,7 +13,8 @@ A portable specification, reference catalog, runnable backend foundation, and pa
 - 中文真实后台约定、业务数据与接口协议。
 - Resend 邮件通知、WhatsApp、文章发布；默认英文原文、完整初始中文和8种语言选项，其余语言缺失译文可按需补齐；后台一键翻译所选/全部语言、选择前台展示语言，文章保存/更新/发布可自动翻译并持久记录进度；默认自有 Hy-MT2、可显式选择其它引擎的运行时注入、术语保护参考模块及测试。
 - 网站完成后默认分别提供服务器 ZIP 和 Cloudflare ZIP，共用业务源码，两个包均为可直接上传的项目根目录；默认实际部署仍为用户 Ubuntu 工作台。
-- 整站参考或多个网站模块组合的设计方法。
+- 整站参考或模块组合、结构化设计规格、独立项目主题与扩展内容字段。
+- 按需使用辅助设计工具，记录真实工作流、共享核心一致性和逐块中文覆盖；记录器不执行任务、不证明审美。
 - 45 条 Blocksy 官方模板介绍索引、37 条 CKCC 企业站候选目录，以及离线包结构检查和打包工具。候选目录待实际画面复核。
 
 本仓库提供规范、参考库、检查工具和可运行的基础后台：同一业务接口分别运行在 Node 服务器或 Cloudflare Workers + SQLite Durable Object。新建工程从 [运行目标与后台](unified-site-builder/references/runtime-profiles.md) 开始；客户内容、前台设计及邮件等外部集成仍按项目完成和验收。仓库不包含云端服务凭据。

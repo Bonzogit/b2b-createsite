@@ -1,0 +1,55 @@
+{
+  "specVersion": "1.0",
+  "projectId": null,
+  "derivedFrom": "docs/DESIGN.md",
+  "note": "Values are decided per project; this template is a checklist, not a house style. Any field left null is unverified.",
+  "viewport": {
+    "contentWidth": null,
+    "grid": { "columns": null, "gutter": null, "breakpoints": { "tablet": null, "mobile": null } },
+    "heroHeight": null,
+    "mobileLayoutNotes": null
+  },
+  "typography": {
+    "fontStack": null,
+    "webfontLicence": null,
+    "scale": { "h1": null, "h2": null, "h3": null, "body": null, "small": null },
+    "lineHeight": { "heading": null, "body": null },
+    "longTitleHandling": null,
+    "rtlFallbackStack": null
+  },
+  "color": {
+    "ink": null, "surface": null, "background": null,
+    "brand": null, "brandDark": null, "accent": null,
+    "line": null, "muted": null,
+    "contrastChecked": null,
+    "darkMode": "not-planned"
+  },
+  "spacing": { "scale": null, "sectionRhythm": null, "cardPadding": null },
+  "radius": { "card": null, "control": null, "pill": null },
+  "componentStates": {
+    "buttons": ["default", "hover", "focus-visible", "disabled"],
+    "inputs": ["default", "focus", "error", "disabled"],
+    "cards": ["default", "hover"],
+    "notes": null
+  },
+  "imagery": {
+    "heroRatio": null, "cardRatio": null, "detailRatio": null,
+    "cropRule": null, "subjectPosition": null,
+    "demoMarking": null,
+    "generatedImageDisclosure": null
+  },
+  "motion": {
+    "purpose": null,
+    "intensity": null,
+    "enabledSurfaces": { "background": null, "cursor": null, "module": null },
+    "independentToggles": null,
+    "reducedMotionBehaviour": null,
+    "mustNot": ["obscure text", "intercept clicks", "break mobile layout", "break RTL layout"]
+  },
+  "auxiliaryInput": {
+    "uiUxProMax": { "used": null, "evidence": null },
+    "impeccable": { "used": null, "evidence": null },
+    "gsapSkills": { "used": null, "evidence": null },
+    "galaxy": { "used": null, "evidence": null }
+  }
+}
