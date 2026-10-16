@@ -1,10 +1,10 @@
 # Agent 读取入口
 
-当前规范版本见 [VERSION](VERSION)。本仓库含规范、参考库、可运行基础后台和离线工具；不是已完成的客户网站。
+当前规范版本见 [VERSION](VERSION)。本仓库含规范、可运行基础后台和离线工具；不是已完成的客户网站。
 
 先读 [SKILL.md](unified-site-builder/SKILL.md)，按其中任务表加载配套规范。完整新建按内容规划、参考与素材、样板与功能、验收及交付推进；已有项目先读实际工程和交接，仅处理本次范围。仅学习或参考分析时止于该任务。
 
-首次接收读 [跨平台交接](unified-site-builder/references/portable-handoff.md)。参考库有 [45条 Blocksy 候选](site-reference-library/design-library.json)与 [37条 CKCC 候选](site-reference-library/ckcc-b2b-candidates.json)；Skill assets 内是空白模板。目录和HTML核对不算视觉验收，采用前实际查看页面及手机端。
+首次接收读 [跨平台交接](unified-site-builder/references/portable-handoff.md)。本包不附固定参考库；设计研究从当前任务、用户资料和实际案例出发，按 [参考研究](unified-site-builder/references/style-selection.md) 形成决定并核对实现。
 
 新工程默认 Hy-MT2，其他引擎按明确选择；邮件、翻译、部署沿用会话已有授权与安全凭据。读取仓库本身不授权外部操作。默认完整网站交付两个独立 ZIP，实际部署仍默认用户 Ubuntu 工作台；修复不强制生成另一平台包。
 

@@ -2,9 +2,9 @@
 
 为不同 AI Agent 提供同一套 B2B 询盘网站建设规范：**先规划基础内容，后台与接口统一，展示站按品牌设计。**
 
-A portable specification, reference catalog, runnable backend foundation, and package checker for AI-built B2B inquiry websites.
+A portable specification, runnable backend foundation, and package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.8.2**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.9.0**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
@@ -14,18 +14,18 @@ A portable specification, reference catalog, runnable backend foundation, and pa
 - Resend 邮件通知、WhatsApp、文章发布；默认英文原文、完整初始中文和8种语言选项，其余语言缺失译文可按需补齐；后台一键翻译所选/全部语言、选择前台展示语言，文章保存/更新/发布可自动翻译并持久记录进度；默认自有 Hy-MT2、可显式选择其它引擎的运行时注入、术语保护参考模块及测试。
 - 网站完成后默认分别提供服务器 ZIP 和 Cloudflare ZIP，共用业务源码，两个包均为可直接上传的项目根目录；默认实际部署仍为用户 Ubuntu 工作台。
 - 整站参考或模块组合、结构化设计规格、独立项目主题与扩展内容字段。
-- 按需使用辅助设计工具，记录真实工作流、共享核心一致性和逐块中文覆盖；记录器不执行任务、不证明审美。
-- 45 条 Blocksy 官方模板介绍索引、37 条 CKCC 企业站候选目录，以及离线包结构检查和打包工具。候选目录待实际画面复核。
+- 轻量设计研究：明确问题、按需观察、形成决定、实现样板、核对效果，不绑定预装目录或专用辅助工具。
+- 设计与工作流记录检查、共享核心一致性、逐块中文覆盖，以及离线包结构检查和打包工具；结构通过不证明审美或实际操作。
 
-本仓库提供规范、参考库、检查工具和可运行的基础后台：同一业务接口分别运行在 Node 服务器或 Cloudflare Workers + SQLite Durable Object。新建工程从 [运行目标与后台](unified-site-builder/references/runtime-profiles.md) 开始；客户内容、前台设计及邮件等外部集成仍按项目完成和验收。仓库不包含云端服务凭据。
+本仓库提供规范、检查工具和可运行的基础后台：同一业务接口分别运行在 Node 服务器或 Cloudflare Workers + SQLite Durable Object。新建工程从 [运行目标与后台](unified-site-builder/references/runtime-profiles.md) 开始；客户内容、前台设计及邮件等外部集成仍按项目完成和验收。仓库不包含云端服务凭据。
 
 ## 给其他 Agent 使用
 
 把仓库链接发给 Agent，并告诉它：
 
-> 请读取此仓库的 AGENT_ENTRY.md，按其中顺序读取 Skill、通用基础框架和参考库。先确认实际读到的版本与能力边界，再按我的具体任务执行。先按基础框架规划丰富且有依据的内容，再根据产品参考一个或多个网站，准备或生成实际图片，实现页面和统一后台，最后实际查看并验收。不能只看 README 就声称已读完规范。
+> 请读取此仓库的 AGENT_ENTRY.md，按其中顺序读取 Skill、通用基础框架和按任务加载的设计规范。先确认实际读到的版本与能力边界，再按我的具体任务执行。先按基础框架规划丰富且有依据的内容，再根据产品参考一个或多个网站，准备或生成实际图片，实现页面和统一后台，最后实际查看并验收。不能只看 README 就声称已读完规范。
 
-如果 Agent 只能读附件，可下载仓库 ZIP 并解压。支持原生 Skill 的工具可安装 `unified-site-builder/`，同时保留同级参考库或另行指定位置。没有文件或执行能力时应说明未完成的范围。尚未在所有 Agent 平台实测导入。
+如果 Agent 只能读附件，可下载仓库 ZIP 并解压。支持原生 Skill 的工具可安装 `unified-site-builder/`；设计参考按本次任务提供或检索。没有文件或执行能力时应说明未完成的范围。尚未在所有 Agent 平台实测导入。
 
 开始建站只需补充产品/业务、已有资料和特殊要求；没有明确部署目标且无法从上下文判断时，使用 Skill 中的 Node 默认。延续旧工程必须先读取该项目的实际源码与交接文档。
 
@@ -39,10 +39,6 @@ A portable specification, reference catalog, runnable backend foundation, and pa
 | [图片制作](unified-site-builder/references/visual-production.md) | 素材规划、实际生成与页面验证 |
 | [业务接口](unified-site-builder/references/business-contract.md) | 后台、接口及数据行为 |
 | [翻译规范](unified-site-builder/references/translation.md) | 三种引擎适配、术语保护、内容块、缓存与验收 |
-| [参考库](site-reference-library/design-library.json) | 45 条候选与来源链接 |
-| [中文参考目录](site-reference-library/参考库总览.html) | 下载后可在浏览器打开的目录 |
-| [CKCC 企业站候选](site-reference-library/ckcc-b2b-candidates.json) | 37 个行业案例的目录链接、演示地址与核对状态 |
-| [CKCC 中文目录](site-reference-library/CKCC企业站候选目录.html) | 下载后可搜索和打开演示站 |
 | [验证范围](VALIDATION.md) | 已检查与未验证的边界 |
 | [更新记录](CHANGELOG.md) | 版本变化 |
 
@@ -67,11 +63,11 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 
 ## 版本与共享
 
-`main` 是持续更新的内容。需要复现某次建站时，记录当时的提交 SHA、Skill 版本和参考库版本。拉取更新不自动升级已有网站；参考库的个人补充与项目历史需要合并保留。私有项目数据和凭据不要提交到公开仓库。
+`main` 是持续更新的内容。需要复现某次建站时，记录当时的提交 SHA、Skill 版本、项目版本和研究来源。拉取更新不自动升级已有网站；客户项目的实际资料、研究证据与历史需要保留。私有项目数据和凭据不要提交到公开仓库。
 
 ## 许可与来源
 
-本项目原创代码和文档按 [MIT License](LICENSE) 提供。模板品牌、外链素材和第三方作品仍归各自权利人；详见 [第三方来源说明](THIRD_PARTY_NOTICES.md)。仓库不分发 Blocksy 的主题、图片、字体、演示站源码或付费插件。
+本项目原创代码和文档按 [MIT License](LICENSE) 提供。模板品牌、外链素材和第三方作品仍归各自权利人；详见 [第三方来源说明](THIRD_PARTY_NOTICES.md)。仓库不附固定模板目录，不分发第三方主题、图片、字体或付费插件。
 
 ## 技能更新与同步
 
@@ -98,3 +94,6 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 - [历史 1.6.6](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.6)
 - [当前 1.6.7](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.7)
 - [后台翻译任务规范](unified-site-builder/references/translation-admin.md)
+
+- [当前固定版本 1.9.0](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.9.0)
+- [旧版 1.8.2](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.8.2)

@@ -1,6 +1,6 @@
 {
-  "version": "1.8.2",
-  "scope": "public specification, reference catalog, runnable backend and translation adapters",
+  "version": "1.9.0",
+  "scope": "public specification, task-driven design research, runnable backend and translation adapters",
   "entry": "AGENT_ENTRY.md",
   "license": "MIT",
   "files": [
@@ -10,15 +10,15 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "f0eed78e8e326afc542b2a2a1217f1389f15b98d07fe92b6436c7aeb61ea4a97"
+      "sha256": "569a9fd646d1dbe44bcb369bc62edbf0bcde224e24f67f02156d1c7e7ed1f952"
     },
     {
       "path": "AGENT_ENTRY.md",
-      "sha256": "834bffac4989ddcbc5eeb3b6405490c21f118bda3339139badc2bb01aeb5e844"
+      "sha256": "c8028024a007c276dbb253ca95da6bb81662258d8bae500f4e8388011dc07238"
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "559d463b6ff18393fbf09b9348eb8c0799e7973881db3ae1e6707ea5cd088a20"
+      "sha256": "1b903be1a3720d9b5c9d4c681de9b80e3b4da5d342039dda1ac41b1c4664139a"
     },
     {
       "path": "LICENSE",
@@ -26,27 +26,19 @@
     },
     {
       "path": "README.md",
-      "sha256": "577c832fcdaaa165e9a76f54bf944d1bb81ad0f57a7cbf54aa73da33515fd344"
+      "sha256": "ebc0a1a9acfaba310276530943b4830354ceb471d5a687fe5250406b4022ddd8"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "78c7877a4aae6d38261d55deaf75012ff3659f0cc51566b89bc934209f51433a"
+      "sha256": "ae49ad3b155c2b957e5e0858d1faa265395a5c94ab7f1bef051261542ba143e9"
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "8b969d10b8cec3944d2df306db3fd3b6bcd35e8bf2cd9e9d0700d66563ba8bac"
+      "sha256": "4d14d760708f33d8f3994cd5ca85e80c280c021a1e7d2cc2fc63e8f39e4d5daf"
     },
     {
       "path": "VERSION",
-      "sha256": "e7066ea517cbc9e563967997e5cf2e3a899250403dac6fbaa25bb6b1815d16ca"
-    },
-    {
-      "path": "site-reference-library/ckcc-b2b-candidates.json",
-      "sha256": "2a2cf668911a19c50ef2d68942c53e81c8b989a8e3376845aed404b62c630735"
-    },
-    {
-      "path": "site-reference-library/design-library.json",
-      "sha256": "e3a524de292d537029f44122f4bda898700acfd1324ac651ea46fbb23cbf5875"
+      "sha256": "30f4611383aa30a15753789f40effde81332f2f8714e6d3b2940bf0fc4592377"
     },
     {
       "path": "tools/refresh_manifest.py",
@@ -54,7 +46,7 @@
     },
     {
       "path": "unified-site-builder/SKILL.md",
-      "sha256": "c6015bc28455ba1baf8307ff75746723b2cf14147c2749ac2e94e285829f8836"
+      "sha256": "f860b240153f37613a5d9a18ca1285ed27f461753e63b6fcb7526d8d80356a88"
     },
     {
       "path": "unified-site-builder/agents/openai.yaml",
@@ -65,16 +57,12 @@
       "sha256": "9c7e5dd0289b940e01dc697cd8b00ac171fecd640175f433e8a9459f3847b32f"
     },
     {
-      "path": "unified-site-builder/assets/design-library.json",
-      "sha256": "7af7625e62d3d23567129c6248f0639c1fbdd9c4212d3cef6c6357a829c9cdfe"
-    },
-    {
       "path": "unified-site-builder/assets/design-record.json",
-      "sha256": "c83bc60ee0d53c9186d26a9ccfda1814930962dc93d85e3a4ad6ccf706ffdb54"
+      "sha256": "4386eb0ce0b9f87036f2ef61f75d8265cb971b31857de81d7d45686860cf2dbe"
     },
     {
       "path": "unified-site-builder/assets/design-spec.json",
-      "sha256": "bff5ada7ed21d23074144975552157943373724af1f1a50306750d81878378b6"
+      "sha256": "daf64a45a6ce0c92e1e1f63a360919df59a123e57b4d37177e8aaf9c5064bdc6"
     },
     {
       "path": "unified-site-builder/assets/runtime/lib/app.mjs",
@@ -170,19 +158,15 @@
     },
     {
       "path": "unified-site-builder/assets/workflow.json",
-      "sha256": "9e6ebc78f6cd6b151bda7f6e8541912366b63e5f3dba5a75fcb74c1401155949"
+      "sha256": "66ea0cafba856ebbbe418a072a34dae28d79162888e870d641dcd18189c5d41f"
     },
     {
       "path": "unified-site-builder/references/acceptance.md",
-      "sha256": "5dbf92425029dfad94a224140cd86efdcd55202baccbad356c95ca477591a282"
+      "sha256": "d45b295a136eef4d3a118f3cabbbf70d43531870d9135ef7b669f7ebb2efaab1"
     },
     {
       "path": "unified-site-builder/references/admin-ui.md",
       "sha256": "1a4f35e07e2842dad628e3127f1cc05e15ef6ad383f9e33bbea691ee809ce787"
-    },
-    {
-      "path": "unified-site-builder/references/aux-capabilities.md",
-      "sha256": "a4a7a502893859fa750953614d1f116e14e1ec160bd07dd60a9d1971cbbb564e"
     },
     {
       "path": "unified-site-builder/references/business-contract.md",
@@ -198,7 +182,7 @@
     },
     {
       "path": "unified-site-builder/references/design.md",
-      "sha256": "95f8c229c591ddc7a1c29af9a7c12c5d12f626ecef2adaf28eb38d6610dce6e6"
+      "sha256": "9e3e484779139eaf4ab34d18f35040b9a93bad663ef34ee3cdbcbd8cf0cdc0bd"
     },
     {
       "path": "unified-site-builder/references/hymt-default.md",
@@ -214,7 +198,7 @@
     },
     {
       "path": "unified-site-builder/references/portable-handoff.md",
-      "sha256": "c04c7ba08ac437541ab50b267cc3ba3a889bba4c7b6c30c11afae2726f49586b"
+      "sha256": "49b82be660a3887cf073ad2bee767ee8bf4ca8819c12ca6dd9720a9193201fa3"
     },
     {
       "path": "unified-site-builder/references/resend-email.md",
@@ -226,11 +210,11 @@
     },
     {
       "path": "unified-site-builder/references/site-foundation.md",
-      "sha256": "f961f0aa49ac98e1978237425a6f72b82da9c1ee29d7f0093e2659629c6978cf"
+      "sha256": "931665ba2ded0c1becc84e6fba5640a6cd56a3b39315d5c19979638de51ecc8f"
     },
     {
       "path": "unified-site-builder/references/style-selection.md",
-      "sha256": "525f4c5789283ed2d5a3170598a5dc3f4004cf276b0cd3847aa603f960e2c856"
+      "sha256": "8ee456afd45b8f961fac2ac835a4d0ba5033f177621ca25dd0e00c0b5432507d"
     },
     {
       "path": "unified-site-builder/references/translation-admin.md",
@@ -250,23 +234,7 @@
     },
     {
       "path": "unified-site-builder/references/workflow-protocol.md",
-      "sha256": "00049fedfb4a9a162bbd8ac1ac9d87a7eb2a7b4c4c6c8e62a6ed92b28f3ba6d0"
-    },
-    {
-      "path": "unified-site-builder/scripts/aux-adapters/galaxy_pick.py",
-      "sha256": "ed6f74889d1c41de63d88dca4d722ccebbdc6582e33ac1101ba7fccca45f10fe"
-    },
-    {
-      "path": "unified-site-builder/scripts/aux-adapters/gsap_setup.py",
-      "sha256": "d3ccd291d2f919db3f2a8868d0a91b65bbe81c16c2c423bb28f4b8027ec3163b"
-    },
-    {
-      "path": "unified-site-builder/scripts/aux-adapters/impeccable_detect.py",
-      "sha256": "ebef61992190673de17c93407800b2640a53706f60f941b8226f1c1f416cf1cd"
-    },
-    {
-      "path": "unified-site-builder/scripts/aux-adapters/pro_max_search.py",
-      "sha256": "a841f825bc4de8d64ebba0f8da0bd8830d10b66fcabcc59bb3aa00ed0819f332"
+      "sha256": "d608651c5d4f975ed7fc443b183851dff84f0b01f94ee5c1745c6fcd183dd563"
     },
     {
       "path": "unified-site-builder/scripts/check_core_sync.py",
@@ -281,6 +249,10 @@
       "sha256": "24c84a340be6d649d5c77be3a11e973a516801d22d1a6cd7d7232af45449589c"
     },
     {
+      "path": "unified-site-builder/scripts/design_check.py",
+      "sha256": "251ab6213ec32f8820f1dcba7e6444384eeec3b276b2d52c64c249e64782e05e"
+    },
+    {
       "path": "unified-site-builder/scripts/e2e_site.mjs",
       "sha256": "ab63aef290f83c1f461333a02261dcf15c6bd791b7ea8ce1f53b3bac467d8c6b"
     },
@@ -293,14 +265,6 @@
       "sha256": "8d709dcb9e45f047f4b6407cd301c0ae048763361ffcfb30f3d2be26078a9f87"
     },
     {
-      "path": "unified-site-builder/scripts/reference_capture.py",
-      "sha256": "f835344b932e6cb849145be989e497129715b35465778c73e8df3284ec2a499d"
-    },
-    {
-      "path": "unified-site-builder/scripts/review_snapshot.py",
-      "sha256": "4696efe60fb75411ab78f616dfc73d26c1dfb9659cc1e8f937b4900d65d540f5"
-    },
-    {
       "path": "unified-site-builder/scripts/site_package.py",
       "sha256": "e0fb71dc25eb961b86bea78569f53d21fab08c3c19c96e3d2caadc410cdd9429"
     },
@@ -311,6 +275,10 @@
     {
       "path": "unified-site-builder/scripts/test_client_requests.mjs",
       "sha256": "5277470b7f62ae7c1709e012714755715b5bf15c65ff40bd27a5dceaf8ba3a6f"
+    },
+    {
+      "path": "unified-site-builder/scripts/test_design_check.py",
+      "sha256": "60d0f438d5ed1ae1d162483409add3cc972a83bf2ce654a5f2a3940f8ae7da50"
     },
     {
       "path": "unified-site-builder/scripts/test_merge.mjs",
@@ -338,7 +306,7 @@
     },
     {
       "path": "unified-site-builder/scripts/test_workflow.py",
-      "sha256": "ca386244bc296e3c2cb963056b80c2e9fb78692333ade0064239ea0566df111d"
+      "sha256": "624777c30619089e5f3a77916ae6c95d3141e89d93758cf1178b15c8ebbc92ee"
     },
     {
       "path": "unified-site-builder/scripts/translation_contract.py",
@@ -350,7 +318,15 @@
     },
     {
       "path": "unified-site-builder/scripts/workflow.py",
-      "sha256": "b845a114fe7758c75362682f832ee53b89eaf5c580989428124e25e5ae8bc556"
+      "sha256": "c29df5e1ae034764cbaabfdff597c4943d3682a8b3f9067c2dfafe493f22c594"
+    },
+    {
+      "path": "unified-site-builder/使用说明.txt",
+      "sha256": "d8c6325258125d11509bcde35ccd2b6385314296a611fb65a5178fa89a0a864f"
+    },
+    {
+      "path": "unified-site-builder/验证结果.txt",
+      "sha256": "efca62fea0ea530811bfc1f7f94ad4df828d14bd0d2d66c80db28f4f2b4225bf"
     }
   ]
 }

@@ -1,10 +1,10 @@
 # Repository guidance
 
-This repository contains a portable website-building specification and reference catalog. It includes a runnable backend reference with Node and Cloudflare Workers adapters, not a completed customer website or hosted shared CMS.
+This repository contains a portable website-building specification and research methodology. It includes a runnable backend reference with Node and Cloudflare Workers adapters, not a completed customer website or hosted shared CMS.
 
 - For a website-building task, start with AGENT_ENTRY.md and follow the task-specific links.
 - For changes to this repository, edit the maintained Skill and reference sources rather than generated customer websites.
-- Preserve stable reference IDs and distinguish public-source descriptions from visual observations and recommendations.
+- Preserve actual project evidence and distinguish source reading, visual observation, interaction checks and recommendations. Do not restore retired catalogs or tool-specific adapters.
 - Keep credentials, private site checks, customer data, and local machine paths out of commits.
 - Run the existing package-checker tests when changing its implementation. Documentation changes need link and JSON validation.
 - Do not mark a generated website as tested merely because this repository's offline checks pass.

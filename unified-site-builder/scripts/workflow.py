@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Project-level workflow state recorder for the unified site builder.
 
-The recorder stores facts about a nine-stage delivery pipeline. It never runs the
+The recorder stores facts about a ten-stage delivery pipeline. It never runs the
 website, never touches services and never infers a result: every status transition
 must be supplied by whoever actually performed the work. Offline, standard library
 only, Python 3.11+.
@@ -10,7 +10,6 @@ Commands
   init       create <project>/workflow.json from assets/workflow.json
   set        record a stage result (pass/fail/unverified/blocked/not-applicable)
   invalidate mark stages whose evidence was voided by later edits
-  aux        record an auxiliary capability version and one invocation result
   block      add or resolve a blocking item
   show       print current state
   check      validate the record against the stage contract
@@ -179,35 +178,6 @@ def cmd_invalidate(args):
     return 0
 
 
-def cmd_aux(args):
-    path, doc = load(args.file)
-    if len(args.capability) != 1:
-        raise SystemExit('aux requires exactly one --capability')
-    slot = doc['auxCapabilities'].get(args.capability[0])
-    if slot is None:
-        raise SystemExit('unknown capability: %s' % args.capability[0])
-    if args.source:
-        slot['source'] = args.source
-    if args.commit:
-        slot['commit'] = args.commit
-    if args.license:
-        slot['license'] = args.license
-    slot['available'] = args.available
-    if args.used_in:
-        for value in args.used_in:
-            if value not in slot['usedIn']:
-                slot['usedIn'].append(value)
-    if args.stage or args.result:
-        slot['invocations'].append({
-            'at': stamp(), 'stage': args.stage, 'action': args.action,
-            'result': args.result, 'evidence': relative(Path(args.file).parent, args.evidence[-1]) if args.evidence else None,
-            'note': args.note
-        })
-    save(path, doc)
-    print('%s recorded' % args.capability[0])
-    return 0
-
-
 def cmd_block(args):
     path, doc = load(args.file)
     if args.resolve:
@@ -245,9 +215,24 @@ def cmd_show(args):
     return 0
 
 
+def record_path_valid(root, value, evidence=False):
+    if not isinstance(value, str) or not value or ':' in value or '\\' in value:
+        return False
+    p = Path(value)
+    if p.is_absolute() or '..' in p.parts:
+        return False
+    target = (root / p).resolve()
+    if not target.is_relative_to(root):
+        return False
+    if target.is_file():
+        return target.stat().st_size > 0
+    return not evidence and target.is_dir() and any(target.iterdir())
+
+
 def cmd_check(args):
     path, doc = load(args.file)
     errors, warnings = [], []
+    root = path.parent.resolve()
     if not doc.get('skillVersion'):
         errors.append('skillVersion is required')
     ids = [row['id'] for row in doc['stages']]
@@ -265,8 +250,13 @@ def cmd_check(args):
         if not row.get('checker'):
             errors.append('%s: missing checker (who verifies the gate)' % row['id'])
             continue
-        if row['status'] == 'pass' and not (row.get('outputs') or row.get('evidence')):
-            errors.append('%s: pass requires at least one output path or evidence entry' % row['id'])
+        if row['status'] == 'pass':
+            if not (row.get('outputs') or row.get('evidence')):
+                errors.append('%s: pass requires at least one output path or evidence entry' % row['id'])
+            for collection in ('outputs', 'evidence'):
+                for value in row.get(collection, []):
+                    if not record_path_valid(root, value, evidence=collection == 'evidence'):
+                        errors.append('%s: missing, empty or unsafe %s file: %s' % (row['id'], collection, value))
         if row['status'] == 'blocked' and not any(b['resolvedAt'] is None for b in doc.get('blocks', [])):
             errors.append('%s: blocked stage requires an open blocking item' % row['id'])
         if row['status'] == 'fail' and not row.get('attempts'):
@@ -274,7 +264,12 @@ def cmd_check(args):
     for row in doc['stages']:
         if row['status'] in ('unverified', 'fail', 'blocked'):
             warnings.append('%s: %s' % (row['id'], row['status']))
+    complete = not warnings and not any(b.get('resolvedAt') is None for b in doc.get('blocks', []))
+    if args.require_complete and not complete:
+        errors.append('unfinished stages or open blocks remain')
     print(render_summary(doc))
+    print('recordStructurePassed=%s allStagesComplete=%s; records/files only, not visual or runtime validation' %
+          (not errors, complete and not errors))
     for message in errors:
         print('ERROR  ' + message)
     for message in warnings:
@@ -285,7 +280,7 @@ def cmd_check(args):
 
 def main():
     parser = argparse.ArgumentParser(description='Record AI site-building workflow state')
-    parser.add_argument('mode', choices=['init', 'set', 'invalidate', 'aux', 'block', 'show', 'check'])
+    parser.add_argument('mode', choices=['init', 'set', 'invalidate', 'block', 'show', 'check'])
     parser.add_argument('extra', nargs='*', help='init only: target project directory')
     parser.add_argument('--file', dest='file')
     parser.add_argument('--stage', choices=STAGE_IDS)
@@ -299,23 +294,17 @@ def main():
     parser.add_argument('--input', action='append', default=[])
     parser.add_argument('--capability', action='append', default=[])
     parser.add_argument('--scope', action='append', default=[])
-    parser.add_argument('--executor', help='who runs this stage, e.g. mainSkill / aux:uiUxProMax / user')
-    parser.add_argument('--checker', help='who verifies the gate, e.g. mainSkill / aux:impeccable')
+    parser.add_argument('--executor', help='actual executor, e.g. mainSkill / user')
+    parser.add_argument('--checker', help='actual checker, e.g. mainSkill / independent reviewer')
     parser.add_argument('--topic', choices=sorted(DOWNSTREAM_BY_TOPIC))
     parser.add_argument('--self-stage', dest='self_stage', action='store_true')
     parser.add_argument('--reason')
-    parser.add_argument('--source')
-    parser.add_argument('--commit')
-    parser.add_argument('--license', dest='license')
-    parser.add_argument('--available', choices=['true', 'false'])
-    parser.add_argument('--used-in', dest='used_in', action='append', default=[])
-    parser.add_argument('--action')
-    parser.add_argument('--result', choices=['success', 'partial', 'failed', 'not-run'])
     parser.add_argument('--id', dest='id')
     parser.add_argument('--summary')
     parser.add_argument('--owner')
     parser.add_argument('--resolve')
     parser.add_argument('--json', action='store_true')
+    parser.add_argument('--require-complete', action='store_true', help='check: reject unfinished stages')
     parser.add_argument('--skill-version', dest='skill_version')
     parser.add_argument('--project-id', dest='project_id')
     parser.add_argument('--project-name', dest='project_name')
@@ -343,11 +332,6 @@ def main():
         if not (args.stage or args.topic) or not args.reason:
             parser.error('--stage|--topic and --reason are required')
         return cmd_invalidate(args)
-    if args.mode == 'aux':
-        if not args.capability:
-            parser.error('--capability is required')
-        args.available = None if args.available is None else args.available == 'true'
-        return cmd_aux(args)
     if args.mode == 'block':
         return cmd_block(args)
     if args.mode == 'show':

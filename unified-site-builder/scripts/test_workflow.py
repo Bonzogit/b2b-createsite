@@ -18,7 +18,9 @@ def run(*args, cwd=None):
 
 class WorkflowTests(unittest.TestCase):
     def setUp(self):
-        self.tmp = Path(tempfile.mkdtemp())
+        self.folder = tempfile.TemporaryDirectory()
+        self.addCleanup(self.folder.cleanup)
+        self.tmp = Path(self.folder.name)
         self.project = self.tmp / 'proj'
         self.project.mkdir()
         self.record = self.project / 'workflow.json'
@@ -46,6 +48,8 @@ class WorkflowTests(unittest.TestCase):
         self.assertIn('pass requires', result.stdout)
 
     def test_pass_with_evidence(self):
+        (self.project / 'docs').mkdir()
+        (self.project / 'docs/env-report.md').write_text('Actual environment report', encoding='utf-8')
         run('init', str(self.project), '--skill-version', '1.7.0')
         run('set', '--file', str(self.record), '--stage', 'environment', '--status', 'pass',
             '--evidence', 'docs/env-report.md')
@@ -96,19 +100,40 @@ class WorkflowTests(unittest.TestCase):
         # a blocked stage with no open block is invalid again
         self.assertNotEqual(run('check', '--file', str(self.record)).returncode, 0)
 
-    def test_aux_records_invocation(self):
-        run('init', str(self.project), '--skill-version', '1.7.0')
-        run('aux', '--file', str(self.record), '--capability', 'uiUxProMax',
-            '--source', 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill',
-            '--commit', '477bcb2', '--license', 'MIT', '--available', 'true',
-            '--used-in', 'reference-selection', '--stage', 'reference-selection',
-            '--action', 'design suggestions', '--result', 'success',
-            '--evidence', 'docs/design-spec.json')
+    def test_missing_evidence_is_rejected(self):
+        run('init', str(self.project), '--skill-version', '1.9.0')
+        run('set', '--file', str(self.record), '--stage', 'reference-selection', '--status', 'pass',
+            '--evidence', 'docs/nonexistent.png')
+        result = run('check', '--file', str(self.record))
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('missing, empty or unsafe', result.stdout)
+
+    def test_empty_and_escaping_evidence_are_rejected(self):
+        run('init', str(self.project), '--skill-version', '1.9.0')
+        (self.project / 'empty.png').write_bytes(b'')
+        (self.tmp / 'outside.png').write_bytes(b'not project evidence')
+        for value in ('empty.png', '../outside.png'):
+            run('set', '--file', str(self.record), '--stage', 'real-sample', '--status', 'pass',
+                '--evidence', value)
+            self.assertNotEqual(run('check', '--file', str(self.record)).returncode, 0)
+
+    def test_structure_success_does_not_mean_work_complete(self):
+        run('init', str(self.project), '--skill-version', '1.9.0')
+        result = run('check', '--file', str(self.record))
+        self.assertEqual(result.returncode, 0, result.stdout)
+        self.assertIn('recordStructurePassed=True allStagesComplete=False', result.stdout)
+        self.assertNotEqual(run('check', '--file', str(self.record), '--require-complete').returncode, 0)
+
+    def test_complete_record_with_real_evidence(self):
+        run('init', str(self.project), '--skill-version', '1.9.0')
+        (self.project / 'report.md').write_text('Actual check evidence', encoding='utf-8')
         doc = json.loads(self.record.read_text(encoding='utf-8'))
-        slot = doc['auxCapabilities']['uiUxProMax']
-        self.assertEqual(slot['available'], True)
-        self.assertEqual(slot['commit'], '477bcb2')
-        self.assertEqual(len(slot['invocations']), 1)
+        for row in doc['stages']:
+            run('set', '--file', str(self.record), '--stage', row['id'], '--status', 'pass',
+                '--evidence', 'report.md')
+        result = run('check', '--file', str(self.record), '--require-complete')
+        self.assertEqual(result.returncode, 0, result.stdout)
+        self.assertIn('allStagesComplete=True', result.stdout)
 
     def test_unknown_stage_rejected(self):
         run('init', str(self.project), '--skill-version', '1.7.0')

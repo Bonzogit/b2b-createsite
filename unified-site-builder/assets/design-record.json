@@ -1,32 +1,21 @@
 {
-  "recordVersion": "1.0",
+  "recordVersion": "2.0",
   "projectId": null,
-  "productType": null,
-  "buyerTask": null,
-  "chosenDirection": null,
-  "selectionReasons": [],
-  "referenceIds": [],
-  "referenceStrategy": null,
-  "sectionReferences": [],
-  "layoutDecisions": {},
-  "comparedProjectIds": [],
-  "meaningfulDifferences": [],
-  "userApprovedConsistency": false,
-  "visualVerification": {
-    "desktop": "unverified",
-    "mobile": "unverified",
-    "evidence": [],
-    "tablet": "unverified"
+  "projectVersion": null,
+  "researchStatus": "unverified",
+  "designQuestions": {
+    "audienceTask": null,
+    "contentOrder": null,
+    "expressionBasis": null,
+    "feasibility": null
   },
-  "referenceLibrary": {
-    "source": null,
-    "revision": null,
-    "readStatus": "unverified",
-    "candidateIds": []
-  },
-  "assetVerification": {
-    "inventory": "docs/DESIGN.md",
-    "status": "unverified",
-    "missing": []
+  "researchLimitations": [],
+  "references": [],
+  "decisions": [],
+  "journeys": [],
+  "journeyNotApplicableReason": null,
+  "recentProjectComparison": {
+    "projectIds": [],
+    "notes": null
   }
 }
