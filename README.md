@@ -4,7 +4,7 @@
 
 A portable specification, runnable backend foundation, and package checker for AI-built B2B inquiry websites.
 
-当前版本：**1.9.0**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
+当前版本：**1.9.1**。完整读取入口：[AGENT_ENTRY.md](AGENT_ENTRY.md)。
 
 ## 它提供什么
 
@@ -95,5 +95,8 @@ node --test unified-site-builder/assets/translation/test_engine.mjs unified-site
 - [当前 1.6.7](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.6.7)
 - [后台翻译任务规范](unified-site-builder/references/translation-admin.md)
 
-- [当前固定版本 1.9.0](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.9.0)
+- [当前固定版本 1.9.1](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.9.1)
+- [上一版 1.9.0](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.9.0)
 - [旧版 1.8.2](https://github.com/Bonzogit/b2b-createsite/tree/versions/v1.8.2)
+
+设计 Skill 交接读取[共同接口](unified-site-builder/references/skill-interfaces.md)，机器契约与询盘适配器由建站包维护，设计包校验实际工程，不复制业务核心。

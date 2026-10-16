@@ -46,7 +46,7 @@
       "generationIsReview": false
     }
   },
-  "skillVersion": "1.8.2",
+  "skillVersion": "1.9.1",
   "translationContract": {
     "version": 2,
     "coreVersion": "unified-translation-v2:hymt-v2",
@@ -80,5 +80,11 @@
     },
     "glossaryPath": "config/translation-glossary.json",
     "initialChinesePath": "seed/translations.zh.json"
+  },
+  "interfaces": {
+    "theme": "unified-theme-v1",
+    "inquiry": "unified-inquiry-v1",
+    "designRecord": "2.0",
+    "translation": 2
   }
 }

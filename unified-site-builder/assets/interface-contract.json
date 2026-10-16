@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "builderVersion": "1.9.1",
+  "interfaces": {
+    "theme": "unified-theme-v1",
+    "inquiry": "unified-inquiry-v1",
+    "designRecord": "2.0",
+    "translation": 2
+  },
+  "adapter": {
+    "path": "assets/runtime/public/assets/inquiry-adapter.js",
+    "projectPath": "public/assets/inquiry-adapter.js",
+    "sha256": "6029a78b36982981ed3dd481a83d24834511c5b1fb64bbb68dd224f4b382f421"
+  },
+  "designChecker": "scripts/design_check.py"
+}

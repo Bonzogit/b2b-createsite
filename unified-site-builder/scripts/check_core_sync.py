@@ -25,6 +25,7 @@ TRANSLATION = SKILL / 'assets' / 'translation'
 # directories owned by the Skill. Everything else in a project is either project
 # content or the project theme, and is expected to differ.
 CORE_FILES = [
+    ('runtime/public/assets/inquiry-adapter.js', 'public/assets/inquiry-adapter.js'),
     ('runtime/server.mjs', 'server.mjs'),
     ('runtime/worker.mjs', 'worker.mjs'),
     ('runtime/lib/app.mjs', 'lib/app.mjs'),
